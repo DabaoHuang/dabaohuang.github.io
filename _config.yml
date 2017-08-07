@@ -26,3 +26,7 @@ github:
   repo:           https://www.github.com/dabaohuang
 
 headpic:          https://avatars1.githubusercontent.com/u/4962159?v=4&amp;s=460
+
+# Category
+categories:
+  1:              'Linux'
