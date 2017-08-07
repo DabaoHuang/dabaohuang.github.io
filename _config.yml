@@ -10,7 +10,7 @@ permalink:        pretty
 title:            Dabao developer
 tagline:          '大寶開發學習誌'
 description:      'H-A-P-P-Y'
-url:              https://dabaohuang.github.io
+url:              /
 baseurl:          https://dabaohuang.github.io/
 
 author:
