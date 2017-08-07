@@ -11,7 +11,7 @@ title:            Dabao developer
 tagline:          '大寶開發學習誌'
 description:      'H-A-P-P-Y'
 url:              https://dabaohuang.github.io
-baseurl:          /
+baseurl:          '/'
 
 author:
   name:           'Dabao Huang'
