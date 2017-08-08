@@ -7,9 +7,9 @@ permalink:        pretty
 #relative_permalinks: true
 
 # Setup
-title:            Dabao developer
+title:            Dabao Dev
 tagline:          '大寶開發學習誌'
-description:      'H-A-P-P-Y'
+description:      '-只有自己整理過的東西，才能算是自己的-'
 url:              /
 baseurl:          https://dabaohuang.github.io/
 

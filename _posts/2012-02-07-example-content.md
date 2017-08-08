@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Example content
-category: Linux
+title: Example con
+comments: true
 ---
 
 
