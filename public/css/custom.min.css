@@ -68,5 +68,6 @@
 }
 
 .LabelBorder {
-    float: left;
+    /* float: left; */
+    padding: 0 15px;
 }
