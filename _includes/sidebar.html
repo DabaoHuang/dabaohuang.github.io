@@ -31,18 +31,6 @@
         {% endif %}
       {% endfor %}
 
-      {% for category in site.categories %}
-      <li><a name="{{ category | first }}">{{ category | first }}</a>
-          <ul>
-          {% for posts in category %}
-            {% for post in posts %}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% endfor %}
-        </ul>
-      </li>
-      {% endfor %}
-
       <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a> -->
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
       <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->

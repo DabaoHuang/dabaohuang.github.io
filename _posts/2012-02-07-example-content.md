@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Example con
+category: Unix
 comments: true
 ---
 
