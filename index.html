@@ -14,7 +14,12 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    <!-- {{ post.content }} -->
+     <div class="IN_POST_CONTENT">
+       {{ post.content }}
+     </div>
+     <div class="IN_POST_READ">
+         <a href="{{ post.url }}">more</a>
+     </div>
   </div>
   {% endfor %}
 </div>

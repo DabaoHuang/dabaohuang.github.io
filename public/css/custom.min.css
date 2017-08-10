@@ -3,3 +3,16 @@
 .dabao_headpic img{
     border-radius: 160px;
 }
+
+.IN_POST_READ {
+    text-align: right;
+    font-size: 14px;
+}
+
+.IN_POST_CONTENT {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
