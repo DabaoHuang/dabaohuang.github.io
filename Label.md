@@ -9,7 +9,7 @@ title: Label
     <ul>
     {% for posts in category %}
       {% for post in posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% if post.url %}<li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endif %}
       {% endfor %}
     {% endfor %}
   </ul>
