@@ -71,3 +71,8 @@
     /* float: left; */
     padding: 0 15px;
 }
+
+.IN_TAG_COMMENTS {
+    width: 200px;
+    float: left;
+}
