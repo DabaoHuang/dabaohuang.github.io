@@ -5,7 +5,7 @@ title: Label
 
 <!-- category start -->
 {% for category in site.categories %}
-<li><a name="{{ category | first }}">{{ category | first }}</a>
+<div class="LabelBorder"><span>{{ category | first }}</span>
     <ul>
     {% for posts in category %}
       {% for post in posts %}
@@ -13,6 +13,6 @@ title: Label
       {% endfor %}
     {% endfor %}
   </ul>
-</li>
+</div>
 {% endfor %}
 <!-- category end -->
