@@ -11,13 +11,15 @@
     {% include sidebar.html %}
 
     <div class="content container">
+      
       {{ content }}
-    </div>
 
-    <div class="disqus_border">
-    {% if page.comments %}
-      {% include disqus.html %}
-    {% endif %}
+      <div class="disqus_border">
+      {% if page.comments %}
+        {% include disqus.html %}
+      {% endif %}
+      </div>
+
     </div>
 
   </body>
