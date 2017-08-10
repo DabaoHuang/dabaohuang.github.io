@@ -9,8 +9,9 @@ permalink:        pretty
 # Setup
 title:            Dabao Dev
 tagline:          '大寶開發學習誌'
-description:      '-只有自己整理過的東西，才能算是自己的-'
+description:      '-自己整理過，才算是學習-'
 url:              /
+newbaseurl:       https://dabaohuang.github.io/
 baseurl:          https://dabaohuang.github.io/
 
 author:
