@@ -4,15 +4,59 @@
     border-radius: 160px;
 }
 
+.IN_POST_READ a, .IN_POST_READ a::after , .IN_POST_READ a::before {
+    transition: all .3s;
+}
+
+.IN_POST_READ a {
+    position: relative;
+    text-decoration: none;
+}
+
+.IN_POST_READ a::after , .IN_POST_READ a::before {
+    opacity: 0;
+    font-weight: 600;
+    transform: rotate(0deg);
+}
+
 .IN_POST_READ {
     text-align: right;
-    font-size: 14px;
+    font-size: 25px;
+    padding: 0 20px ;
+    transform: scale(.7);
+}
+
+.IN_POST_READ a::before {
+    position: absolute;
+    content: '[';
+    left: -99px;
+}
+
+.IN_POST_READ a::after {
+    position: absolute;
+    content: ']';
+    right: -99px;
+}
+
+.IN_POST_READ:hover.IN_POST_READ a::before, .IN_POST_READ:hover.IN_POST_READ a::after {
+    font-size:40px;
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+.IN_POST_READ:hover.IN_POST_READ a {
+    text-decoration: underline;
+}
+
+.IN_POST_READ:hover.IN_POST_READ a::before {
+    left: 70px;
+}
+
+.IN_POST_READ:hover.IN_POST_READ a::after {
+    right: 70px;
 }
 
 .IN_POST_CONTENT {
+    height: 120px ;
     overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
 }
