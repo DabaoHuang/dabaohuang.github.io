@@ -109,7 +109,7 @@
   transform:scale(1);
 }
 .github-button , .github-button * , .facebook-button , .facebook-button * {
-    transition: all .3s;
+    transition: all .5s;
 }
 .github-button , .facebook-button{
     font-size: 40px;
@@ -122,10 +122,11 @@
 }
 .github-button span , .facebook-button span{
     position: absolute;
-    top: -70px;
+    top: -85px;
 }
 .github-button:hover.github-button span , .facebook-button:hover.facebook-button span{
-    top: 0px;
+    top: -15px;
+    color:#444;
 }
 .float-left {
     float: left;
