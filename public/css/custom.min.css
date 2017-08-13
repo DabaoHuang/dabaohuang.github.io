@@ -108,4 +108,26 @@
 .IN_TAG_COMMENTS:hover.IN_TAG_COMMENTS::after {
   transform:scale(1);
 }
-
+.github-button , .github-button * , .facebook-button , .facebook-button * {
+    transition: all .3s;
+}
+.github-button , .facebook-button{
+    font-size: 40px;
+    color: #655643;
+    position: relative;
+    overflow:hidden;
+    width: 40px;
+    height: 45px;
+    float:left;
+}
+.github-button span{
+    position: absolute;
+    top: -45px;
+}
+.github-button:hover.github-button span{
+    top: 0px;
+}
+.float-left {
+    float: left;
+    margin-right: 5px;
+}
