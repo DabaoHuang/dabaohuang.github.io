@@ -120,11 +120,11 @@
     height: 45px;
     float:left;
 }
-.github-button span{
+.github-button span , .facebook-button span{
     position: absolute;
-    top: -45px;
+    top: -70px;
 }
-.github-button:hover.github-button span{
+.github-button:hover.github-button span , .facebook-button:hover.facebook-button span{
     top: 0px;
 }
 .float-left {
