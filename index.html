@@ -12,8 +12,6 @@ title: Home
 
         <span class="post-date">
           {{ post.date | date_to_string }}
-          &nbsp;&nbsp;
-          <a class="btn-success" href="https://dabaohuang.github.io/Label/#{{ post.category }}"><i class="fa fa-tags"></i>&nbsp;{{ post.category }}</a>
         </span>
 
         <div class="IN_POST_CONTENT">
@@ -21,9 +19,14 @@ title: Home
         </div>
 
         <div class="IN_TAG_COMMENTS">
-            <!-- comments-count -->
             <i class="fa fa-comment"></i>
             <a class="disqus-comment-count" href="{{ site.newbaseurl }}{{ post.url }}#disqus_thread"></a>
+        </div>
+
+        <div class="IN_TAG_LABELS">
+          <i class="fa fa-tags"></i>
+            <a class="btn-success" href="https://dabaohuang.github.io/Label/#{{ post.category }}">&nbsp;{{ post.category }}
+          </a>
         </div>
 
         <div class="IN_POST_READ">
