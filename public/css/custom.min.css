@@ -426,8 +426,13 @@
 }
 
 .IN_TAG_COMMENTS {
+    width: 130px;
+}
+
+.IN_TAG_COMMENTS,
+.IN_TAG_LABELS {
     margin-top: 5px;
-    width: 100px;
+    margin-right: 10px;
     float: left;
 }
 
@@ -435,24 +440,41 @@
 .IN_TAG_COMMENTS a,
 .IN_TAG_COMMENTS::after {
     color: #444;
+    border-color: #444;
+}
+
+.IN_TAG_LABELS,
+.IN_TAG_LABELS a,
+.IN_TAG_LABELS::after {
+    color: #268bd2;
+    border-color: #268bd2;
+}
+
+.IN_TAG_COMMENTS,
+.IN_TAG_COMMENTS a,
+.IN_TAG_COMMENTS::after,
+.IN_TAG_LABELS,
+.IN_TAG_LABELS a,
+.IN_TAG_LABELS::after {
     text-decoration: none;
     transition: all .5s;
-    border-color: #444;
     position: relative;
     font-size: 14px;
 }
 
-.IN_TAG_COMMENTS::after {
+.IN_TAG_COMMENTS::after,
+.IN_TAG_LABELS::after {
     content: "  ";
     position: absolute;
     border-bottom: 1px solid;
     width: 95%;
-    left: 0px;
+    left: 5px;
     bottom: -3px;
     transform: scale(0);
 }
 
-.IN_TAG_COMMENTS:hover.IN_TAG_COMMENTS::after {
+.IN_TAG_COMMENTS:hover.IN_TAG_COMMENTS::after,
+.IN_TAG_LABELS:hover.IN_TAG_LABELS::after {
     transform: scale(1);
 }
 
