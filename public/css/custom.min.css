@@ -425,8 +425,7 @@
     padding: 0 15px;
 }
 
-.IN_TAG_COMMENTS,
-.IN_TAG_LABELS {
+.IN_TAG_COMMENTS {
     margin-top: 5px;
     width: 100px;
     float: left;
