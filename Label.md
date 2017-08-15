@@ -9,7 +9,7 @@ title: Label
     <ul id="{{ category | first }}">
     {% for posts in category %}
       {% for post in posts %}
-        {% if post.url %}<li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endif %}
+        {% if post.url %}<li><a href="{{ post.url }}">{{ post.subtitle }}</a></li>{% endif %}
       {% endfor %}
     {% endfor %}
   </ul>

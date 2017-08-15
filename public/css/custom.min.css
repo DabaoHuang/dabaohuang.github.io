@@ -416,7 +416,7 @@
 }
 
 .IN_POST_CONTENT {
-    height: 95px;
+    height: 85px;
     overflow: hidden;
 }
 
@@ -467,10 +467,18 @@
     content: "  ";
     position: absolute;
     border-bottom: 1px solid;
-    width: 95%;
-    left: 5px;
     bottom: -3px;
     transform: scale(0);
+}
+
+.IN_TAG_COMMENTS::after {
+    width: 76%;
+    left: 0px;
+}
+
+.IN_TAG_LABELS::after {
+    width: 95%;
+    left: 5px;
 }
 
 .IN_TAG_COMMENTS:hover.IN_TAG_COMMENTS::after,
