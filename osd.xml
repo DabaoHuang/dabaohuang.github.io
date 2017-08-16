@@ -1,0 +1,25 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<ShortName>wudybao</ShortName>
+<Description>Search Dabao - 大寶的開發學習誌</Description>
+<Contact>cn41408@gmail.com</Contact>
+<Url type="application/atom+xml" template="https://dabaohuang.github.io/?s={searchTerms}&feed=atom"/>
+<Url type="application/rss+xml" template="https://dabaohuang.github.io/?s={searchTerms}&feed=rss2"/>
+<Url type="text/html" template="https://dabaohuang.github.io/?s={searchTerms}" method="GET"/>
+<Url type="application/opensearchdescription+xml" rel="self" template="/osd.xml"/>
+<LongName>Dabao 大寶的開發學習誌</LongName>
+<Image height="16" width="16" type="image/vnd.microsoft.icon">
+https://dabaohuang.github.io/public/favicon.ico
+</Image>
+<Image height="64" width="64" type="image/png">
+https://dabaohuang.github.io/img/logo.png
+</Image>
+<Query role="example" searchTerms="photography"/>
+<Tags>網誌</Tags>
+<Developer>Automattic</Developer>
+<SyndicationRight>open</SyndicationRight>
+<AdultContent>false</AdultContent>
+<Language>zh-TW</Language>
+<OutputEncoding>UTF-8</OutputEncoding>
+<InputEncoding>UTF-8</InputEncoding>
+<moz:SearchForm>https://dabaohuang.github.io/</moz:SearchForm>
+</OpenSearchDescription>
