@@ -4,6 +4,7 @@ title: '[ Linux ] Linux cannot allocate memory'
 subtitle: '[ Linux ] 執行時，記憶體不足'
 category: Linux
 comments: true
+signature: true
 ---
 
 <div class="message">

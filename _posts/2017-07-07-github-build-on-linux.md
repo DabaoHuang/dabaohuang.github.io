@@ -4,6 +4,7 @@ title: '[ Git ] Build git and github'
 subtitle: '[ Git ] git 與 github 建置'
 category: Git
 comments: true
+signature: true
 ---
 
 <div class="message">
