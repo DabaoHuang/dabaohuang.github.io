@@ -150,13 +150,13 @@ abbr[title] {
 /* Code */
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  /* font-family: Menlo, Monaco, "Courier New", monospace; */
 }
 code {
   padding: .25em .5em;
   font-size: 85%;
-  color: #bf616a;
-  background-color: #f9f9f9;
+  color: #FF7300;
+  background-color: #eee;
   border-radius: 3px;
 }
 pre {
@@ -338,7 +338,7 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: #bf4d28;
 }
 .page-title,
 .post-title {
