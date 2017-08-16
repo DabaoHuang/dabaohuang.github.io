@@ -28,16 +28,17 @@ cd ~/.ssh
 ssh-keygen
 {% endhighlight %}
 
-在產生金鑰的過程中，會詢問一些問題，對於一般的使用者而言
-全部都使用預設值（直接按下 Enter 鍵）即可。接著系統會問你是否要指定金鑰密碼
+在產生金鑰的過程中，會詢問一些問題，對於一般的使用者而言全部都使用預設值（直接按下 **Enter** 鍵）即可。
 
-指定金鑰檔案名稱，直接 enter 為預設`id_rsa`
+接著系統會問你是否要指定金鑰密碼
+
+指定金鑰檔案名稱，直接 **Enter** 為預設`id_rsa`
  > Enter file in which to save the key (/root/.ssh/id_rsa): 
 
 如果這邊直接按 Enter，代表不需要密碼或是輸入指定的密碼
  > Enter passphrase (empty for no passphrase):
 
-再次輸入密碼，就會產生金鑰
+再次輸入密碼或是在按一次**Enter**，就會產生金鑰
  > Enter same passphrase again:
 
 <div class="message">
@@ -54,27 +55,28 @@ ssh-keygen
  OK，這時候我們可以看一下我們的公鑰長的如何，並把那一大串字複製
 
 {% highlight shell %}
-#ssh-rsa AAAAB3Nxxxxxxxxxxxxxxxxxxxxxxxx
 cat id_rsa.pub
+#ssh-rsa AAAAB3Nxxxxxxxxxxxxxxxxxxxxxxxx
 {% endhighlight %}
 
 接下來可以拿著這串公鑰到**github**，你的帳號設定內找到註冊公鑰的地方
 
-接下來就可以直接在 Linux 上`git clone`你的 repository
+然後就可以直接在 Linux 上`git clone`你的 repository
 
 {% highlight shell %}
 git clone httsp://github.com/xxxxx/xxxx.git
 {% endhighlight %}
 
-然後試著 git push 看看是否可以寫入，我就有遇到一個小問題，系統出現
+再試著 git push 看看是否可以寫入，我就有遇到一個小問題，系統出現 ↓
  > error: The requested URL returned error: 403 while accessing https://dabahuang@github.com/ ....
 
 後來我查了一下，在 [stackoverflow](https://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-403-fatal-http-request-failed) 上也有人遇到跟我一樣的問題
 
 原來 Github 只支援**ssh**的讀寫，雖然**https**也回傳可讀寫卻不支援 XD
+
 這時侯只要編輯**同repository**目錄底下的`.git/config`就可以正常使用囉 !
 
-`.git/config`
+`.git/config`↓
 {% highlight shell %}
 [core]
         repositoryformatversion = 0
