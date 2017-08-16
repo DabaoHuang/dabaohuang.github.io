@@ -107,3 +107,4 @@ git push -u origin master
 <div class="message">
 窗戶的使用者建置git非常方便，只要安裝好git、tortles git 這兩個軟體，因為過程非常簡單，滑鼠左鍵加右鍵就能解決一切安裝與設定，頂多加上Ctrl+C複製 github 的 SSL 連結，就不多做說明了，希望我不要忘記怎麼設定，不然回頭要裝 windows git 時忘記怎麼裝回來看到當時的我打這串字應該會很想死 XD
 </div>
+
