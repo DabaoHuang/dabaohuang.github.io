@@ -21,7 +21,7 @@ find 指令結構
  > find ~ -iname "test"
 
   - 在**家目錄**搜尋名稱包含`test`且大小寫一致的資料夾或檔案
- > find ~ -name "*test*"
+ > find ~ -name "\*test\*"
  
  - 在**家目錄**搜尋名為`test`且大小寫一致的檔案
  > find ~ -name "test" -type f
@@ -44,10 +44,12 @@ find 指令結構
 以上只是搜尋，接下來下面要介紹的是進階用法，適合拿來做排程、執行 ↓
 
  - 在**/var/www**搜尋名稱包含`DABAO`的檔案，並更改擁有者為**dabao**
- > find -name "*DABAO*" -type f -user dabao
+ > find -name "\*DABAO\*" -type f -user dabao
 
  - 在**/tmp**搜尋超過`七天`沒有改動過的檔案並刪除
  > find /tmp -mtime +7 -type f -delete
 
  - 在**/var/www**搜尋副檔名為`.php`且內容包含`phpinfo`的檔案
- > find -name "*.php" | exec grep -H "phpinfo" {} \;
+ {% highlight shell %}
+ find -name "*.php" | exec grep -H "phpinfo" {} \;
+ {% endhighlight %}
