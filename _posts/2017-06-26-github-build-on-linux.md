@@ -8,7 +8,7 @@ signature: true
 ---
 
 <div class="message">
-    以往遇到問題都沒有好好記錄的習慣，所以最近開了這個BLOG，想把遇到的問題或是方法記錄下來，我個人習慣的作業系統是 Windows，平常幫公司建置的 server 大部分是 Linux，所以 git 是直接裝在 Linux 上，但是 windows 建置 git 的環境也是挺方便的。
+    以往遇到問題都沒有好好記錄的習慣，所以最近開了這個BLOG，就是想把遇到的問題或是方法記錄下來，我個人習慣的作業系統是 Windows，平常幫公司建置的 server 大部分是 Linux，所以 git 是直接裝在 Linux 上，但是 windows 建置 git 的環境也是挺方便的。
 </div>
 
 ## Linux
