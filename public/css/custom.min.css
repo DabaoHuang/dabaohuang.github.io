@@ -405,6 +405,7 @@ body {
 .IN_POST_READ:hover.IN_POST_READ a::before,
 .IN_POST_READ:hover.IN_POST_READ a::after {
     font-size: 30px;
+    top:0px;
     transform: rotate(180deg);
     opacity: 1;
 }
