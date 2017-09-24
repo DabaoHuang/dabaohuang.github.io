@@ -11,7 +11,23 @@ body {
     scroll-behavior: smooth;
 }
 
-.theme-base-chocolate .sidebar {
+.mobile-sidebar {
+    display: none;
+    position: fixed;
+    top:0px;
+    width: 100%;
+    padding: 5px;
+}
+
+.mobile-sidebar > span {
+    float: left;
+    border-radius: 8px;
+    border: 2px solid #655643;
+    color: #655643;
+}
+
+.theme-base-chocolate .sidebar,
+.mobile-sidebar {
     background-color: #edc951;
     color: #655643
 }
@@ -78,6 +94,9 @@ body {
 @media screen and (max-width:767px) {
     .theme-base-chocolate .sidebar {
         display: none
+    }
+    .mobile-sidebar {
+        display: block;
     }
 }
 

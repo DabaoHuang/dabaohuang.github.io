@@ -6,7 +6,7 @@ title: About
 <p class="message">
     Hi I'm Dabao Huang. A website developer.
     <br>
-    你好，我叫做大寶也可以叫我熙熙，熱衷於各種技術鑽研的台灣人，
+    你好，我叫做大寶也可以叫我熙熙，熱衷於鑽研各種技術、攝影、游泳跟電動的宅宅，
     2015年之前就註冊好 github，卻一直到最近才感受到它的魅力，頻繁的使用，
     <br>
     github 真的超棒的 !
@@ -18,7 +18,7 @@ title: About
 
 Taiwanese BIG guy. Nice to meet you !!!
 
-Use: HTML, Javascript, CSS, PHP, C++, Visual Basic
+Language: HTML, Javascript, CSS, PHP, C++, Visual Basic, Assembly
 
 Learning: Python
 
