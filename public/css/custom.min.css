@@ -19,16 +19,25 @@ body {
     padding: 5px;
 }
 
-.mobile-sidebar > span {
+.mobile-sidebar > span:nth-child(1) {
     float: left;
     border-radius: 8px;
     border: 2px solid #655643;
     color: #655643;
+    font-size: 20px;
+    z-index: 9999999;
+    padding: 0 10px;
+}
+
+.mobile-sidebar > span:nth-child(2) {
+    float: right;
+    font-size: 20px;
+    padding: 0 10px;
 }
 
 .theme-base-chocolate .sidebar,
 .mobile-sidebar {
-    background-color: #edc951;
+    background-color: #EDC851;
     color: #655643
 }
 
@@ -161,7 +170,7 @@ body {
 .theme-base-chocolate .post {
     border-bottom: 1px solid #ddd;
     margin: 0;
-    padding: 40px 0
+    /* padding: 40px 0 */
 }
 
 .theme-base-chocolate .post h1 p {
