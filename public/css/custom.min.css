@@ -107,6 +107,11 @@ body {
     .mobile-sidebar {
         display: block;
     }
+
+    .theme-base-chocolate .post {
+        padding: 0 0 20px 0;
+    }
+    
 }
 
 .theme-base-chocolate .navbar {
@@ -170,7 +175,7 @@ body {
 .theme-base-chocolate .post {
     border-bottom: 1px solid #ddd;
     margin: 0;
-    /* padding: 40px 0 */
+    padding: 40px 0
 }
 
 .theme-base-chocolate .post h1 p {
