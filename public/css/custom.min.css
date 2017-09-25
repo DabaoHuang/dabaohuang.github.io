@@ -23,6 +23,12 @@ body {
     position: absolute;
     top:45px;
     left: 0px;
+    font-size: 30px;
+}
+
+.mobile-menu > div {
+    padding: 10px;
+    border: 2px solid #655643;
 }
 
 .mobile-sidebar > span:nth-child(1) {
