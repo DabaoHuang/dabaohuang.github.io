@@ -19,6 +19,12 @@ body {
     padding: 5px;
 }
 
+.mobile-menu {
+    position: absolute;
+    top:45px;
+    left: 0px;
+}
+
 .mobile-sidebar > span:nth-child(1) {
     float: left;
     border-radius: 8px;
