@@ -21,13 +21,13 @@ body {
 
 .mobile-menu {
     position: absolute;
-    top: 45px;
+    top: 43px;
     left: -150px;
     font-size: 24px;
     width: 150px;
     height: -webkit-fill-available;
     background-color: #EDC851;
-    transition: all .3;
+    transition: all .3s;
 }
 
 .mobile-menu-show {
