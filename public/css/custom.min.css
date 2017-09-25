@@ -21,14 +21,22 @@ body {
 
 .mobile-menu {
     position: absolute;
-    top:45px;
+    top: 45px;
+    left: -150px;
+    font-size: 24px;
+    width: 150px;
+    height: -webkit-fill-available;
+    background-color: #EDC851;
+    transition: all .3;
+}
+
+.mobile-menu-show {
     left: 0px;
-    font-size: 30px;
 }
 
 .mobile-menu > div {
     padding: 10px;
-    border: 2px solid #655643;
+    /* border: 2px solid #655643; */
 }
 
 .mobile-sidebar > span:nth-child(1) {

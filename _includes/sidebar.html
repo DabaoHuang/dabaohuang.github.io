@@ -1,7 +1,7 @@
 {% assign pages_list = site.pages %}
 
 <div class="mobile-sidebar">
-  <span onclick="">
+  <span onclick="$('mobile-menu').toggleClass('mobile-menu-show');">
     <i class="fa fa-bars" aria-hidden="true"></i>
   </span>
 
@@ -18,9 +18,8 @@
       {% endif %}
     {% endfor %}
     <div>
-      <a href="{{ site.github.repo }}" target="_blank"><i class="fa fa-github-square"></i></a>
-      <a href="{{ site.author.fb }}" target="_blank"><i class="fa fa-facebook-square"></i></a>
-    </div>
+      <a href="{{ site.github.repo }}" target="_blank"><i class="fa fa-github-square"></i>&nbsp;GitHub</a></div>
+    <div><a href="{{ site.author.fb }}" target="_blank"><i class="fa fa-facebook-square"></i>&nbsp;Facebook</a></div>
   </div>
 </div>
 
