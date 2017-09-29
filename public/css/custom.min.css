@@ -57,6 +57,11 @@ body {
     padding: 0 10px;
 }
 
+body.theme-base-chocolate {
+    max-width: 100%;
+
+}
+
 .theme-base-chocolate .sidebar,
 .mobile-sidebar {
     background-color: #EDC851;
@@ -312,6 +317,10 @@ body {
     }
     .theme-base-chocolate .archive .archive-post-title {
         width: 84%
+    }
+    .IN_POST_READ {
+        float: inherit;
+        font-size: 18px;
     }
 }
 
