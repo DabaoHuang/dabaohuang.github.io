@@ -5,7 +5,11 @@
   <meta name="keywords"
         content="大寶開發學習誌,CSS,Git,HTML5,JavaScript,Python,jQuery,Front end engineering,VScode,Linux,CentOS,Ubuntu,RHEL,前端,後端,技術研究,教學,Dabao,Dabao Huang,{{ page.baseurl }}">
   <meta name="description"
-        content="大寶開發學習誌,CSS,Git,HTML5,JavaScript,Python,jQuery,Front end engineering,VScode,Linux,CentOS,Ubuntu,RHEL,前端,後端,技術研究,教學,Dabao,Dabao Huang,{{ page.baseurl }}">
+        content="大寶開發學習誌,CSS,Git,HTML5,JavaScript,Python,jQuery,Front end engineering,VScode,Linux,CentOS,Ubuntu,RHEL,前端,後端,技術研究,教學,Dabao,Dabao Huang,{{ page.baseurl }},{% if page.title == "Home" %}
+        {{ site.title }} &middot; {{ site.tagline }}
+        {% else %}
+          {{ page.title }} &middot; {{ site.title }}
+        {% endif %}">
 
   <link rel="contents" title="Archive" href="/Archive">
   <link rel="start" title="Dabao's Tech Note" href="/">
@@ -40,7 +44,12 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
     ",
-      "description": "大寶開發學習誌,CSS,Git,HTML5,JavaScript,Python,jQuery,Front end engineering,VScode,Linux,CentOS,Ubuntu,RHEL,前端,後端,技術研究,教學,Dabao,Dabao Huang,{{ page.baseurl }}",
+      "description": "大寶開發學習誌,CSS,Git,HTML5,JavaScript,Python,jQuery,Front end engineering,VScode,Linux,CentOS,Ubuntu,RHEL,前端,後端,技術研究,教學,Dabao,Dabao Huang,{{ page.baseurl }},
+      {% if page.title == "Home" %}
+        {{ site.title }} &middot; {{ site.tagline }}
+      {% else %}
+        {{ page.title }} &middot; {{ site.title }}
+      {% endif %}",
       "url" :"{{ page.baseurl }}",
       "image":"",
       "sku":"",
