@@ -13,7 +13,7 @@ signature: true
 
 ## Linux
 
-###Step 1 - Install the service s3fs,fuse
+### Step 1 - Install the service s3fs,fuse
 
 {% highlight shell %}
 
