@@ -8,7 +8,7 @@ signature: true
 ---
 
 <div class="message">
-    這是很久之前學到的一個小東西，是將AWS上S3服務的bucket掛載到linux上的某個資料夾，讓ftp使用者能直接的操作檔案，在這之前要先跟大家說聲抱歉，在之前的文章中，我都是以root身分在下指令，之後我會多加使用sudo來寫，以免造成權限上的誤會
+    這是很久之前學到的一個小東西，是將AWS上S3服務的bucket掛載到linux上的某個資料夾，讓ftp使用者能直接的操作檔案
 </div>
 
 ## Linux
