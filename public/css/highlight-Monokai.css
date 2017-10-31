@@ -1,9 +1,9 @@
 .highlight pre, pre, .highlight .hll {
     font-family: 'Microsoft YaHei';
     background-color: #444;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     padding: 6px 10px;
-    border-radius: 3px;
+    border-radius: 5px;
     color: #FFFFFF;
 }
 /* Highlights taken from https://gist.github.com/asaaki/1007420  for Monokai theme */
