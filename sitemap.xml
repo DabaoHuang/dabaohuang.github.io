@@ -21,7 +21,7 @@ layout: null
         <loc>{{ site.baseurl }}{{ page.url }}</loc>
         <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-        <priority>{{ page.sitemap.priority }}</priority>
+        <priority>0.7</priority>
        </url>
     {% endif %}
   {% endfor %}
