@@ -9,7 +9,7 @@ layout: null
       {% if post.lastmod == null %}
         <lastmod>{{ post.date }}</lastmod>
       {% else %}
-        <lastmod>{{ post.lastmod }}</lastmod>
+        <lastmod>{{ post.lastmod | date: "%Y-%m-%d" }}</lastmod>
       {% endif %}
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -19,7 +19,7 @@ layout: null
     {% if page.sitemap != null and page.sitemap != empty %}
       <url>
         <loc>{{ site.baseurl }}{{ page.url }}</loc>
-        <lastmod>{{ page.sitemap.lastmod }}</lastmod>
+        <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
         <changefreq>{{ page.sitemap.changefreq }}</changefreq>
         <priority>{{ page.sitemap.priority }}</priority>
        </url>
