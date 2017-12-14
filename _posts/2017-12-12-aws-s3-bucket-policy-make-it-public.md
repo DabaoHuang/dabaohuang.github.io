@@ -43,4 +43,36 @@ signature: true
 | Action | 設定開放的權限，上面的範例是僅開放GetObject這項權限，也可以填入`*`開放全部權限(不建議) |
 | Resource | source bucket arn |
 
+### 2017-12-14 補充:
+
+Policy的規則是可以同時設定很多項的，以下是範例 ↓
+
+{% highlight json %}
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "SavePolicy",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::1234567891011:user/user-name"
+            },
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::butcket-name/*"
+        },
+        {
+            "Sid": "MakeItPublic",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::butcket-name/*"
+        }
+    ]
+}
+
+{% endhighlight %}
+
+ > 第一段 SavePolicy 是開放S3全部權限給某一使用者(arn)，第二段 MakeItPublic 是只開放讀取給全部使用者(*)
+
 參考：[https://tiffanybbrown.com/2014/09/making-all-objects-in-an-s3-bucket-public-by-default/index.html](https://tiffanybbrown.com/2014/09/making-all-objects-in-an-s3-bucket-public-by-default/index.html)
