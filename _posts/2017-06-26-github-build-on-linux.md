@@ -20,7 +20,7 @@ signature: true
 以下為指令紀錄 ( Command line below ) :
 
 {% highlight shell %}
-#在~家目錄建一個 ssh folder
+#在~家目錄建一個 .ssh folder
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 cd ~/.ssh
@@ -108,3 +108,32 @@ git push -u origin master
 窗戶的使用者建置git非常方便，只要安裝好git、tortles git 這兩個軟體，因為過程非常簡單，滑鼠左鍵加右鍵就能解決一切安裝與設定，頂多加上Ctrl+C複製 github 的 SSL 連結，就不多做說明了，希望我不要忘記怎麼設定，不然回頭要裝 windows git 時忘記怎麼裝回來看到當時的我打這串字應該會很想死 XD
 </div>
 
+### 2018-01-03 補充：
+
+今天創建了一個 `Repository`，但是跟上面的最終目的不太一樣，是要將「原本有資料的 Repository」 丟上去，當然前提是你已經在 github 創建好一個「空的」 Repository
+
+{% highlight shell %}
+
+# 到想要上傳的目錄
+cd /your/repo
+
+# 當然，本地也要建成一個 Repository，如果還沒作一定要先 git init，如果已經做過了可以跳過這個步驟
+git init
+
+# 因為預設通常是 origin，如果已經有別人先建置過一遍的話需要先確認一下有沒有人把 origin 用掉
+cat .git/config
+
+### 如果有用過的話會長的像是這樣
+[remote "origin"]
+        url = git@github.org:xxxxxxx/xxx.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+###
+
+# 確認後即可同步，如果Origin 被佔用了可以換成其他熟悉好記的字詞
+
+git remote add origin git@github.org:xxxxxxx/xxx.git
+git add .
+git commit -m "commit as `/bin/date +%G/%m/%d/%H/%M/%S"
+git push origin master
+
+{% endhighlight %}
