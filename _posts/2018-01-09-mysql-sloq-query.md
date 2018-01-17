@@ -13,11 +13,10 @@ signature: true
 
 ## Step 1 - 設定 /etc/my.cnf
 
- > 
+ > vim /etc/my.cnf
 
 {% highlight vim %}
 
-vim /etc/my.cnf
 # 設定紀錄sloq file的位置
 ...
 log-slow-queries=/your/path
@@ -37,7 +36,7 @@ log-long-format
 做完設定後，通常等過一段時間再來查那些語法過慢，這檔案早已茁壯，要查的話相當不容易，這時候 MySQL 早已推出 mysqldumpslow 這個小工具，幫助開發者分析這茁壯到不行的檔案
 
 
-{% highlight vim %}
+{% highlight bash %}
 
 mysqldumpslow使用说明
 mysqldumpslow --help
