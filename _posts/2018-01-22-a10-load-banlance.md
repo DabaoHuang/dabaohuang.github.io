@@ -219,3 +219,9 @@ Total received conn attempts on this port: 184
 {% endhighlight %}
 
 到這邊就大工告成啦 ! (累
+
+### 2018-01-25 補充：
+
+**測試** 連上建起的 `Virtual server VIP-WEB ` **211.78.82.5**
+
+兩台開`iftop`之類的監控軟體看目前是連到哪一台，然後把連上的那台網路線拔掉，看看連線是不是有分配到第二台，都正常就是成功了~
