@@ -8,7 +8,7 @@ signature: true
 ---
 
 <div class="message">
-    延續上一篇文章提到，正在協助建置機房，安裝 Red Hat Enter price 遇到的問題，解決過程檢視
+    延續上一篇文章提到，正在協助建置機房，安裝 Red Hat Enter price 時所做的筆記
 </div>
 
  - 安裝的設備: DELL R610 Server
