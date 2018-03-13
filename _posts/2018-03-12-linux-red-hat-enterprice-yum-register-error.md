@@ -16,7 +16,7 @@ signature: true
  - 安裝的設備: DELL R610 Server
  - 使用的媒介: USB 2.0 4G DISK
  - BIOS 模式: UEFI
- - USB Maker: Fedora media writer
+ - USB Maker: Rufus
 
 安裝過程就不贊述了，我是用 `Rufus` 製作開機 USB，安裝的檔案是 `Red Hat Enterprise Linux 7.4 Binary DVD`
 
@@ -26,7 +26,7 @@ signature: true
 
 白話來講就是你雖然下載了免費的 Enterprice 但是想要安裝屬於 Enterprice 的 Package 是要付錢的
 
-但是網路早已有解決方案了，我們可以安裝 CentOS 的 yum eprl 來代替 ( CentOS是 Red Hat 底下的開源 Linux 專案 )
+但是網路早已有解決方案了，可以安裝 CentOS 的 yum eprl 來代替 ( CentOS是 Red Hat 底下的開源 Linux 專案 )
 
 
 ## Step1 - 網路設定
@@ -100,7 +100,7 @@ nameserver 8.8.4.4 #google
 
 ## Step2 - 清除系統原生的 yum package
 
-我們可以透過 **rpm -qa** 這指令確認有哪些套件要清除
+可以透過 **rpm -qa** 這指令確認有哪些套件要清除
 
  > 可以用 `man rpm` 查詢相關說明，以下列出會使用的指令 ↓
  - `rpm -qa` : 列出目前系統內的套件
@@ -144,7 +144,7 @@ nameserver 8.8.4.4 #google
 **刪除原本的 repo 源**
  > `rm -rf /etc/yum.repos.d/*`
 
-**建立新的 repo 源**，這是將 yum 指向 [http://mirrors.163.com/](http://mirrors.163.com/)，把這網易公司鏡像網站當作 package base
+**建立新的 repo 源**，這是將 yum 指向 [http://mirrors.163.com/](http://mirrors.163.com/)，把**網易公司鏡像網站**當作 package base
  > `vim /etc/yum.repos.d/CentOS-Base.repo`
 
 {% highlight vim %}
