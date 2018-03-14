@@ -118,3 +118,8 @@ Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
  > echo "<?php phpinfo();?>" >> /var/www/html/index.php
 
 Test http://yourip/
+
+
+
+## 參考
+ - [CentOS 7 安裝、升級 PHP 5.6](http://blog.qoding.us/2017/09/centos-7-%E5%AE%89%E8%A3%9D%E3%80%81%E5%8D%87%E7%B4%9A-php-5-6/)

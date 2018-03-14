@@ -233,3 +233,8 @@ yum update -y rpm*
  - [Rufus](https://rufus.akeo.ie/?locale=zh_TW)
  - [開源鏡像網](http://mirrors.kernel.org/centos/)
  - [網易公司鏡像網站](http://mirrors.163.com/)
+
+
+## 參考
+ - [RedHat 替换 yum 源](https://ztgame.shenyu.me/linux/set-yum-source.html)
+ - [解决Redhat自带yum源注册问题](http://www.xiaoqying.com/?p=514)
