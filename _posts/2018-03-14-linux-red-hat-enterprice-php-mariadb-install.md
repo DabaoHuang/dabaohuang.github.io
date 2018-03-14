@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '[ INFRA ] Red hat enterprice PHP & MariaDB install - NOTE '
-subtitle: '[ INFRA ] Red hat enterprice PHP & MariaDB 安裝 - NOTE'
+title: '[ INFRA ] Red hat enterprice PHP 5.6 & MariaDB install - NOTE '
+subtitle: '[ INFRA ] Red hat enterprice PHP 5.6 & MariaDB 安裝 - NOTE'
 category: INFRA
 comments: true
 signature: true
@@ -15,16 +15,66 @@ signature: true
  - 使用的媒介: USB 2.0 4G DISK
  - BIOS 模式: UEFI
  - USB Maker: Rufus
- - O.S      : Red hat enterprice
+ - O.S      : Red hat enterprice 7
 
 安裝過程就不贊述了，我是用 `Rufus` 製作開機 USB，安裝的檔案是 `Red Hat Enterprise Linux 7.4 Binary DVD`
 
-雖然此步驟非常的簡單，還是有些小細節想記錄下來，以下是指令紀錄
+除了上次提到的軟體源 `mirror163.com`，這次還會再新增一個 `epel` 來安裝 php5.6 版本
+
+以下方法其他 php5.4, php5.5 也適用
+
+## install/update epel-repo
 
 {% highlight shell %}
 
-# 安裝 php，因為上一篇有更新過軟體源到最新的關係，安裝的PHP是 7.0up 的版本，若是要安裝其他版本請參考下篇
-yum install php php-mysql php-pdo php-gd php-mbstring
+yum install epel-release
+# or
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+# 更新 Remi 庫
+rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+
+# 檢查有沒有 php 相關套件
+rpm -qa | grep php
+
+# 卸載 php 相關套件
+yum remove php-*
+
+{% endhighlight %}
+
+ > `vim /etc/yum.repos.d/remi.repo`
+
+{% highlight shell %}
+[remi-php56]
+name=Les RPM de remi de PHP 5.6 pour Enterprise Linux 6 - $basearch
+#baseurl=http://rpms.famillecollet.com/enterprise/6/php56/$basearch/
+mirrorlist=http://rpms.famillecollet.com/enterprise/6/php56/mirror
+# WARNING: If you enable this repository, you must also enable "remi"
+enabled=1  # <=== 這行要改成 1 ，原本是 0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+{% endhighlight %}
+
+
+## Step2 - Install php
+
+在安裝之前，先把 yum 清空一遍，重作一份 cache
+
+{% highlight shell %}
+yum clean all
+
+yum makecache fast
+{% endhighlight %}
+
+接著就可以直接使用 remi repo 安裝
+
+ > yum install --enablerepo=remi,remi-php56 php php-devel php-mbstring php-pdo php-gd php-xml php-mcrypt php-mysql
+
+上方範例是安裝 php5.6 版本，如果想要安裝 php7, php5.5, php5.4，只要把php56改成 php70、php55、php54 即可
+
+後面的 php php-devel ... 是一些基本會用到的套件，常在寫 php 應該都不陌生
+
+{% highlight shell %}
 
 # 修改時區設定
 sed -i 's/;date.timezone =/date.timezone = Asia\/Taipei/' /etc/php.ini
@@ -34,7 +84,12 @@ service httpd restart
 # Redirecting to /bin/systemctl restart  httpd.service
 # or
 systemctl restart httpd
+{% endhighlight %}
 
+
+## Step3 - MariaDB
+
+{% highlight shell %}
 # 安裝 MariaDB
 yum install mariadb-server mariadb
 
@@ -48,3 +103,18 @@ systemctl start mariadb
 systemctl enable mariadb
 
 {% endhighlight %}
+
+
+## Finish
+
+ > `php --version`
+
+{% highlight text %}
+PHP 5.6.34 (cli) (built: Feb 28 2018 10:16:58)
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+{% endhighlight %}
+
+ > echo "<?php phpinfo();?>" >> /var/www/html/index.php
+
+Test http://yourip/

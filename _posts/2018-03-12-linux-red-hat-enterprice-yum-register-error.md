@@ -107,10 +107,11 @@ nameserver 8.8.4.4 #google
  - `rpm -qa | grep yum` : 列出所有 yum 相關的套件
 
  > `rpm -qa |grep yum|xargs rpm -e --nodeps` # 解除 yum 相關的安裝
- > `rpm -qa |grep python-urlgrabb|xargs rpm -e –nodep` 這支是網路上的教學強烈建議一併解除安裝的，安裝 yum 的時候會用到
+ > `rpm -qa |grep python-urlgrabb|xargs rpm -e –nodeps` # 這支是網路上的教學強烈建議一併解除安裝的，安裝 yum 的時候會用到
  - `--nodeps` : 不檢查相關性，直接執行指令
  - `--force` : 強制執行
  - `-e` : 解除安裝
+ > `rpm -qa | grep subscription | xargs rpm -e --nodeps` # 順便把一直提醒你註冊的程式也砍掉 :P
 
 
 
@@ -137,7 +138,7 @@ nameserver 8.8.4.4 #google
 **第一個一定要先裝這個，順序不能錯**
  > `rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpm`
 
- > `rpm -ivh --force --nodeps yum-3.4.3-154.el7.centos.noarch.rpm python-urlgrabber-3.10-8.el7.noarch.rpm yum-plugin-fastestmirror-1.1.31-42.el7.noarch.rpm`
+ > `rpm -ivh --force --nodeps yum-3.4.3-154.el7.centos.noarch.rpm python-urlgrabber-3.10-8.el7.noarch.rpm yum-plugin-fastestmirror-1.1.31-42.el7.noarch.rpm yum-rhn-plugin-2.0.1-9.el7`
 
  - `rpm -ivh` : rpm 的安裝參數
 

@@ -15,7 +15,7 @@ signature: true
  - 使用的媒介: USB 2.0 4G DISK
  - BIOS 模式: UEFI
  - USB Maker: Rufus
- - O.S      : Red hat enterprice
+ - O.S      : Red hat enterprice 7
 
 安裝過程就不贊述了，我是用 `Rufus` 製作開機 USB，安裝的檔案是 `Red Hat Enterprise Linux 7.4 Binary DVD`
 
