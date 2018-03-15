@@ -73,7 +73,7 @@ dabao-ax1000(config)# show clock
 
 ## Step 2 - Cut Vlan
 
- > Vlan : 虛擬區域網路，總而言之就是劃分、隔離不同的網路，需要知道詳細的話，wiki有解答~
+ > Vlan : 虛擬區域網路，總而言之就是劃分、隔離不同的網路，需要知道詳細的話，[wiki](https://zh.wikipedia.org/zh-tw/虚拟局域网)有解答~
 
 {% highlight shell %}
 
@@ -135,7 +135,7 @@ dabao-ax1000(config-if:ve20)# end
 到這邊，初步的設定算是做完了，接下來就是重頭戲 - 負載平衡
 
 
-## Step 3 - Load balance
+## Step 3 - Load-balance
 
 開始設定要做 load balance的群組，雖然圖片上有五台SERVER，但是目前我示範的是兩台的設定唷~
 
@@ -181,7 +181,6 @@ dabao-ax1000(config-slbsvc group)# end
 # 確認群組運作狀態
 dabao-ax1000(config)# show slb service-group
 
-dabao-ax1000(config)#show slb service-group
 Total Number of Service Groups configured: 1
                    Current = Current Connections, Total = Total Connections
                    Fwd-p = Forward packets, Rev-p = Reverse packets

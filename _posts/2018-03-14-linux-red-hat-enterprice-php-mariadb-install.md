@@ -27,6 +27,7 @@ signature: true
 
 {% highlight shell %}
 
+# 安裝 epel 庫
 yum install epel-release
 # or
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -42,9 +43,9 @@ yum remove php-*
 
 {% endhighlight %}
 
- > `vim /etc/yum.repos.d/remi.repo`
+ > vim /etc/yum.repos.d/remi.repo
 
-{% highlight shell %}
+{% highlight vim %}
 [remi-php56]
 name=Les RPM de remi de PHP 5.6 pour Enterprise Linux 6 - $basearch
 #baseurl=http://rpms.famillecollet.com/enterprise/6/php56/$basearch/
@@ -58,13 +59,10 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
 
 ## Step2 - Install php
 
-在安裝之前，先把 yum 清空一遍，重作一份 cache
-
-{% highlight shell %}
-yum clean all
-
-yum makecache fast
-{% endhighlight %}
+在安裝之前，先把 yum 清空一遍
+ > yum clean all
+重作一份 cache
+ > yum makecache fast
 
 接著就可以直接使用 remi repo 安裝
 
@@ -74,40 +72,32 @@ yum makecache fast
 
 後面的 php php-devel ... 是一些基本會用到的套件，常在寫 php 應該都不陌生
 
-{% highlight shell %}
+修改時區
+ > sed -i 's/;date.timezone =/date.timezone = Asia\/Taipei/' /etc/php.ini
 
-# 修改時區設定
-sed -i 's/;date.timezone =/date.timezone = Asia\/Taipei/' /etc/php.ini
-
-# 重新啟動 Web Server
-service httpd restart
-# Redirecting to /bin/systemctl restart  httpd.service
-# or
-systemctl restart httpd
-{% endhighlight %}
+重新啟動 Web server
+ > systemctl restart httpd
+或`service httpd restart`
 
 
 ## Step3 - MariaDB
 
-{% highlight shell %}
-# 安裝 MariaDB
-yum install mariadb-server mariadb
+安裝 MariaDB
+ > yum install mariadb-server mariadb
 
-#啟動 MariaDB
-systemctl start mariadb
+啟動 MariaDB
+ > systemctl start mariadb
 
-#初始化資料庫設定
-/usr/bin/mysql_secure_installation
+初始化資料庫設定
+ > /usr/bin/mysql_secure_installation
 
-#設定開機時啟動 MariaDB
-systemctl enable mariadb
-
-{% endhighlight %}
+設定開機時啟動 MariaDB
+ > systemctl enable mariadb
 
 
 ## Finish
 
- > `php --version`
+ > php --version
 
 {% highlight text %}
 PHP 5.6.34 (cli) (built: Feb 28 2018 10:16:58)
@@ -115,7 +105,7 @@ Copyright (c) 1997-2016 The PHP Group
 Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
 {% endhighlight %}
 
- > echo "<?php phpinfo();?>" >> /var/www/html/index.php
+ > echo "小於?phpinfo();?大於" >> /var/www/html/index.php
 
 Test http://yourip/
 

@@ -129,6 +129,16 @@ cat .git/config
         fetch = +refs/heads/*:refs/remotes/origin/*
 ###
 
+# 或是用
+git remote -v
+origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+origin  https://github.com/OWNER/REPOSITORY.git (push)
+destination  https://github.com/FORKER/REPOSITORY.git (fetch)
+destination  https://github.com/FORKER/REPOSITORY.git (push)
+
+# 如果有重複的分支就刪除
+git remote rm destination
+
 # 確認後即可同步，如果Origin 被佔用了可以換成其他熟悉好記的字詞
 
 git remote add origin git@github.org:xxxxxxx/xxx.git
@@ -137,3 +147,6 @@ git commit -m "commit as `/bin/date +%G/%m/%d/%H/%M/%S"
 git push origin master
 
 {% endhighlight %}
+
+## 參考
+ - (GitHub.Help)[https://help.github.com/articles/removing-a-remote/]
