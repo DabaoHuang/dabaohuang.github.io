@@ -598,3 +598,8 @@ body.theme-base-chocolate {
     float: left;
     margin-right: 5px;
 }
+
+div.post h2 {
+    color: forestgreen;
+    margin: 3% 0;
+}

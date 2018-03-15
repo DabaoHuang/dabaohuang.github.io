@@ -23,7 +23,7 @@ signature: true
 
 以下方法其他 php5.4, php5.5 也適用
 
-## install/update epel-repo
+## Step1 - install/update epel-repo
 
 {% highlight shell %}
 
@@ -77,6 +77,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
 
 重新啟動 Web server
  > systemctl restart httpd
+
 或`service httpd restart`
 
 
