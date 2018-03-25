@@ -224,3 +224,28 @@ Total received conn attempts on this port: 184
 **測試** 連上建起的 `Virtual server VIP-WEB ` **211.78.82.5**
 
 兩台開`iftop`之類的監控軟體看目前是連到哪一台，然後把連上的那台網路線拔掉，看看連線是不是有分配到第二台，都正常就是成功了~
+
+### 2018-03-25 補充：
+
+**還原/回復原廠設定的方法**
+
+ - 利用console Port登入設備
+ - 用User`reset` 登入
+    {% highlight shell %}
+    login: reset
+    password:  # A10設備上的serial-number
+    Do you want to reset admin password to default?[y/n]: y
+    Do you want to reset enable password to default?[y/n]: y
+    Do you want to erase startup config?[y/n]: y
+    {% endhighlight %}
+ - 使用預設帳密登入，下`system-reset`指令，重置startup-config
+    {% highlight shell %}
+    login: admin
+    password: a10
+    a10> en
+    a10# config
+    a10(config)# system-reset
+    [yes/no]: yes
+    {% endhighlight %}
+
+完成!
