@@ -56,7 +56,7 @@ ClientAliveCountMax 0
 
 {% endhighlight %}
 
-設定完後記得要重啟 ssh 服務
+設定完後記得要重啟 ssh, sshd 服務
  > systemctl restart ssh
  > systemctl restart sshd
 
