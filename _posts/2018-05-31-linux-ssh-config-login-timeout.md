@@ -56,6 +56,10 @@ ClientAliveCountMax 0
 
 {% endhighlight %}
 
+設定完後記得要重啟 ssh 服務
+ > systemctl restart ssh
+ > systemctl restart sshd
+
 以上就完成逾時不斷線的設定囉！
 
 ## 參考
