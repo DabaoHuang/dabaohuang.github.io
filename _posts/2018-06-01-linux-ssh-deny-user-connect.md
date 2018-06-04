@@ -30,6 +30,7 @@ DenyGroups master1 master2 master3
 
 設定完後記得要重啟 ssh 服務
  > systemctl restart ssh
+ 
  > systemctl restart sshd
 
 # 額外筆記
