@@ -21,12 +21,6 @@ Error message ↓
 
  > [ErrorException] proc_open(): fork failed – Cannot allocate memory
 
-
-
-1. 
-2. 
-3. 啟用虛擬記憶體
-
 {% highlight shell %}
 # 先確認可用空間
 df -h
