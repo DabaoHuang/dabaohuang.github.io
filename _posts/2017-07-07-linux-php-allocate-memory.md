@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[ Linux ] Linux cannot allocate memory'
-subtitle: '[ Linux ] 執行時，記憶體不足'
+subtitle: '[ Linux ] 記憶體不足，啟用 Swap Memory'
 category: Linux
 comments: true
 signature: true
@@ -21,17 +21,19 @@ Error message ↓
 
  > [ErrorException] proc_open(): fork failed – Cannot allocate memory
 
-1. 先確認可用空間
-2. 再把部分的可用空間改為虛擬記憶體
+
+
+1. 
+2. 
 3. 啟用虛擬記憶體
 
 {% highlight shell %}
-# 檢查空閒的空間
+# 先確認可用空間
 df -h
 cd /(可用的空間)
-# 製造1G的swap memory
+# 再把部分的可用空間改為虛擬記憶體，製造 1G 的 Swap Memory
 fallocate -l 1G swapfile
-# 改寫 swap memory的權限
+# 修改 Swap Memory file 的權限
 chmod 600 swapfile
 mkswap swapfile
 # 啟動
