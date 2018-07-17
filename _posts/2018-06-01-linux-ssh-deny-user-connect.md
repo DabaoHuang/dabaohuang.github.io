@@ -60,4 +60,4 @@ DenyGroups master1 master2 master3
 假設我現在登入的是 ubuntu 只要輸入 `groups` 就能看到使用者 ubuntu 的所在群組 !
 
 # 參考
- - (鳥哥 第十三章-Linux 帳號管理與 ACL 權限設定)[http://linux.vbird.org/linux_basic/0410accountmanager.php#group_file]
+ - [鳥哥 第十三章-Linux 帳號管理與 ACL 權限設定](http://linux.vbird.org/linux_basic/0410accountmanager.php#group_file)
