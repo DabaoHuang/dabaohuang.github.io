@@ -425,6 +425,7 @@ body.theme-base-chocolate {
 
 .dabao_headpic img {
     border-radius: 160px;
+    transform: scale(0.7);
 }
 
 .IN_POST_READ a,
