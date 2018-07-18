@@ -11,9 +11,9 @@ signature: true
      今天有個廠商希望我們開放一支ＡＰＩ給他拉取資料，站在資安的角度上，要給他一些限制
 </div>
 
-#Nginx
+# Nginx
 
-##帳號/密碼 登入
+## 帳號/密碼 登入
 
 這個方法是透過 [HTTP Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) 驗證登入
 
