@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[ Nginx ] deny-allow-ip'
+title: '[ Nginx ] account and ip login'
 subtitle: '[ Nginx ] 開放特定ip ＆ 帳號密碼登入'
 category: Nginx
 comments: true
