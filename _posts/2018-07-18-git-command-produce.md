@@ -1,0 +1,119 @@
+---
+layout: post
+title: '[ Git ] command produce'
+subtitle: '[ Git ] 常用指令介紹'
+category: Git
+comments: true
+signature: true
+---
+
+<div class="message">
+    Git 指令多而雜，記錄一些好用卻時常忘記的指令
+</div>
+
+# Git
+
+## 工具建議
+
+ - Mac : iterm2 , 終端機
+ - Linux : 終端機
+ - Windows : Git bash
+
+## 安裝 Git
+
+ - Mac : `brew install git`
+ - Linux(Ubuntu, Debian) : `apt-get install git-core`
+ - Linux(CentOS, RHCE) : `yum install git`
+ - Windows : 請安裝 [Git](https://git-scm.com/downloads)
+
+## 如何開始使用 Respository 
+ - 在全新/未使用的專案底下 : `git init`
+ - 已經存在/已知的位址 : `git clone git://xxxxxxx.git`
+
+## 如何推送你的第一個版本
+
+Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄底下
+
+1. 將想要修改的檔案加入此次推送的流程中
+ > git add PATH/FileName
+ - 或是將 **所有** 修改過的檔案加進暫存內，用 **句點** 表示所有檔案
+ > git add . 
+2. 為這批檔案寫上一個可以辨識的註解，這是可以在版本控制中看到的
+ > git commit -m "It's my first commit"
+ - 省略前面的 `git add .`，所有修改過的檔案直接執行 commit
+ > git commit -am "It's mean all files."
+ ＊注意：只要完成 **commit** 即完成本機上的版本控制，若是需要更新到 **遠端Branch** 才進行下一步
+3. 推送上來自 origin 這個遠端的分支 master
+ > git push origin master
+
+## 修改 Commit
+
+ - 修改上一次已經提交的 commit 訊息 : `git commit --amend`
+ - 把檔案Ａ, 檔案Ｂ補充到上次提交的 commit : `git commit --amend fileA fileB`
+ - 取消剛剛提交的 commit 並保留修改過的檔案 : `git reset HEAD^ --soft`
+ - 取消剛剛提交的 commit 並完全回到上一個版本，連同檔案都復原到上個版本 : `git reset HEAD^ --hard`
+
+## 本地/遠端分支操作 Branch
+
+ - `git branch`
+  - 無參數 : 列出所有 **本地** 分支
+  - -r : 列出遠端所有分支
+  - -a : 列出所有本地/遠端分支
+  - **Name** : 建一個新的分支 **Name**
+  - -d **Name** : 刪除本地分支 **Name**
+  - **Name** **Commit/branch NameB** : 以 **Commit/NameB** 為 base，建立分支 **Name**
+  - --track **Name** **origin/NameB** : 重新定義/連結本地分支 **Name** 與遠端分支 **NameB**，這樣在本地操作 **Name** 不管是pull/push，都會直接對應 **NameB**
+
+ - `git checkout` （切換時，修改過的檔案會保留在你原來的分支）
+  - **Name** : 切換到分支 **Name**
+  - -b **Name** : 建一個分支 Name 並切換到此分支
+ - `git push origin :Name` : 刪除遠端 **origin** 中的分支 **Name**
+
+## 遠端服務 Remote
+
+上述的資料中提到的 **origin** 是最常見的 Remote 名稱
+
+在執行 `git clone git://xxxxxx.git` 的過程中也是預設在本地建立一個 **origin**
+
+詳見 `repo/.git/config`
+
+ - `git remote add **Remote** git://xxxxxxxx.git` : 把 **Remote** 及後面代的網址加入遠端列表，就可以在這 repo 下對新的遠端操作
+
+## 合併分支 Merge
+
+ - `git merge`
+  - **Name** : 將 **Name** 合併到當下分支中並產生一個 commit 做紀錄
+  - **Name** --no-commit : 將 **Name** 合併到當下分支中，且不產生合併的 commit (不建議)
+ - `git cherry-pic Commit` : 將 **commit** 合併到當下的分支中
+
+## 暫存修改 Stash
+
+ - `git stash`
+  - 無參數 : 暫存目前所有有修改過的檔案
+  - apply : 複製出最後一次更新的暫存檔案
+  - pop   : 複製出最後一次更新的暫存檔案並移除
+  - list  : 列出所有暫存清單
+  - clear : 刪除所有暫存中的檔案
+
+## 還原分支 Reset
+
+ - `git reset`
+  - HEAD^ --hard : 強制還原到上個版本
+  - --hard **commit** : 將整個分支還原至 **commit** 的狀態
+
+假設，有一種情況是你發現過了兩三個版本之後才發現很多 code 都是錯的
+
+（這情況很瞎，我知道，只是個假設）
+
+想要將 **遠端分支** 也一併還原到某個版本，並且確定該版本後面的改動也都不需要了
+
+這時候只需要紀下 **commit** 的序號，先用上述的指令先將本地端的版本還原到你想要的時間點
+
+然後，執行 `git push remote branch --force`，強制遠端分支更新至你的版本
+
+這時候會發現遠端的 gitlens 後面比他新的版本都不見了，這也是一種整線技巧，但是這技巧非常危險
+
+請搞懂了再使用，不要危害他人啊！
+
+# 參考
+ - [Git](https://git-scm.com/docs)
