@@ -17,7 +17,7 @@ signature: true
 
  > Error: php56w-common conflicts with php-common-5.4.16-42.el7.x86_64
 
-所以我一併安裝好這兩個模組就可以正常使用 PHPExce 
+所以我一併安裝好這兩個模組就可以正常使用 PHPExcel
 
 {% highlight vim %}
 sudo -s
