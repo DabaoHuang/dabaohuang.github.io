@@ -35,16 +35,16 @@ signature: true
 Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄底下
 
 1. 將想要修改的檔案加入此次推送的流程中
- > git add PATH/FileName
+ > `git add PATH/FileName`
  - 或是將 **所有** 修改過的檔案加進暫存內，用 **句點** 表示所有檔案
- > git add . 
+ > `git add . `
 2. 為這批檔案寫上一個可以辨識的註解，這是可以在版本控制中看到的
- > git commit -m "It's my first commit"
+ > `git commit -m "It's my first commit"`
  - 省略前面的 `git add .`，所有修改過的檔案直接執行 commit
- > git commit -am "It's mean all files."
+ > `git commit -am "It's mean all files."`
  ＊注意：只要完成 **commit** 即完成本機上的版本控制，若是需要更新到 **遠端Branch** 才進行下一步
 3. 推送上來自 origin 這個遠端的分支 master
- > git push origin master
+ > `git push origin master`
 
 ## 修改 Commit
 
@@ -66,16 +66,6 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
   - **Name** : 切換到分支 Name
   - -b **Name** : 建一個分支 Name 並切換到此分支
  - `git push origin :Name` : 刪除遠端 origin 中的分支 Name
-
-## 遠端服務 Remote
-
-上述的資料中提到的 **origin** 是最常見的 Remote 名稱
-
-在執行 `git clone git://xxxxxx.git` 的過程中也是預設在本地建立一個 **origin**
-
-詳見 `repo/.git/config`
-
- - `git remote add Remote git://xxxxxxxx.git` : 把 Remote 及後面代的網址加入遠端列表，就可以在這 repo 下對新的遠端操作
 
 ## 合併分支 Merge
 
@@ -142,6 +132,42 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 1. `git commit -am "like statsh"` : 將修改過的檔案丟進本地分支，並成為最新版本
 2. `git pull --rebase origin master` : 把遠端有修改的部分都加進本地分支歷史，並更新到最新版本
 3. `git reset HEAD~1` : 將本地分支回復到前一版本並保留修改過的檔案
+
+## 遠端服務 Remote
+
+上述的資料中提到的 **origin** 是最常見的 Remote 名稱
+
+在執行 `git clone git://xxxxxx.git` 的過程中也是預設在本地建立一個 **origin**
+
+詳見 `repo/.git/config`
+
+ - `git remote add Remote git://xxxxxxxx.git` : 把 Remote 及後面代的網址加入遠端列表，就可以在這 repo 下對新的遠端操作
+ - `git remote set-url Remote git@xxxxxxx.git` : 修改 Remote 遠端來源
+
+## 將遠端分支從 https 改用 ssh git
+
+1. 在 repo 下修改 Remote 位址
+ - `git remote set-url Remote git://xxxxxxx.git`
+2. 創造 ssh 金鑰，用 rsa 加密，名字是 Dabao-mac
+ - `ssh-keygen -t rsa -C "Dabao-mac"`
+3. 然後把金鑰.pub新增到使用的線上版控服務上並測試，這邊範例為 github
+ - `ssh git@github.com`
+4. 如果成功會看到以下訊息，如果看到以下訊息就可以回頭測試 `push` 了
+ - Hi DabaoHuang! You've successfully authenticated, but GitHub does not provide shell access.
+5. 失敗的話要先測試是不是金鑰沒放對位置，測試成功會看到上面的訊息
+ - `ssh -i ~/.ssh/Dabao-mac.pub git@github.com`
+6. 也有可能 `~/.ssh` 不存在，要自己建，然後從第二步驟開始在做一遍
+ - `mkdir ~/.ssh` => `chmod 700 ~/.ssh`
+7. 也有可能資料夾裡面沒有設定讓使用者 git 使用相對的key
+ - `touch ~/.ssh/config` => `vim ~/.ssh/config`
+{% highlight shell %}
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/Dabao-mac
+{% endhighlight %}
+
+以上，有可能的問題我已經盡量列出來了，有錯誤請指正！
 
 # 參考
  - [Git](https://git-scm.com/docs)
