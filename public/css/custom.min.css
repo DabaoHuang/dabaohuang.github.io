@@ -604,3 +604,7 @@ div.post h2 {
     color: forestgreen;
     margin: 3% 0;
 }
+
+strong {
+    color: #17de59;
+}
