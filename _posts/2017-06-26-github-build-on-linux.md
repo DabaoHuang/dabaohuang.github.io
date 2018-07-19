@@ -149,28 +149,4 @@ git push origin master
 {% endhighlight %}
 
 ## 參考
- - (GitHub.Help)[https://help.github.com/articles/removing-a-remote/]
-
-## 2018-07-13 補充：
-
-在開發過程中若是沒有將 git 管理好，難免會有幾條線被遺忘許久
-
-這時若是要將這條幾世紀前的分支往前推到最新，又怕檔案相隔太久
-
-merge出一堆 "===="，這時候只要複製最新的 commit version
-
-{% highlight shell %}
-
-git chekcout WannaChangeBranch
-
-git reset --hard {commit version}
-
-git add .
-
-git commit -m "upgrade"
-
-git push remote WannaChangeBranch --force
-
-{% endhighlight %}
-
- - 刪除遠端分支：git push origin :branch
+ - (GitHub.Help)[https://help.github.com/articles/removing-a-remote/]s
