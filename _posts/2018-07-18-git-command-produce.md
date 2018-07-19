@@ -11,7 +11,7 @@ signature: true
     Git 指令多而雜，記錄一些好用卻時常忘記的指令
 </div>
 
-# Git
+![placeholder]({{ site.baseurl }}img/git.png "Git")
 
 ## 工具建議
 
@@ -167,7 +167,27 @@ Host github.com
     IdentityFile ~/.ssh/Dabao-mac
 {% endhighlight %}
 
-以上，有可能的問題我已經盡量列出來了，有錯誤請指正！
+## 修改作者 Config
+
+在工作過程中也許會遇到，做個紀錄
+
+1. 修改目前 config 中的 **name** 與 **email**，改一次永久有效喔！
+ - `git config --global --edit`
+![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-1.png {{ post.title }})
+
+2. 修改上次提交的 commit，沒有要修改內容的，直接儲存，就完成本地 commit 了
+ - `git commit --amend --reset-author`
+![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-2.png {{ post.title }})
+
+3. 查看修改
+ - `git log`
+![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-3.png {{ post.title }})
+
+4. 最後傳到遠端分支上
+ - `git push Remote Branch`
+
+
+以上，有可能的問題我已經盡量列出來了，有錯誤還請指正！
 
 # 參考
  - [Git](https://git-scm.com/docs)
