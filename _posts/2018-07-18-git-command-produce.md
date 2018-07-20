@@ -115,24 +115,6 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
 請搞懂了再使用，不要危害他人啊！
 
-## 小技巧
-
-開發人員每天上班第一件事情就是將本地分支更新到最新
-
-若是能順便整線以及同步，便是甚好
-
-但要是遇到修改的過的檔案與同事衝突可以試試以下方法
-
-1. `git stash -u` : 將修改過的檔案丟進暫存
-2. `git pull --rebase origin master` : 把遠端有修改的部分都加進本地分支歷史，並更新到最新版本
-3. `git stash pop` : 把修改過的檔案丟出來
-
-另外也有人透過另外一種方法做到相同目的
-
-1. `git commit -am "like statsh"` : 將修改過的檔案丟進本地分支，並成為最新版本
-2. `git pull --rebase origin master` : 把遠端有修改的部分都加進本地分支歷史，並更新到最新版本
-3. `git reset HEAD~1` : 將本地分支回復到前一版本並保留修改過的檔案
-
 ## 遠端服務 Remote
 
 上述的資料中提到的 **origin** 是最常見的 Remote 名稱
@@ -185,6 +167,58 @@ Host github.com
 
 4. 最後傳到遠端分支上
  - `git push Remote Branch`
+
+## 小技巧 - 保持最新又能保留修改過的檔案
+
+開發人員每天上班第一件事情就是將本地分支更新到最新
+
+若是能順便整線以及同步，便是甚好
+
+但要是遇到修改的過的檔案與同事衝突可以試試以下方法
+
+1. `git stash -u` : 將修改過的檔案丟進暫存
+2. `git pull --rebase origin master` : 把遠端有修改的部分都加進本地分支歷史，並更新到最新版本
+3. `git stash pop` : 把修改過的檔案丟出來
+
+另外也有人透過另外一種方法做到相同目的
+
+1. `git commit -am "like statsh"` : 將修改過的檔案丟進本地分支，並成為最新版本
+2. `git pull --rebase origin master` : 把遠端有修改的部分都加進本地分支歷史，並更新到最新版本
+3. `git reset HEAD~1` : 將本地分支回復到前一版本並保留修改過的檔案
+
+## 小技巧 - 多個 commit 合併成一個
+
+開發過程中有可能會有許多修正，可能寫好一個即 commit 一次
+
+這樣開發到最後，這條線必定有成堆的版本
+
+假設我們今天有兩條線 master , develop
+
+![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-4.png {{ post.title }})
+
+在遵守 git-flow 原則下，master 會是最主要佈上去的版本
+
+所以點越少越好，才不會亂，但 Dev 是開發過程
+
+中間可能會有很多未完成品，最後才慢慢開發完成
+
+假設 N 是我測試完成準備要佈上正式機的版本，可以這樣做
+
+1. 到 master 線上
+ - `git checkout master`
+
+2. 基於 C 結點之後的變更全部合併到 Master
+ - `git merge --squash dev`
+
+變為 ▽
+![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-5.png {{ post.title }})
+
+3. 把線路調整一下讓 Dev 基於 master 的 M 節點開始開發
+ - `git checkout develop`
+ - `git pull origin master`
+
+變為 ▽
+![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-6.png {{ post.title }})
 
 
 以上，有可能的問題我已經盡量列出來了，有錯誤還請指正！
