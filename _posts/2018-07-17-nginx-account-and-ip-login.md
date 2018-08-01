@@ -66,7 +66,7 @@ Adding password for user1
 
 再到 `/etc/nginx/conf/htpasswd` 確認即可
 
-##限制可以讀取的ＩＰ位址
+## 限制可以讀取的ＩＰ位址
 
 Nginx 只要 `allow` 與 `deny` 就可以做到
 
