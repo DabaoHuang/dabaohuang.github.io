@@ -72,7 +72,7 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
  - `git merge`
   - **Name** : 將 Name 合併到當下分支中並產生一個 commit 做紀錄
   - **Name** --no-commit : 將 Name 合併到當下分支中，且不產生合併的 commit (不建議)
- - `git cherry-pic Commit` : 將 commit 合併到當下的分支中
+ - `git cherry-pic <Commit>` : 將 commit 合併到當下的分支中
 
 ## 暫存修改 Stash
 
@@ -96,8 +96,8 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
   - 無參數 : 取消 stage
   - HEAD^ --soft : 取消前一個提交的 commit 並保留修改過的檔案
   - HEAD^ --hard : 取消前一個提交的 commit 並完全回到上一個版本，檔案也一併復原
-  - --soft **commit** : 將本地分支回復到該版本並保留修改過的檔案
-  - --hard **commit** : 將本地分支回復到該版本，檔案也一併復原
+  - --soft <commit> : 將本地分支回復到該版本並保留修改過的檔案
+  - --hard <commit> : 將本地分支回復到該版本，檔案也一併復原
   - HEAD~n : 將本地分支回復到往前數第n版本並保留修改過的檔案
   - HEAD^n : 將本地分支回復到往前數第n版本，檔案也一併復原
 
