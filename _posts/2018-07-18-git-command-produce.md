@@ -30,6 +30,8 @@ signature: true
  - 在全新/未使用的專案底下 : `git init`
  - 已經存在/已知的位址 : `git clone git://xxxxxxx.git`
 
+
+
 ## 如何推送你的第一個版本
 
 Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄底下
@@ -46,10 +48,14 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 3. 推送上來自 origin 這個遠端的分支 master
  > `git push origin master`
 
+
+
 ## 修改 Commit
 
  - `git commit --amend` : 修改上一次已經提交的 commit 訊息
  - `git commit --amend fileA fileB` : 把檔案Ａ, 檔案Ｂ補充到上次提交的 commit
+
+
 
 ## 本地/遠端分支操作 Branch
 
@@ -67,12 +73,16 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
   - -b **Name** : 建一個分支 Name 並切換到此分支
  - `git push origin :Name` : 刪除遠端 origin 中的分支 Name
 
+
+
 ## 合併分支 Merge
 
  - `git merge`
   - **Name** : 將 Name 合併到當下分支中並產生一個 commit 做紀錄
   - **Name** --no-commit : 將 Name 合併到當下分支中，且不產生合併的 commit (不建議)
  - `git cherry-pic <Commit>` : 將 commit 合併到當下的分支中
+
+
 
 ## 暫存修改 Stash
 
@@ -89,6 +99,8 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 可能會有疑問說，untracked files 是指什麼？
 
 可以試試再有修改檔案的情況下，下 `git status` 便知曉
+
+
 
 ## 還原分支 Reset
 
@@ -109,6 +121,8 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
 請搞懂了再使用，不要危害他人啊！
 
+
+
 ## 遠端服務 Remote
 
 上述的資料中提到的 **origin** 是最常見的 Remote 名稱
@@ -119,6 +133,8 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
  - `git remote add Remote git://xxxxxxxx.git` : 把 Remote 及後面代的網址加入遠端列表，就可以在這 repo 下對新的遠端操作
  - `git remote set-url Remote git@xxxxxxx.git` : 修改 Remote 遠端來源
+
+
 
 ## 將遠端分支從 https 改用 ssh git
 
@@ -143,7 +159,9 @@ Host github.com
     IdentityFile ~/.ssh/Dabao-mac
 {% endhighlight %}
 
-## 修改作者 Config
+
+
+## 小技巧 - 修改作者 Config
 
 在工作過程中也許會遇到，做個紀錄
 
@@ -162,6 +180,16 @@ Host github.com
 4. 最後傳到遠端分支上
  - `git push Remote Branch`
 
+
+
+## 小技巧 - 修改 git 預設編輯器
+
+在 ubuntu 下 `git config --amend ... ` 相關指令時，會以 *nano* 編輯器打開
+
+這時候可以下 `git config --global core.editor "vim"` 改以 *vim* 開啟
+
+
+
 ## 小技巧 - 保持最新又能保留修改過的檔案
 
 開發人員每天上班第一件事情就是將本地分支更新到最新
@@ -179,6 +207,8 @@ Host github.com
 1. `git commit -am "like statsh"` : 將修改過的檔案丟進本地分支，並成為最新版本
 2. `git pull --rebase origin master` : 把遠端有修改的部分都加進本地分支歷史，並更新到最新版本
 3. `git reset HEAD~1` : 將本地分支回復到前一版本並保留修改過的檔案
+
+
 
 ## 小技巧 - 多個 commit 合併成一個
 
