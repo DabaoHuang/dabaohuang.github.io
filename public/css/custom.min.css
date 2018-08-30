@@ -613,3 +613,8 @@ img[alt="logo"] {
     max-width: 50%;
     margin: auto;
 }
+
+img[alt="logo25"] {
+    max-width: 25%;
+    margin: auto;
+}
