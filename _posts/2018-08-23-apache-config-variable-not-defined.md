@@ -11,18 +11,7 @@ signature: true
     今天，Apache 竟然 Crash 了，還好是測試用的機器，查了一下發現是 Ubuntu 系統的更新影響運作，以下是記錄
 </div>
 
-![placeholder]({{ site.baseurl }}img/apache.png "Apache")
-
-## 工具建議
-
- - Mac : iterm2
- - Windows : Putty
-
-## 系統資訊
-
- - Ubuntu 16.04.4
- - Apache 2.4
- - php 7.2
+![logo]({{ site.baseurl }}img/apache.png "Apache")
 
 ## 錯誤訊息
 
@@ -179,3 +168,14 @@ Syntax OK
 
 重新啟動 Apache2 服務
  > $ sudo systemctl restart apache2
+
+## 工具建議
+
+ - Mac : iterm2
+ - Windows : Putty
+
+## 系統資訊
+
+ - Ubuntu 16.04.4
+ - Apache 2.4
+ - php 7.2
