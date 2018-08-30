@@ -11,7 +11,7 @@ signature: true
     Git 指令多而雜，記錄一些好用卻時常忘記的指令
 </div>
 
-![placeholder]({{ site.baseurl }}img/git.png "Git")
+![logo25]({{ site.baseurl }}img/git.png "Git")
 
 ## 工具建議
 
