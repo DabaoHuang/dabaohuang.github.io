@@ -608,3 +608,8 @@ div.post h2 {
 strong {
     color: #17de59;
 }
+
+img[alt="logo"] {
+    max-width: 50%;
+    margin: auto;
+}
