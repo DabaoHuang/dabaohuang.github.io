@@ -13,7 +13,7 @@ signature: true
 
 # MySQL
 
-![placeholder]({{ site.baseurl }}img/mysql.png {{ post.title }})
+![logo]({{ site.baseurl }}img/mysql.png {{ post.title }})
 
 1. 停用 MySQL service
  - `sudo /etc/init.d/mysql stop`
