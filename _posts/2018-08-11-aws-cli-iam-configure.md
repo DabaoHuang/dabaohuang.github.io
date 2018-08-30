@@ -11,7 +11,7 @@ signature: true
     AWS CLI 是 AWS 使用者相當方便的工具，在使用之前一定要配上對應服務的權限，也就是 IAM，以下是記錄
 </div>
 
-![placeholder]({{ site.baseurl }}img/aws.png "AWS")
+![logo]({{ site.baseurl }}img/aws.png "AWS")
 
 ## Step 1 - 安裝 Python, AWS CLI
 
