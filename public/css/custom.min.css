@@ -606,7 +606,8 @@ div.post h2 {
 }
 
 strong {
-    color: #17de59;
+    /*color: #17de59;*/
+    color: #6a5fc5;
 }
 
 img[alt="logo"] {

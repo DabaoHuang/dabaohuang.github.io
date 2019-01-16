@@ -54,6 +54,8 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
  - `git commit --amend` : 修改上一次已經提交的 commit 訊息
  - `git commit --amend fileA fileB` : 把檔案Ａ, 檔案Ｂ補充到上次提交的 commit
+ - `git rev-parse` : 取得當前 HEAD 版本號
+ - `git rev-parse origin/branch` : 取得 Rmote 端 HEAD 版本號
 
 
 
@@ -165,20 +167,52 @@ Host github.com
 
 在工作過程中也許會遇到，做個紀錄
 
-1. 修改目前 config 中的 **name** 與 **email**，改一次永久有效喔！
- - `git config --global --edit`
+1. 第一種是修改預設 config 中的 **name** 與 **email**，僅針對沒有設定作者的 repo 有效（預設）！
+ - `git config --global user.name "YOUR NAME"`
+ - `git config --global user.email "E-mail"`
+
+2. 第二種是只修改這個 **Repo** 要用的 **name** 與 **email**，比方說公司專案，不想拿在外闖蕩的名稱 commit 上去的話，建議設定
+ - `git config user.name "YOUR NAME"`
+ - `git config user.email "E-mail"`
+
+3. 最後傳到遠端分支上
+ - `git push Remote Branch`
+
+設定完成後可以先藉由 `git config --edit` 或 `git config --global --edit` 查看有沒有修改成功
 ![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-1.png {{ post.title }})
 
-2. 修改上次提交的 commit，沒有要修改內容的，直接儲存，就完成本地 commit 了
+
+
+## 小技巧 - 修改上次提交的 commit
+
+1. 編輯上次的 commit
  - `git commit --amend --reset-author`
 ![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-2.png {{ post.title }})
 
-3. 查看修改
+2. 查看修改
  - `git log`
 ![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-3.png {{ post.title }})
 
-4. 最後傳到遠端分支上
+3. 最後傳到遠端分支上
  - `git push Remote Branch`
+
+
+
+## 小技巧 - 修正某個節點的 commit
+
+假設今天有 A->B->C->D->E->F(HEAD)，而我要修改 C,D,E 這三個 commit
+
+1. 在該 **Repo** 的目錄下指令
+ - `git rebase -i B`
+
+2. 將要修改的 commit *pick* 都改為 *edit* `:wq` 儲存，這時候 commit 會停在 C 上
+![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-7.png {{ post.title }})
+
+3. 此時是修改 C
+ - `git commit --amend --author="Author Name<email@e-mail>"`
+
+4. 進入 D，重複**步驟 3 , 4** 到結束即可
+ - `git rebase --continue`
 
 
 
@@ -186,7 +220,9 @@ Host github.com
 
 在 ubuntu 下 `git config --amend ... ` 相關指令時，會以 *nano* 編輯器打開
 
-這時候可以下 `git config --global core.editor "vim"` 改以 *vim* 開啟
+這時候可以下 `git config --global core.editor "vim"` 改以 *vim* 
+
+要是你有其他慣用的編輯器只要把 *vim* 換掉即可
 
 
 
