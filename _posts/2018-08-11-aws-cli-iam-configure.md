@@ -43,6 +43,12 @@ $ aws configure
 
 這樣設定，會讓 CLI 在不指定的情況下使用此權限
 
+## 2019-06-25 更新
+
+在原廠受訓上課時得知，原來這是以明碼儲存的... 其位置就在
+
+ > cat ~/.aws/credentials
+
 # 參考
  - [AWS CLI Document (English)](https://docs.aws.amazon.com/cli/latest/reference/)
  - [AWS CLI Document (中文)](https://docs.aws.amazon.com/zh_tw/polly/latest/dg/setup-aws-cli.html)
