@@ -7,11 +7,11 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/apache.png "Apache")
+
 <div class="message">
     今天，Apache 竟然 Crash 了，還好是測試用的機器，查了一下發現是 Ubuntu 系統的更新影響運作，以下是記錄
 </div>
-
-![logo]({{ site.baseurl }}img/apache.png "Apache")
 
 ## 錯誤訊息
 

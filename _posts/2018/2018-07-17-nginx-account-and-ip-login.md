@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Nginx.png "Nginx")
+
 <div class="message">
      今天有個廠商希望我們開放一支ＡＰＩ給他拉取資料，站在資安的角度上，要給他一些限制
 </div>

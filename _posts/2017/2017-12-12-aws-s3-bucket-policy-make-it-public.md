@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/aws.png "AWS")
+
 <div class="message">
     繼上次搬完S3，這禮拜測試完就要正式關閉舊帳號了。一般情況下，做完 s3 sync的資料對外都是permission denied，所以都會手動做一次 「make public」 (有用過S3的應該都知道)，才可以讓外部使用者檢視檔案，但是 ... 當檔案大於 2T 的時候又是另一回事了，於是我問了 Google大神 找到一個方法可以不用透過「make public」而是用上一篇文章提到的「bucket policy」即可，以下是紀錄。
 </div>

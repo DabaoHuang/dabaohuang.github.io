@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Linux.png "linux")
+
 <div class="message">
     延續 SSH 連線的議題，今天 user 跟我抱怨「連線時間太短了啦 ! 」，確實沒動幾下就被踢了，自己下去用也覺得很難用，哈哈，以下是設定過程，以及順便提一下其他項目的設定方法
 </div>

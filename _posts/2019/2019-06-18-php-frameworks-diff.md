@@ -7,7 +7,7 @@ comments: true
 signature: true
 ---
 
-![logo]({{ site.baseurl }}img/php.png "php")
+![logo]({{ site.baseurl }}img/logo/php.png "php")
 
 Criteria | Laravel | Symfony | Nette | CodeIgniter | Yii 2 | Zend 2 | CakePHP
 ------- | ------- | ------- | ------- | ------- | ------- | ------- | -------

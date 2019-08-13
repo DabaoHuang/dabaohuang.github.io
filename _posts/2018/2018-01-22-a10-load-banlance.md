@@ -7,11 +7,13 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/a10.png "A10")
+
 <div class="message">
     這篇要講的是一個古老設備「A10 ax1000」的設定方式，因為最近有INFRA上的需求，需要學習一些不同領域的東西，好在大學時摸過CISCO SWTICH，更慶幸 ax1000 的console是CISCO的module，在學習上不至於太過困難。網路上多這台的說明書，但並不是完全免費的，所以花了不少時間在研究指令跟設定，步驟如下。
 </div>
 
-![placeholder]({{ site.baseurl }}img/2018-01-22-a10-ax1000-load-banlance-2.jpg "Load balance")
+![placeholder]({{ site.baseurl }}img/2018/2018-01-22-a10-ax1000-load-banlance-2.jpg "Load balance")
 
 > 為什麼要做負載平衡 ?
 
@@ -19,7 +21,7 @@ signature: true
 
 ## 負載平衡 (Load balance) 示意架構如下：
 
-![placeholder]({{ site.baseurl }}img/2018-01-22-a10-ax1000-load-banlance.png "Load balance")
+![placeholder]({{ site.baseurl }}img/2018/2018-01-22-a10-ax1000-load-banlance.png "Load balance")
 
  - User A to C   : 一般 user 透過 Browser 連線
  - Load balance  : A10 ax1000

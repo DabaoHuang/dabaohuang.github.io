@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Linux.png "Linux")
+
 <div class="message">
 find，一般linux user很常用到的指令之一，如同它的英文一樣，可以用來找檔案名稱或是內容。
 </div>

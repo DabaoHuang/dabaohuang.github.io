@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Linux.png "linux")
+
 <div class="message">
     初學 Ubuntu 紀錄，今天有個需求是需要讓廠商連線至我在 AWS 的 某台 server，所以我想讓他用 ssh 的方式連進來，先從新增講起
 </div>

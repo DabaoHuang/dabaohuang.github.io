@@ -7,7 +7,7 @@ comments: true
 signature: true
 ---
 
-![logo]({{ site.baseurl }}img/VScode.png "VScode")
+![logo]({{ site.baseurl }}img/logo/VScode.png "VScode")
 
 ## 安裝
  - Extensions -> 搜尋 "Monokai Pro" > Install
@@ -27,7 +27,7 @@ signature: true
  > return true
 4. 儲存，重開`VScode`即可
 
-![2019-06-24-vscode-monokai-pro-to-free]({{ site.baseurl }}img/2019-06-24-vscode-monokai-pro-to-free.png "VScode")
+![2019-06-24-vscode-monokai-pro-to-free]({{ site.baseurl }}img/2019/2019-06-24-vscode-monokai-pro-to-free.png "VScode")
 
 <div class="message">
     還是請大家多多支持正版喔！

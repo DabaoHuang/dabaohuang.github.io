@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/aws.png "AWS")
+
 <div class="message">
     上禮拜突然被告知某個 AWS 帳號要停用，底下有成群的 EC2 instance 跟 S3 等著我搬，把 EC2搬完之後，今天準備著手動 S3 卻一直碰到權限問題卡了一個上午 ... 英文不太好的我查了好久才找到解答><，以下是紀錄
 </div>
@@ -43,7 +45,7 @@ pip uninstall awscli
 
 點開後可以看到`Bucket policy editor`有個`Policy generator`，點進去後如下
 
-![placeholder]({{ site.baseurl }}img/2017-11-29-aws-s3-IAM-and-bucket-policy-01.png "Bucket-Policy")
+![placeholder]({{ site.baseurl }}img/2017/2017-11-29-aws-s3-IAM-and-bucket-policy-01.png "Bucket-Policy")
 
 唯一要注意的是 ARN(Amazon Resource Name)，這是Amazon系統的辨識名稱，需要填上該Bucket的ARN
 

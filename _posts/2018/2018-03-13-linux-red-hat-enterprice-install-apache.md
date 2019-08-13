@@ -1,11 +1,13 @@
 ---
 layout: post
-title: '[ INFRA ] Red hat enterprice Apache install - NOTE '
-subtitle: '[ INFRA ] Red hat enterprice Apache 安裝 - NOTE'
-category: INFRA
+title: '[ Linux ] Red hat enterprice Apache install - NOTE '
+subtitle: '[ Linux ] Red hat enterprice Apache 安裝 - NOTE'
+category: Linux
 comments: true
 signature: true
 ---
+
+![logo]({{ site.baseurl }}img/logo/Linux.png "linux")
 
 <div class="message">
     延續上一篇文章提到，正在協助建置機房，安裝 Red Hat Enter price 時所做的筆記

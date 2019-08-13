@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Linux.png "linux")
+
 <div class="message">
     延續 SSH 連線的議題，假設今天有 user 離職，想保留他的檔案但又不想讓它登入的情況下可以這樣做。
 </div>

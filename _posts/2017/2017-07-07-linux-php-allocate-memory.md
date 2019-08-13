@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Linux.png "Linux")
+
 <div class="message">
     最近在研究 LINE-robot ，因為需要 PHP 管理套件 Composser 協助安裝，在執行時遇到了記憶體不足的錯誤，就順便記錄下來
 </div>
@@ -15,7 +17,7 @@ signature: true
 
 ### AWS-EC2
 
-![placeholder]({{ site.baseurl }}img/2017-06-26-linux-php-allocate-memory.jpg "AWS-EC2")
+![placeholder]({{ site.baseurl }}img/2017/2017-06-26-linux-php-allocate-memory.jpg "AWS-EC2")
 
 Error message ↓
 

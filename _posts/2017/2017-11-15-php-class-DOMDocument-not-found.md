@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/php.png "PHP")
+
 <div class="message">
     這是今天做一些檔案的處理，用了 PHPExcel 整理成 Excel 時所遇到的小問題，紀錄一下。(此次使用的主機為 php --version 5.6w)
 </div>

@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/javascript.png "Javascript)
+
 <div class="message">
     這東西也是我在做上一個專案時發現的，有天我正在為了 chrome 不支援 smooth scroll 而煩惱的時候找到 https://www.astralweb.com.tw/ 這網站，我發現他的 Scroll 的效果體驗很好，想拿來用，於是我循線找到了源頭 https://github.com/galambalazs/smoothscroll-for-websites ，使用時只要引入 SmoothScroll.js 網頁就有 smooth scroll 的效果了，非常方便 ! 就讓我們拜讀一下他的 js code 吧 !
 </div>

@@ -7,7 +7,7 @@ comments: true
 signature: true
 ---
 
-![logo]({{ site.baseurl }}img/php.png "php")
+![logo]({{ site.baseurl }}img/logo/php.png "php")
 
 ## Error Message
  > phpize: not found

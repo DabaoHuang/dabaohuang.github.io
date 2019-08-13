@@ -7,11 +7,11 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/aws.png "AWS")
+
 <div class="message">
     AWS CLI 是 AWS 使用者相當方便的工具，在使用之前一定要配上對應服務的權限，也就是 IAM，以下是記錄
 </div>
-
-![logo]({{ site.baseurl }}img/aws.png "AWS")
 
 ## Step 1 - 安裝 Python, AWS CLI
 
@@ -31,7 +31,7 @@ $ pip uninstall awscli
 
 ## Step 2 - 設定 IAM 權限
 
-![placeholder]({{ site.baseurl }}img/2018-08-11-aws-cli-iam-configure.jpg "2018-08-11-aws-cli-iam-configure")
+![placeholder]({{ site.baseurl }}img/2018/2018-08-11-aws-cli-iam-configure.jpg "2018-08-11-aws-cli-iam-configure")
 
 {% highlight vim %}
 $ aws configure

@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Bootstrap.jpg "Bootstrap")
+
 <div class="message">
     呼，工作總算是告一段落。最近被公司派去支援切版順便學習 (唯一能切版的網站設計離職了)，而且一切(ㄑ一ㄝ)就是RWD，真的非常有挑戰性 ... 
     不過也因為這樣，photoshop 跟 boostrap 的技能都被大幅強化了 (レベルアップ！) 今天就是要來講在這工作中遇到的一些小問題

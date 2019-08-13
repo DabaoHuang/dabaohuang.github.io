@@ -7,7 +7,7 @@ comments: true
 signature: true
 ---
 
- ![logo]({{ site.baseurl }}img/VScode.png "VScode")
+ ![logo]({{ site.baseurl }}img/logo/VScode.png "VScode")
 
 ## 載點
  - [Visual Studio Code shortcuts for Windows](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
@@ -15,4 +15,4 @@ signature: true
  - [Visual Studio Code shortcuts for MacOS](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
 
- ![Introduce]({{ site.baseurl }}img/2019-06-17-vscode-shortcuts.png "shortcut")
+ ![Introduce]({{ site.baseurl }}img/2019/2019-06-17-vscode-shortcuts.png "shortcut")

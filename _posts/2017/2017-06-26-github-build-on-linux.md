@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/github.png "github")
+
 <div class="message">
     以往遇到問題都沒有好好記錄的習慣，所以最近開了這個BLOG，就是想把遇到的問題或是方法記錄下來。所幸有 github 這麼方便的地方可供紀錄。
 </div>

@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Linux.png "Linux")
+
 <div class="message">
     因為案子還沒開始，今天幫忙接手了同事做到一半的server，在 yum install 時報錯，於是有了這篇文章 ...
 </div>

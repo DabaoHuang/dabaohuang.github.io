@@ -7,11 +7,11 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/css.jpg "CSS")
+
 <div class="message">
     到今天我們公司依然還未找到美術/前端，因為一直在支援前端需求，寫了一堆的CSS後，我真的覺得這些寫法相當不smart，感覺一直在做重複的事情 ... ，所以我決定引進SCSS來用XD
 </div>
-
-
 
 ## SASS 安裝步驟
 

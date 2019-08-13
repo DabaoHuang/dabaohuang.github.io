@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Linux.png "linux")
+
 <div class="message">
     延續上一篇文章提到，正在協助建置機房，安裝 Red Hat Enter price 遇到的問題，解決過程檢視
 </div>

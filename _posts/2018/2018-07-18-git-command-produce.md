@@ -7,11 +7,11 @@ comments: true
 signature: true
 ---
 
+![logo25]({{ site.baseurl }}img/logo/git.png "Git")
+
 <div class="message">
     Git 指令多而雜，記錄一些好用卻時常忘記的指令
 </div>
-
-![logo25]({{ site.baseurl }}img/git.png "Git")
 
 ## 工具建議
 
@@ -179,7 +179,7 @@ Host github.com
  - `git push Remote Branch`
 
 設定完成後可以先藉由 `git config --edit` 或 `git config --global --edit` 查看有沒有修改成功
-![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-1.png {{ post.title }})
+![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-1.png {{ post.title }})
 
 
 
@@ -187,11 +187,11 @@ Host github.com
 
 1. 編輯上次的 commit
  - `git commit --amend --reset-author`
-![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-2.png {{ post.title }})
+![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-2.png {{ post.title }})
 
 2. 查看修改
  - `git log`
-![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-3.png {{ post.title }})
+![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-3.png {{ post.title }})
 
 3. 最後傳到遠端分支上
  - `git push Remote Branch`
@@ -206,7 +206,7 @@ Host github.com
  - `git rebase -i B`
 
 2. 將要修改的 commit *pick* 都改為 *edit* `:wq` 儲存，這時候 commit 會停在 C 上
-![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-7.png {{ post.title }})
+![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-7.png {{ post.title }})
 
 3. 此時是修改 C
  - `git commit --amend --author="Author Name<email@e-mail>"`
@@ -254,7 +254,7 @@ Host github.com
 
 假設我們今天有兩條線 master , develop
 
-![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-4.png {{ post.title }})
+![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-4.png {{ post.title }})
 
 在遵守 git-flow 原則下，master 會是最主要佈上去的版本
 
@@ -271,14 +271,14 @@ Host github.com
  - `git merge --squash dev`
 
 變為 ▽
-![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-5.png {{ post.title }})
+![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-5.png {{ post.title }})
 
 3. 把線路調整一下讓 Dev 基於 master 的 M 節點開始開發
  - `git checkout develop`
  - `git pull origin master`
 
 變為 ▽
-![placeholder]({{ site.baseurl }}img/2018-07-18-git-command-produce-6.png {{ post.title }})
+![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-6.png {{ post.title }})
 
 
 以上，有可能的問題我已經盡量列出來了，有錯誤還請指正！

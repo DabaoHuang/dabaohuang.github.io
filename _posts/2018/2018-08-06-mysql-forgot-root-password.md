@@ -7,13 +7,13 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/lgoo/mysql.png {{ post.title }})
+
 <div class="message">
     這幾天在整理以前的筆記，可能會陸續新增上來（看心情，ＸＤ），如果忘記 MySQL 最大管理者的密碼可以這樣做
 </div>
 
 # MySQL
-
-![logo]({{ site.baseurl }}img/mysql.png {{ post.title }})
 
 1. 停用 MySQL service
  - `sudo /etc/init.d/mysql stop`

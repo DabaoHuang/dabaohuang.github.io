@@ -1,11 +1,13 @@
 ---
 layout: post
-title: '[ INFRA ] Red hat enterprice install error '
-subtitle: '[ INFRA ] Red hat enterprice 安裝時，設置基礎軟體庫時發生錯誤'
-category: INFRA
+title: '[ Linux ] Red hat enterprice install error '
+subtitle: '[ Linux ] Red hat enterprice 安裝時，設置基礎軟體庫時發生錯誤'
+category: Linux
 comments: true
 signature: true
 ---
+
+![logo]({{ site.baseurl }}img/logo/Linux.png "linux")
 
 <div class="message">
     新年快樂，近期提了辭呈，因為許多交接準備工作而疏於更新這個Blog，終於有點時間喘口氣，今天要來記錄的是，近期建置伺服器所遇到的問題。
@@ -20,7 +22,7 @@ signature: true
 
 安裝過程就不贊述了，我是用Red hat官網推薦的 Fedora media writer 製作，發生下面的畫面 ↓
 
-![placeholder]({{ site.baseurl }}img/2018-03-02-linux-red-hat-enterprice-install-error.jpg "problem")
+![placeholder]({{ site.baseurl }}img/2018/2018-03-02-linux-red-hat-enterprice-install-error.jpg "problem")
 
 而我百思不得其解的是，為什麼會出現**安裝來源**會出現`設置基礎軟體庫時發生錯誤`
 
@@ -28,7 +30,7 @@ signature: true
 
 但是當我點進去看時，也發現畫面跟網路上的教學有出入 ↓
 
-![placeholder]({{ site.baseurl }}img/2018-03-02-linux-red-hat-enterprice-install-error-2.jpg "problem")
+![placeholder]({{ site.baseurl }}img/2018/2018-03-02-linux-red-hat-enterprice-install-error-2.jpg "problem")
 
 就在我多嘗試了 unebootin(一樣)、rufus(一樣)、win32diskimager(連開機都進不去安裝畫面) 後，我在漫無目的地找尋答案中
 
@@ -42,7 +44,7 @@ signature: true
 
 後來仔細的看了一遍官方的介紹後，才發現[官方](https://access.redhat.com/documentation/zh-tw/red_hat_enterprise_linux/6/html/installation_guide/ch-obtaining_red_hat_enterprise_linux)有提醒 ... 真是犯蠢了
 
-![placeholder]({{ site.baseurl }}img/2018-03-02-linux-red-hat-enterprice-install-error-3.jpg "problem")
+![placeholder]({{ site.baseurl }}img/2018/2018-03-02-linux-red-hat-enterprice-install-error-3.jpg "problem")
 
  > Red Hat Enterprice 在官網[下載](https://access.redhat.com/downloads/content/69/ver=/rhel---7/7.4/x86_64/product-software)時，請務必選擇 `Binary DVD` 版本，否則會像我一樣吃閉門羹
 

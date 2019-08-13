@@ -1,11 +1,13 @@
 ---
 layout: post
-title: '[ INFRA ] Red hat enterprice PHP 5.6 & MariaDB install - NOTE '
-subtitle: '[ INFRA ] Red hat enterprice PHP 5.6 & MariaDB 安裝 - NOTE'
-category: INFRA
+title: '[ Linux ] Red hat enterprice PHP 5.6 & MariaDB install - NOTE '
+subtitle: '[ Linux ] Red hat enterprice PHP 5.6 & MariaDB 安裝 - NOTE'
+category: Linux
 comments: true
 signature: true
 ---
+
+![logo]({{ site.baseurl }}img/logo/Linux.png "linux")
 
 <div class="message">
     延續前幾篇文章提到，正在協助建置機房，安裝 Red Hat Enter price 時所做的筆記

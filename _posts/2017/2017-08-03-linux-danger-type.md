@@ -7,6 +7,8 @@ comments: true
 signature: true
 ---
 
+![logo]({{ site.baseurl }}img/logo/Linux.png "Linux")
+
 <div class="message">
   這是在朋友的問卷調查中看到的，做個紀錄以防不時之需 (喂!)
 </div>
