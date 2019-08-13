@@ -1,8 +1,8 @@
 ---
 layout: post
-title: '[ INFRA ] Red hat enterprice install error '
-subtitle: '[ INFRA ] Red hat enterprice 透過 yum 安裝時，發生軟體源註冊錯誤'
-category: INFRA
+title: '[ Linux ] Red hat enterprice install error '
+subtitle: '[ Linux ] Red hat enterprice 透過 yum 安裝時，發生軟體源註冊錯誤'
+category: Linux
 comments: true
 signature: true
 ---
