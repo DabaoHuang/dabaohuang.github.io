@@ -10,14 +10,17 @@ signature: true
 ![logo]({{ site.baseurl }}img/logo/VScode.png "VScode")
 
 ## 安裝
+-------------
  - Extensions -> 搜尋 "Monokai Pro" > Install
  - `Ctrl+P`-> 打上 "theme" -> 選擇 "Monokai Pro"
  - 關掉`VScode`
 
 ## Linux / MAC OS
+-------------
  > cd ~/.vscode/extensions/monokai.theme-monokai-pro-vscode<version>
 
 ## Windows
+-------------
  > cd %USERPROFILE%\.vscode\extensions 
 
 1. 用編輯器開啟 `/js/app.js`

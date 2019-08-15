@@ -10,6 +10,7 @@ signature: true
  ![logo]({{ site.baseurl }}img/logo/VScode.png "VScode")
 
 ## 載點
+-------------
  - [Visual Studio Code shortcuts for Windows](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
  - [Visual Studio Code shortcuts for Linux](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
  - [Visual Studio Code shortcuts for MacOS](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
