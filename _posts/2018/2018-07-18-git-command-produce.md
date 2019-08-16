@@ -14,12 +14,14 @@ signature: true
 </div>
 
 ## 工具建議
+-------------
 
  - Mac : iterm2 , 終端機
  - Linux : 終端機
  - Windows : Git bash
 
 ## 安裝 Git
+-------------
 
  - Mac : `brew install git`
  - Linux(Ubuntu, Debian) : `apt-get install git-core`
@@ -27,12 +29,14 @@ signature: true
  - Windows : 請安裝 [Git](https://git-scm.com/downloads)
 
 ## 如何開始使用 Respository 
+-------------
  - 在全新/未使用的專案底下 : `git init`
  - 已經存在/已知的位址 : `git clone git://xxxxxxx.git`
 
 
 
 ## 如何推送你的第一個版本
+-------------
 
 Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄底下
 
@@ -51,6 +55,7 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
 
 ## 修改 Commit
+-------------
 
  - `git commit --amend` : 修改上一次已經提交的 commit 訊息
  - `git commit --amend fileA fileB` : 把檔案Ａ, 檔案Ｂ補充到上次提交的 commit
@@ -60,6 +65,7 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
 
 ## 本地/遠端分支操作 Branch
+-------------
 
  - `git branch`
   - 無參數 : 列出所有 **本地** 分支
@@ -78,6 +84,7 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
 
 ## 合併分支 Merge
+-------------
 
  - `git merge`
   - **Name** : 將 Name 合併到當下分支中並產生一個 commit 做紀錄
@@ -87,6 +94,7 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
 
 ## 暫存修改 Stash
+-------------
 
  - `git stash`
   - 無參數 : 暫存目前所有有修改過的檔案，同 save
@@ -105,6 +113,7 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
 
 ## 還原分支 Reset
+-------------
 
  - `git reset`
   - 無參數 : 取消 stage
@@ -126,6 +135,7 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
 
 ## 遠端服務 Remote
+-------------
 
 上述的資料中提到的 **origin** 是最常見的 Remote 名稱
 
@@ -133,27 +143,28 @@ Git 的推送流程可以分為三個步驟，三行指令，請先到該目錄�
 
 詳見 `repo/.git/config`
 
- - `git remote add Remote git://xxxxxxxx.git` : 把 Remote 及後面代的網址加入遠端列表，就可以在這 repo 下對新的遠端操作
- - `git remote set-url Remote git@xxxxxxx.git` : 修改 Remote 遠端來源
+ > git remote add Remote git://xxxxxxxx.git  : 把 Remote 及後面代的網址加入遠端列表，就可以在這 repo 下對新的遠端操作
+ > git remote set-url Remote git@xxxxxxx.git  : 修改 Remote 遠端來源
 
 
 
 ## 將遠端分支從 https 改用 ssh git
+-------------
 
 1. 在 repo 下修改 Remote 位址
- - `git remote set-url Remote git://xxxxxxx.git`
+ > git remote set-url Remote git://xxxxxxx.git
 2. 創造 ssh 金鑰，用 rsa 加密，名字是 Dabao-mac
- - `ssh-keygen -t rsa -C "Dabao-mac"`
+ > ssh-keygen -t rsa -C "Dabao-mac"
 3. 然後把金鑰.pub新增到使用的線上版控服務上並測試，這邊範例為 github
- - `ssh git@github.com`
-4. 如果成功會看到以下訊息，如果看到以下訊息就可以回頭測試 `push` 了
- - Hi DabaoHuang! You've successfully authenticated, but GitHub does not provide shell access.
+ > ssh git@github.com
+4. 如果成功會看到以下訊息，如果看到以下訊息就可以回頭測試 push 了
+ > Hi DabaoHuang! You've successfully authenticated, but GitHub does not provide shell access.
 5. 失敗的話要先測試是不是金鑰沒放對位置，測試成功會看到上面的訊息
- - `ssh -i ~/.ssh/Dabao-mac.pub git@github.com`
-6. 也有可能 `~/.ssh` 不存在，要自己建，然後從第二步驟開始在做一遍
- - `mkdir ~/.ssh` => `chmod 700 ~/.ssh`
+ > ssh -i ~/.ssh/Dabao-mac.pub git@github.com
+6. 也有可能 ~/.ssh 不存在，要自己建，然後從第二步驟開始在做一遍
+ > mkdir ~/.ssh => chmod 700 ~/.ssh
 7. 也有可能資料夾裡面沒有設定讓使用者 git 使用相對的key
- - `touch ~/.ssh/config` => `vim ~/.ssh/config`
+ > touch ~/.ssh/config => vim ~/.ssh/config
 {% highlight shell %}
 Host github.com
     HostName github.com
@@ -164,19 +175,20 @@ Host github.com
 
 
 ## 小技巧 - 修改作者 Config
+-------------
 
 在工作過程中也許會遇到，做個紀錄
 
 1. 第一種是修改預設 config 中的 **name** 與 **email**，僅針對沒有設定作者的 repo 有效（預設）！
- - `git config --global user.name "YOUR NAME"`
- - `git config --global user.email "E-mail"`
+ > git config --global user.name "YOUR NAME"
+ > git config --global user.email "E-mail"
 
 2. 第二種是只修改這個 **Repo** 要用的 **name** 與 **email**，比方說公司專案，不想拿在外闖蕩的名稱 commit 上去的話，建議設定
- - `git config user.name "YOUR NAME"`
- - `git config user.email "E-mail"`
+ > git config user.name "YOUR NAME"
+ > git config user.email "E-mail"
 
 3. 最後傳到遠端分支上
- - `git push Remote Branch`
+ > git push Remote Branch
 
 設定完成後可以先藉由 `git config --edit` 或 `git config --global --edit` 查看有沒有修改成功
 ![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-1.png {{ post.title }})
@@ -184,39 +196,42 @@ Host github.com
 
 
 ## 小技巧 - 修改上次提交的 commit
+-------------
 
 1. 編輯上次的 commit
- - `git commit --amend --reset-author`
+ > git commit --amend --reset-author
 ![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-2.png {{ post.title }})
 
 2. 查看修改
- - `git log`
+ > git log
 ![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-3.png {{ post.title }})
 
 3. 最後傳到遠端分支上
- - `git push Remote Branch`
+ > git push Remote Branch
 
 
 
 ## 小技巧 - 修正某個節點的 commit
+-------------
 
 假設今天有 A->B->C->D->E->F(HEAD)，而我要修改 C,D,E 這三個 commit
 
 1. 在該 **Repo** 的目錄下指令
- - `git rebase -i B`
+ > git rebase -i B
 
 2. 將要修改的 commit *pick* 都改為 *edit* `:wq` 儲存，這時候 commit 會停在 C 上
 ![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-7.png {{ post.title }})
 
 3. 此時是修改 C
- - `git commit --amend --author="Author Name<email@e-mail>"`
+ > git commit --amend --author="Author Name<email@e-mail>"
 
 4. 進入 D，重複**步驟 3 , 4** 到結束即可
- - `git rebase --continue`
+ > git rebase --continue
 
 
 
 ## 小技巧 - 修改 git 預設編輯器
+-------------
 
 在 ubuntu 下 `git config --amend ... ` 相關指令時，會以 *nano* 編輯器打開
 
@@ -227,6 +242,7 @@ Host github.com
 
 
 ## 小技巧 - 保持最新又能保留修改過的檔案
+-------------
 
 開發人員每天上班第一件事情就是將本地分支更新到最新
 
@@ -247,6 +263,7 @@ Host github.com
 
 
 ## 小技巧 - 多個 commit 合併成一個
+-------------
 
 開發過程中有可能會有許多修正，可能寫好一個即 commit 一次
 
@@ -265,23 +282,90 @@ Host github.com
 假設 N 是我測試完成準備要佈上正式機的版本，可以這樣做
 
 1. 到 master 線上
- - `git checkout master`
+ > git checkout master
 
 2. 基於 C 結點之後的變更全部合併到 Master
- - `git merge --squash dev`
+ > git merge --squash dev
 
 變為 ▽
 ![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-5.png {{ post.title }})
 
 3. 把線路調整一下讓 Dev 基於 master 的 M 節點開始開發
- - `git checkout develop`
- - `git pull origin master`
+ > git checkout develop
+ > git pull origin master
 
 變為 ▽
 ![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-6.png {{ post.title }})
 
 
+
+## 小技巧 - 把某檔案從所有 commit 中拔掉
+-------------
+
+假設今天發現好幾個 commit 之前有個不該出現的檔案就存在 repo 裡面
+
+可以利用 `git filter-branch` 來完成需求，將這個檔案徹底從所有 commit 中移除
+
+ > $ git filter-branch --tree-filter "rm -f folder/xxxx.xxx"
+“”“
+Rewrite xsdfwhthwgqdsxcwe543ty4gdf322ghtbsdvs (99/99) (0 seconds passed, remaining 0 predicted)
+Ref 'refs/heads/master' was rewritten
+”“”
+
+這樣看起來好像刪除成功了，但其實它還在暫存之中
+
+隨時都可以取消這個指令
+
+ > git reset origin master --hard
+"""
+HEAD is now at 27f6ed6 add dog 2
+"""
+
+如果確定你不會後悔的話可以這樣
+
+ > git filter-branch -f --tree-filter "rm -f folder/xxxx.xxx"
+“”“
+Rewrite xsdfwhthwgqdsxcwe543ty4gdf322ghtbsdvs (99/99) (0 seconds passed, remaining 0 predicted)
+Ref 'refs/heads/master' was rewritten
+”“”
+
+跟前面不太一樣，這次多加了參數 -f 是因為要強制覆寫 filter-branch 的備份
+
+最後還需要清除一下殘餘的垃圾，先切斷 master 的線
+
+ > rm .git/refs/original/refs/heads/master
+
+強制更新 reflog，請求 reflog 現在就過期 (預設是30天)
+
+ > git reflog expire --all --expire=now
+
+確認受到影響的 commit (unreachable)
+
+ > git fsck --unreachable
+
+用 git 本身的回收機制回收不需要的檔案
+
+ > git gc --prune=now
+
+再檢查一次
+
+ > git fsck
+"""
+Checking object directories: 100% (256/256), done.
+Checking objects: 100% (14/14), done.
+"""
+
+最後，更新遠端的 master 線
+
+ > git push origin master --force
+
+
+
+
+
+ 
+
 以上，有可能的問題我已經盡量列出來了，有錯誤還請指正！
 
-# 參考
+## 參考
  - [Git](https://git-scm.com/docs)
