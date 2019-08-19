@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '[ Linux ] Red hat enterprice Apache install - NOTE '
-subtitle: '[ Linux ] Red hat enterprice Apache 安裝 - NOTE'
+title: '[ NOTE ] Linux Red hat enterprice Apache install'
+subtitle: '[ NOTE ] Linux Red hat enterprice Apache 安裝'
 category: Linux
 comments: true
 signature: true

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '[ VScode ] shortcuts - NOTE'
-subtitle: '[ VScode ] 快捷鍵一覽表 - NOTE'
+title: '[ NOTE ] vscode shortcuts'
+subtitle: '[ NOTE ] VScode 快捷鍵一覽表'
 category: VScode
 comments: true
 signature: true

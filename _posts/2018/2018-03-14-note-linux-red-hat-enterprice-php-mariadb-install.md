@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '[ Linux ] Red hat enterprice PHP 5.6 & MariaDB install - NOTE '
-subtitle: '[ Linux ] Red hat enterprice PHP 5.6 & MariaDB 安裝 - NOTE'
+title: '[ NOTE ] Linux Red hat enterprice PHP 5.6 & MariaDB install'
+subtitle: '[ NOTE ] Linux Red hat enterprice PHP 5.6 & MariaDB 安裝'
 category: Linux
 comments: true
 signature: true
