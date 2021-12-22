@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[ AWS ] Enable CLR in RDS SQL server'
-subtitle: '[ AWS ] Enable CLR in RDS SQL server'
+subtitle: '[ AWS ] 在 RDS SQL server 中啟用 CRL 設定'
 category: AWS
 comments: true
 signature: true

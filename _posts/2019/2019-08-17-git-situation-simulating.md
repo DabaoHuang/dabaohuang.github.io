@@ -78,8 +78,10 @@ git rebase -i B
 ![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-7.png {{ post.title }})
 
 3. 此時當下的 HEAD 在 C
+ - `--amend`: 修改當前 commit
+ - `--no-edit`: 除了 commit 訊息外不要更動其他修改
 ```
-git commit --amend --author="Author Name E-mail"
+git commit --amend --no-edit --author="Author Name E-mail"
 ```
 
 4. 進入 D，重複**步驟 3 , 4** 到結束即可

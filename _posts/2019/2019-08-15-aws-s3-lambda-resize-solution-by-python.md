@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[ AWS ] Lambda image resize solution by Python'
-subtitle: '[ AWS ] Lambda image resize solution by Python'
+subtitle: '[ AWS ] 用 Lambda 與 Python 建置縮圖服務'
 category: AWS
 comments: true
 signature: true

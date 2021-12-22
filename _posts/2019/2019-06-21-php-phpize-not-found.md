@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[ PHP ] phpize not found'
-subtitle: '[ PHP ] phpize not found '
+subtitle: '[ PHP ] 找不到 phpize 的錯誤處理 '
 category: PHP
 comments: true
 signature: true
