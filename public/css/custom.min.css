@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Microsoft YaHei';
+    font-family: 'system-ui' !important;
     scroll-behavior: smooth;
 }
 
