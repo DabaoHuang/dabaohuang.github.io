@@ -27,13 +27,13 @@ signature: true
 綜上所述，如果要確保在斷開連接期間產生的 log 不會丟失，建議設置 client 為緩存數據的模式。但也需要注意，過多的緩存可能會導致記憶體消耗過高，因此需要根據實際需求和系統資源來進行適當的設置。
  client 緩存的設置可以通過修改 client 的配置文件進行。以下是一些常用的設置選項：
 
-$ActionQueueType: 這個選項可以用來設置緩存類型。可選值有 "LinkedList"、"FixedArray"、"DirectFile"、"LinkedList-Reuse"、"FixedArray-Reuse"、"DirectFile-Reuse"，預設值為 "LinkedList"。
+`$ActionQueueType`: 這個選項可以用來設置緩存類型。可選值有 "LinkedList"、"FixedArray"、"DirectFile"、"LinkedList-Reuse"、"FixedArray-Reuse"、"DirectFile-Reuse"，預設值為 "LinkedList"。
 
-$ActionQueueSize: 這個選項可以用來設置緩存大小。設置值的單位是 KB。預設值是 100000。
+`$ActionQueueSize`: 這個選項可以用來設置緩存大小。設置值的單位是 KB。預設值是 100000。
 
-$ActionQueueDiscardMark: 這個選項可以用來設置緩存滿時的丟棄策略。當緩存佔用的空間超過 $ActionQueueSize 的設置值時，如果還有新的數據要進入緩存，就需要進行一些處理。可選值有 "80%"、"90%"、"95%"，預設值為 "75%"。
+`$ActionQueueDiscardMark`: 這個選項可以用來設置緩存滿時的丟棄策略。當緩存佔用的空間超過 $ActionQueueSize 的設置值時，如果還有新的數據要進入緩存，就需要進行一些處理。可選值有 "80%"、"90%"、"95%"，預設值為 "75%"。
 
-$ActionQueueTimeoutEnqueue: 這個選項可以用來設置緩存等待新數據的超時時間。設置值的單位是秒。當緩存空間不足，需要等待數據被發送出去時，如果等待時間超過了 $ActionQueueTimeoutEnqueue 的設置值，就會自動丟棄這些數據。預設值為 1。
+`$ActionQueueTimeoutEnqueue`: 這個選項可以用來設置緩存等待新數據的超時時間。設置值的單位是秒。當緩存空間不足，需要等待數據被發送出去時，如果等待時間超過了 $ActionQueueTimeoutEnqueue 的設置值，就會自動丟棄這些數據。預設值為 1。
 
 以下是一個簡單的範例，展示了如何將 client 的緩存設置為 "DirectFile" 類型，大小為 50 MB，滿時丟棄策略為 "80%"：
 
