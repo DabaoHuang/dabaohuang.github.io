@@ -1,8 +1,8 @@
 ---
 layout: post
-title: '[ rsyslog ] 特殊情境整理'
-subtitle: '[ rsyslog ] 特殊情境整理'
-category: rsyslog
+title: '[ Rsyslog ] 特殊情境整理'
+subtitle: '[ Rsyslog ] 特殊情境整理'
+category: Rsyslog
 comments: true
 signature: true
 ---

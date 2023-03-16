@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '[ NOTE ] PHP Framework different'
-subtitle: '[ NOTE ] PHP 框架比較一覽'
+title: '[ PHP ] Framework comparison overview'
+subtitle: '[ PHP ] 框架比較一覽'
 category: PHP
 comments: true
 signature: true

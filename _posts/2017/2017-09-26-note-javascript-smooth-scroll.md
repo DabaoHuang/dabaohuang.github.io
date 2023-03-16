@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '[ NOTE ] Javascript Share Chrome smooth scroll'
-subtitle: '[ NOTE ] Javascript 分享 Chrome 也能用的 Smooth scroll'
+title: '[ Javascript ] Share Chrome smooth scroll'
+subtitle: '[ Javascript ] 分享 Chrome 也能用的 Smooth scroll'
 category: Javascript
 comments: true
 signature: true

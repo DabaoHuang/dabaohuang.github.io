@@ -2,7 +2,7 @@
 layout: post
 title: '[ Packer ] build automated machine images with Packer'
 subtitle: '[ Packer ] 自動化建立 AWS AMI'
-category: packer
+category: Packer
 comments: true
 signature: true
 ---

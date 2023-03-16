@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '[ NOTE ] AWS S3 bucket public policy make it public'
-subtitle: '[ NOTE ] AWS S3 將儲存桶內的檔案預設公開讀取'
+title: '[ AWS ] S3 bucket public policy make it public'
+subtitle: '[ AWS ] S3 將儲存桶內的檔案預設公開讀取'
 category: AWS
 comments: true
 signature: true
