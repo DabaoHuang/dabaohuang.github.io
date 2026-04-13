@@ -1,5 +1,5 @@
 url: /
-baseurl: ""
+baseurl: /
 newbaseurl: http://localhost:4000
 
 plugins:

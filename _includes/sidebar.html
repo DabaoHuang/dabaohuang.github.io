@@ -1,11 +1,11 @@
 {% assign pages_list = site.pages %}
 
 <div class="mobile-sidebar">
-  <span onclick="$('.mobile-menu').toggleClass('mobile-menu-show');">
+  <button class="mobile-menu-toggle" type="button" onclick="$('.mobile-menu').toggleClass('mobile-menu-show');" aria-label="Toggle navigation">
     <i class="fa fa-bars" aria-hidden="true"></i>
-  </span>
+  </button>
 
-  <span>
+  <span class="mobile-brand">
     <a href="{{ site.baseurl }}">Dabao's Tech Blog</a>
   </span>
 
@@ -19,6 +19,7 @@
     {% endfor %}
     <div><a href="{{ site.github.repo }}" target="_blank">GitHub</a></div>
     <div><a href="{{ site.author.fb }}" target="_blank">Facebook</a></div>
+    <div><a href="mailto:{{ site.author.email }}">Email</a></div>
   </div>
 </div>
 
@@ -26,7 +27,7 @@
   <div class="container sidebar-sticky">
 
     <div class="dabao_headpic">
-      <img src="{{ site.headpic }}" />
+      <img src="{{ site.headpic }}" alt="Dabao Huang" />
     </div>
 
     <div class="sidebar-about">
@@ -36,10 +37,11 @@
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
+      <p class="sidebar-kicker">Full-stack engineer focused on web development, DevOps, and practical field notes.</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+      <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="/">Home</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
@@ -60,19 +62,23 @@
         <div class="github-button"><span>
           <i class="fa fa-github"></i>
           <i class="fa fa-github-square"></i>
-        </span></div>
+        </span>GitHub</div>
       </a>
       <a class="sidebar-nav-item float-left" href="{{ site.author.fb }}" target="_blank">
         <div class="facebook-button"><span>
           <i class="fa fa-facebook-official"></i>
           <i class="fa fa-facebook-square"></i>
+        </span>Facebook</div>
+      </a>
+      <a class="sidebar-nav-item float-left" href="mailto:{{ site.author.email }}">
+        <div class="mail-button"><span>
+          <i class="fa fa-envelope"></i>
+          <span class="contact-label">Email</span>
         </span></div>
       </a>
       <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
     </nav>
 
-    <br>
-
-    <p>&copy; Dabao Huang {{ site.time | date: '%Y' }}. </p>
+    <p class="sidebar-footer">&copy; Dabao Huang {{ site.time | date: '%Y' }}.</p>
   </div>
 </div>

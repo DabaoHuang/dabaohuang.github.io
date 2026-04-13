@@ -4,37 +4,44 @@ title: Home
 ---
 
 <div class="posts">
+    <section class="home-intro" aria-label="Blog introduction">
+        <p class="eyebrow">Tech Notes</p>
+        <h1>把踩過的坑，整理成下一次能直接用的答案。</h1>
+        <p>Linux、AWS、Git、PHP、資料庫與維運筆記。每篇文章保留問題、指令與實作脈絡，方便日後查找。</p>
+    </section>
+
+    <section class="work-strip" aria-label="Engineering profile">
+        <div>
+            <p class="eyebrow">Engineering Profile</p>
+            <h2>全端工程師，專注於網頁開發與 DevOps，從產品功能到部署維運都能一起處理。</h2>
+        </div>
+        <a href="/portfolio/">View projects</a>
+    </section>
+
     {% for post in paginator.posts %}
-    <div class="post">
+    <article class="post post-card">
+        <div class="post-card-meta">
+            <span class="post-date">
+              {{ post.date | date: "%Y.%m.%d" }}
+            </span>
+            {% if post.category %}
+              <a class="post-category" href="/Label/#{{ post.category }}">{{ post.category }}</a>
+            {% endif %}
+        </div>
+
         <h1 class="post-title">
           <a href="{{ post.url }}">{{ post.subtitle }}</a>
         </h1>
 
-        <span class="post-date">
-          {{ post.date | date_to_string }}
-        </span>
-
         <div class="IN_POST_CONTENT">
-            {{ post.content }}
+            <p>{{ post.content | strip_html | normalize_whitespace | truncate: 170 }}</p>
         </div>
 
-        <div class="IN_TAG_COMMENTS">
-            <i class="fa fa-comment"></i>
-            <a class="disqus-comment-count" href="{{ site.newbaseurl }}{{ post.url }}#disqus_thread">0 Comments</a>
+        <div class="post-card-actions">
+            <a class="read-more" href="{{ post.url }}">Read article</a>
+            <a class="comment-link disqus-comment-count" href="{{ site.newbaseurl }}{{ post.url }}#disqus_thread">0 Comments</a>
         </div>
-
-        <div class="IN_TAG_LABELS">
-          <a class="btn-success" href="https://dabaohuang.github.io/Label/#{{ post.category }}">
-            &nbsp;
-            <i class="fa fa-tags"></i>
-            {{ post.category }}
-          </a>
-        </div>
-
-        <div class="IN_POST_READ">
-            <a href="{{ post.url }}">more</a>
-        </div>
-    </div>
+    </article>
     {% endfor %}
 </div>
 
