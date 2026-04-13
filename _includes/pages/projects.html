@@ -1,0 +1,63 @@
+{% include i18n.html %}
+<section class="portfolio-intro">
+  <p class="eyebrow">{{ t.projects.eyebrow }}</p>
+  <h2>{{ t.projects.heading }}</h2>
+  <p>{{ t.projects.intro }}</p>
+</section>
+
+<section class="portfolio-grid" aria-label="Focus areas">
+  <article class="portfolio-item">
+    <h3>{{ t.projects.web_title }}</h3>
+    <p>{{ t.projects.web_text }}</p>
+  </article>
+  <article class="portfolio-item">
+    <h3>{{ t.projects.fullstack_title }}</h3>
+    <p>{{ t.projects.fullstack_text }}</p>
+  </article>
+  <article class="portfolio-item">
+    <h3>{{ t.projects.devops_title }}</h3>
+    <p>{{ t.projects.devops_text }}</p>
+  </article>
+</section>
+
+<section class="collaboration-section">
+  <h2>{{ t.projects.needs_title }}</h2>
+  <ul class="collaboration-list">
+    {% for item in t.projects.needs %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="collaboration-section">
+  <h2>{{ t.projects.process_title }}</h2>
+  <div class="collaboration-steps">
+    {% for step in t.projects.process %}
+      <article>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.text }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="collaboration-section">
+  <h2>{{ t.projects.contact_brief_title }}</h2>
+  <ul class="collaboration-list">
+    {% for item in t.projects.contact_brief %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="portfolio-contact">
+  <h2>{{ t.projects.contact_title }}</h2>
+  <p>{{ t.projects.contact_text }}</p>
+  <p>
+    <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+    <span aria-hidden="true"> / </span>
+    <a href="https://www.github.com/dabaohuang/">GitHub</a>
+    <span aria-hidden="true"> / </span>
+    <a href="https://www.facebook.com/da.bao.12">Facebook</a>
+  </p>
+</section>

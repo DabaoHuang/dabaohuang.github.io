@@ -1,0 +1,65 @@
+{% include i18n.html %}
+<div class="posts">
+    <section class="home-intro" aria-label="Blog introduction">
+        <p class="eyebrow">{{ t.home.eyebrow }}</p>
+        <h1>{{ t.home.title }}</h1>
+        <p>{{ t.home.intro }}</p>
+    </section>
+
+    <section class="work-strip" aria-label="Engineering profile">
+        <div>
+            <p class="eyebrow">{{ t.home.profile_eyebrow }}</p>
+            <h2>{{ t.home.profile_title }}</h2>
+        </div>
+        <a href="{% if current_lang == 'zh' %}/portfolio/{% else %}/{{ current_lang }}/portfolio/{% endif %}">{{ t.home.projects_cta }}</a>
+    </section>
+
+    {% assign visible_posts = paginator.posts | default: site.posts %}
+    {% for post in visible_posts limit:5 %}
+    <article class="post post-card">
+        <div class="post-card-meta">
+            <span class="post-date">
+              {{ post.date | date: "%Y.%m.%d" }}
+            </span>
+            {% if post.category %}
+              <a class="post-category" href="/Label/#{{ post.category }}">{{ post.category }}</a>
+            {% endif %}
+        </div>
+
+        <h1 class="post-title">
+          <a href="{{ post.url }}">{{ post.subtitle }}</a>
+        </h1>
+
+        <div class="IN_POST_CONTENT">
+            <p>{{ post.content | strip_html | normalize_whitespace | truncate: 170 }}</p>
+        </div>
+
+        <div class="post-card-actions">
+            <a class="read-more" href="{{ post.url }}">{{ t.posts.read_article }}</a>
+            <a class="comment-link disqus-comment-count" href="{{ site.newbaseurl }}{{ post.url }}#disqus_thread">{{ t.posts.comments }}</a>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+{% if paginator %}
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">{{ t.posts.older }}</a>
+  {% else %}
+    <span class="pagination-item older">{{ t.posts.older }}</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">{{ t.posts.newer }}</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">{{ t.posts.newer }}</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">{{ t.posts.newer }}</span>
+  {% endif %}
+</div>
+{% endif %}
+
+<!-- comments-count -->
+<script id="dsq-count-scr" src="//da-bao-kai-fa-xue-xi-zhi.disqus.com/count.js" async></script>

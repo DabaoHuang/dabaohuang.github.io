@@ -1,21 +1,26 @@
+{% include i18n.html %}
 {% assign site_origin = site.newbaseurl | default: site.url | replace: 'https://dabaohuang.github.io/', 'https://dabaohuang.github.io' | replace: 'http://localhost:4000/', 'http://localhost:4000' %}
 {% assign canonical_path = page.url | replace: 'index.html', '' %}
 {% assign canonical_url = site_origin | append: canonical_path %}
 {% if page.subtitle %}
   {% assign seo_title = page.subtitle | append: ' | ' | append: site.title %}
+{% elsif canonical_path contains '/portfolio/' %}
+  {% assign seo_title = t.projects.title | append: ' | ' | append: site.title %}
 {% elsif page.title == 'Home' %}
-  {% assign seo_title = site.title | append: ' | ' | append: site.tagline %}
+  {% assign seo_title = t.blog_name | append: ' | ' | append: t.home.title %}
 {% else %}
   {% assign seo_title = page.title | append: ' | ' | append: site.title %}
 {% endif %}
 {% if page.description %}
   {% assign seo_description = page.description | strip_html | normalize_whitespace | truncate: 160 %}
+{% elsif canonical_path contains '/portfolio/' %}
+  {% assign seo_description = t.projects.intro | strip_html | normalize_whitespace | truncate: 160 %}
 {% elsif page.signature == true %}
   {% assign seo_description = page.content | strip_html | normalize_whitespace | truncate: 160 %}
 {% elsif page.title != 'Home' and page.content %}
   {% assign seo_description = page.content | strip_html | normalize_whitespace | truncate: 160 %}
 {% else %}
-  {% assign seo_description = site.description | append: ' Dabao Huang 的技術筆記，記錄 Web Development、DevOps、Linux、AWS、Git 與全端開發實務。' | normalize_whitespace %}
+  {% assign seo_description = t.sidebar.description | append: ' ' | append: t.seo.fallback_description | normalize_whitespace %}
 {% endif %}
 {% assign seo_image = site_origin | append: '/img/logo/logo.png' %}
 {% assign seo_type = 'website' %}
@@ -29,6 +34,19 @@
 <meta name="keywords" content="Dabao Huang, 大寶開發學習誌, Web Development, DevOps, Full-stack, AWS, Linux, Git, PHP, JavaScript, Python, 技術筆記">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="{{ canonical_url }}">
+{% unless page.layout == 'post' or page.signature == true %}
+{% if canonical_path contains '/portfolio/' %}
+<link rel="alternate" hreflang="zh-Hant" href="{{ site_origin }}/portfolio/">
+<link rel="alternate" hreflang="en" href="{{ site_origin }}/en/portfolio/">
+<link rel="alternate" hreflang="ja" href="{{ site_origin }}/ja/portfolio/">
+<link rel="alternate" hreflang="x-default" href="{{ site_origin }}/portfolio/">
+{% else %}
+<link rel="alternate" hreflang="zh-Hant" href="{{ site_origin }}/">
+<link rel="alternate" hreflang="en" href="{{ site_origin }}/en/">
+<link rel="alternate" hreflang="ja" href="{{ site_origin }}/ja/">
+<link rel="alternate" hreflang="x-default" href="{{ site_origin }}/">
+{% endif %}
+{% endunless %}
 
 <link rel="contents" title="Archive" href="/Archive/">
 <link rel="start" title="Dabao's Tech Note" href="/">
@@ -40,7 +58,19 @@
 <meta property="og:url" content="{{ canonical_url }}">
 <meta property="og:image" content="{{ seo_image }}">
 <meta property="og:description" content="{{ seo_description }}">
+{% if current_lang == 'en' %}
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="ja_JP">
+{% elsif current_lang == 'ja' %}
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="en_US">
+{% else %}
 <meta property="og:locale" content="zh_TW">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+{% endif %}
 {% if page.layout == 'post' or page.signature == true %}
 <meta property="article:author" content="{{ site.author.name }}">
 {% if page.date %}

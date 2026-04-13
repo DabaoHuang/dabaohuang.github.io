@@ -1,3 +1,4 @@
+{% include i18n.html %}
 {% assign pages_list = site.pages %}
 
 <div class="mobile-sidebar">
@@ -6,14 +7,29 @@
   </button>
 
   <span class="mobile-brand">
-    <a href="{{ site.baseurl }}">Dabao's Tech Blog</a>
+    <a href="{% if current_lang == 'zh' %}/{% else %}/{{ current_lang }}/{% endif %}">{{ t.blog_name }}</a>
   </span>
 
   <div class="mobile-menu">
+    <div><a href="/">中文</a></div>
+    <div><a href="/en/">English</a></div>
+    <div><a href="/ja/">日本語</a></div>
     {% for node in pages_list %}
       {% if node.title != null %}
         {% if node.layout == "page" %}
-          <div><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a></div>
+          {% assign show_node = false %}
+          {% if node.lang == current_lang %}
+            {% assign show_node = true %}
+          {% elsif current_lang == 'zh' and node.lang == nil %}
+            {% assign show_node = true %}
+          {% endif %}
+          {% if show_node %}
+          {% assign nav_title = node.title %}
+          {% if node.url contains '/portfolio/' %}
+            {% assign nav_title = t.nav.projects %}
+          {% endif %}
+          <div><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ nav_title }}</a></div>
+          {% endif %}
         {% endif %}
       {% endif %}
     {% endfor %}
@@ -32,16 +48,22 @@
 
     <div class="sidebar-about">
       <h1>
-        <a href="{{ site.baseurl }}">
+        <a href="{% if current_lang == 'zh' %}/{% else %}/{{ current_lang }}/{% endif %}">
           {{ site.title }}
         </a>
       </h1>
-      <p class="lead">{{ site.description }}</p>
-      <p class="sidebar-kicker">Full-stack engineer focused on web development, DevOps, and practical field notes.</p>
+      <p class="lead">{{ t.sidebar.description }}</p>
+      <p class="sidebar-kicker">{{ t.sidebar.kicker }}</p>
+    </div>
+
+    <div class="language-switcher" aria-label="{{ t.nav.language }}">
+      <a class="{% if current_lang == 'zh' %}active{% endif %}" href="/">中文</a>
+      <a class="{% if current_lang == 'en' %}active{% endif %}" href="/en/">EN</a>
+      <a class="{% if current_lang == 'ja' %}active{% endif %}" href="/ja/">日本語</a>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="/">Home</a>
+      <a class="sidebar-nav-item{% if page.url == '/' or page.url == '/en/' or page.url == '/ja/' %} active{% endif %}" href="{% if current_lang == 'zh' %}/{% else %}/{{ current_lang }}/{% endif %}">{{ t.nav.home }}</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
@@ -52,7 +74,19 @@
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            {% assign show_node = false %}
+            {% if node.lang == current_lang %}
+              {% assign show_node = true %}
+            {% elsif current_lang == 'zh' and node.lang == nil %}
+              {% assign show_node = true %}
+            {% endif %}
+            {% if show_node %}
+            {% assign nav_title = node.title %}
+            {% if node.url contains '/portfolio/' %}
+              {% assign nav_title = t.nav.projects %}
+            {% endif %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ nav_title }}</a>
+            {% endif %}
           {% endif %}
         {% endif %}
       {% endfor %}

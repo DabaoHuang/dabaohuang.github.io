@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    {% if page.subtitle %}{{ page.subtitle }} &middot; {{ site.title }}{% elsif page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}
+    {% if page.subtitle %}{{ page.subtitle }} &middot; {{ site.title }}{% elsif page.url contains '/portfolio/' %}{{ t.projects.title }} &middot; {{ site.title }}{% elsif page.title == "Home" %}{{ t.blog_name }} &middot; {{ t.home.title }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}
   </title>
 
   <!-- original-CSS -->

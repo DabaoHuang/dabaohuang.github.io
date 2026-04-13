@@ -1,0 +1,185 @@
+zh:
+  lang_code: zh-Hant
+  blog_name: "Dabao's Tech Blog"
+  nav:
+    home: 首頁
+    projects: 專案
+    language: 語言
+  sidebar:
+    description: 全端工程師，專注於網頁開發、DevOps 與實務技術筆記。
+    kicker: 把踩過的坑整理成可以回頭查、也能交接的經驗。
+  home:
+    eyebrow: Tech Notes
+    title: 把踩過的坑，整理成下一次能直接用的答案。
+    intro: Linux、AWS、Git、PHP、資料庫與維運筆記。每篇文章保留問題、指令與實作脈絡，方便日後查找。
+    profile_eyebrow: Engineering Profile
+    profile_title: 全端工程師，專注於網頁開發與 DevOps，從產品功能到部署維運都能一起處理。
+    projects_cta: 查看專案
+  posts:
+    read_article: 閱讀文章
+    comments: "0 Comments"
+    older: Older
+    newer: Newer
+    related: Related Posts
+  projects:
+    title: Projects
+    eyebrow: Projects & Collaboration
+    heading: 全端工程師，可承接網頁開發與 DevOps 相關專案。
+    intro: 我什麼類型的系統都願意討論，但更專精於網頁開發、後台工具、流程自動化與雲端維運。這裡會逐步整理做過的網站、內部工具、資料流程與 DevOps 經驗。
+    web_title: Web Development
+    web_text: 前後端功能、網站架構、管理後台、文件站與技術部落格。
+    fullstack_title: Full-stack Delivery
+    fullstack_text: 需求拆解、資料流程、API、表單、匯入匯出與例行工作自動化。
+    devops_title: DevOps & Operations
+    devops_text: AWS、Linux、部署流程、備份、監控、CI/CD 與既有環境改善。
+    needs_title: 適合討論的需求
+    needs:
+      - 公司形象網站、技術部落格、文件站、作品集網站
+      - 後台管理系統、表單流程、資料匯入匯出、報表整理
+      - 既有網站維護、功能擴充、頁面調整、效能與 SEO 改善
+      - AWS、Linux、部署流程、備份、監控、CI/CD 與維運改善
+      - 把重複的人工流程整理成可追蹤、可交接的內部工具
+    process_title: 合作方式
+    process:
+      - title: 1. 初步討論
+        text: 先確認目前遇到的問題、希望完成的結果、時程與預算範圍。如果需求還不明確，也可以先一起把範圍整理出來。
+      - title: 2. 範圍確認
+        text: 把功能、頁面、資料來源、部署方式、交付內容與驗收方式列清楚，避免做到一半才發現雙方期待不同。
+      - title: 3. 分階段交付
+        text: 依照專案大小拆成可檢查的階段，定期同步進度。小型修改可以快速處理，較大的系統會先切 MVP。
+      - title: 4. 上線與交接
+        text: 協助部署、基本測試、文件整理與必要的操作說明，讓專案不是只有能跑，而是之後也能維護。
+    contact_brief_title: 聯絡時可以附上
+    contact_brief:
+      - 目前網站或系統網址，如果已經存在的話
+      - 想解決的問題，以及希望完成後變成什麼狀態
+      - 預計時程、預算範圍與是否有既有設計或規格
+      - 需要我負責的部分：前端、後端、部署、維運或整體規劃
+    contact_title: Contact
+    contact_text: 如果有網站、內部工具或 DevOps 相關需求，可以透過 Email、GitHub 或 Facebook 聯絡我。
+  seo:
+    fallback_description: "Dabao Huang 的技術筆記，記錄 Web Development、DevOps、Linux、AWS、Git 與全端開發實務。"
+
+en:
+  lang_code: en
+  blog_name: "Dabao's Tech Blog"
+  nav:
+    home: Home
+    projects: Projects
+    language: Language
+  sidebar:
+    description: Full-stack engineer focused on web development, DevOps, and practical technical notes.
+    kicker: Field notes from debugging, delivery, and operations work.
+  home:
+    eyebrow: Tech Notes
+    title: Notes from real debugging, deployment, and web development work.
+    intro: Practical notes on Linux, AWS, Git, PHP, databases, operations, and full-stack development. Articles remain in their original language.
+    profile_eyebrow: Engineering Profile
+    profile_title: Full-stack engineer focused on web development and DevOps, from product features to deployment and operations.
+    projects_cta: View projects
+  posts:
+    read_article: Read article
+    comments: "0 Comments"
+    older: Older
+    newer: Newer
+    related: Related Posts
+  projects:
+    title: Projects
+    eyebrow: Projects & Collaboration
+    heading: Full-stack engineer available for web development and DevOps projects.
+    intro: I am open to discussing many types of systems, with a stronger focus on web development, admin tools, workflow automation, cloud operations, and maintainable delivery.
+    web_title: Web Development
+    web_text: Frontend and backend features, site architecture, admin panels, documentation sites, and technical blogs.
+    fullstack_title: Full-stack Delivery
+    fullstack_text: Requirement breakdown, data flows, APIs, forms, import/export flows, and recurring task automation.
+    devops_title: DevOps & Operations
+    devops_text: AWS, Linux, deployment workflows, backups, monitoring, CI/CD, and operational improvements.
+    needs_title: Good Fits
+    needs:
+      - Company websites, technical blogs, documentation sites, and portfolio sites
+      - Admin systems, forms, import/export flows, and reporting workflows
+      - Existing site maintenance, feature expansion, page updates, performance, and SEO improvements
+      - AWS, Linux, deployment, backup, monitoring, CI/CD, and operations work
+      - Turning repeated manual work into trackable internal tools
+    process_title: Collaboration Process
+    process:
+      - title: 1. Initial discussion
+        text: Clarify the problem, expected outcome, timeline, and rough budget. If the scope is unclear, we can shape it first.
+      - title: 2. Scope alignment
+        text: Define features, pages, data sources, deployment, deliverables, and acceptance criteria before implementation starts.
+      - title: 3. Staged delivery
+        text: Split work into reviewable milestones. Small changes can move quickly; larger systems start with a focused MVP.
+      - title: 4. Launch and handoff
+        text: Support deployment, basic testing, documentation, and handoff notes so the project can be maintained after launch.
+    contact_brief_title: Helpful Context
+    contact_brief:
+      - Current website or system URL, if one exists
+      - The problem you want to solve and the desired end state
+      - Timeline, rough budget, and any existing design or spec
+      - Which parts you need help with: frontend, backend, deployment, operations, or planning
+    contact_title: Contact
+    contact_text: For web development, internal tools, or DevOps-related projects, contact me by email, GitHub, or Facebook.
+  seo:
+    fallback_description: "Technical notes by Dabao Huang on web development, DevOps, Linux, AWS, Git, and full-stack engineering."
+
+ja:
+  lang_code: ja
+  blog_name: "Dabao's Tech Blog"
+  nav:
+    home: ホーム
+    projects: プロジェクト
+    language: 言語
+  sidebar:
+    description: Web 開発、DevOps、実務的な技術メモを中心に扱うフルスタックエンジニアです。
+    kicker: デバッグ、開発、運用で得た知見を後から使える形で整理しています。
+  home:
+    eyebrow: Tech Notes
+    title: 実務で踏んだ問題を、次に使える技術メモとして整理しています。
+    intro: Linux、AWS、Git、PHP、データベース、運用、フルスタック開発に関する実務メモです。記事本文は原文のまま掲載しています。
+    profile_eyebrow: Engineering Profile
+    profile_title: Web 開発と DevOps を中心に、機能開発からデプロイ・運用まで扱うフルスタックエンジニアです。
+    projects_cta: プロジェクトを見る
+  posts:
+    read_article: 記事を読む
+    comments: "0 件のコメント"
+    older: 古い記事
+    newer: 新しい記事
+    related: 関連記事
+  projects:
+    title: プロジェクト
+    eyebrow: Projects & Collaboration
+    heading: Web 開発と DevOps 関連のプロジェクトを相談できます。
+    intro: 幅広いシステムについて相談可能ですが、特に Web 開発、管理画面、業務フロー自動化、クラウド運用、保守しやすい構成づくりを得意としています。
+    web_title: Web Development
+    web_text: フロントエンド・バックエンド機能、サイト設計、管理画面、ドキュメントサイト、技術ブログ。
+    fullstack_title: Full-stack Delivery
+    fullstack_text: 要件整理、データフロー、API、フォーム、インポート・エクスポート、定型作業の自動化。
+    devops_title: DevOps & Operations
+    devops_text: AWS、Linux、デプロイ、バックアップ、監視、CI/CD、既存環境の改善。
+    needs_title: 相談しやすい内容
+    needs:
+      - 会社サイト、技術ブログ、ドキュメントサイト、ポートフォリオサイト
+      - 管理画面、フォーム、データ入出力、レポート作成フロー
+      - 既存サイトの保守、機能追加、ページ修正、パフォーマンスと SEO 改善
+      - AWS、Linux、デプロイ、バックアップ、監視、CI/CD、運用改善
+      - 手作業の多い業務を、追跡・引き継ぎしやすい内部ツールにすること
+    process_title: 進め方
+    process:
+      - title: 1. 初回相談
+        text: 現在の課題、目指す状態、スケジュール、予算感を確認します。要件が曖昧な場合は整理から始めます。
+      - title: 2. 範囲の確認
+        text: 機能、ページ、データ、デプロイ方法、納品物、確認方法を実装前にそろえます。
+      - title: 3. 段階的な納品
+        text: 確認しやすい単位に分けて進めます。小さな修正は素早く、大きなシステムは MVP から始めます。
+      - title: 4. 公開と引き継ぎ
+        text: デプロイ、基本テスト、ドキュメント、操作メモまで整理し、公開後も保守しやすい状態にします。
+    contact_brief_title: 連絡時にあると助かる情報
+    contact_brief:
+      - 既存のサイトやシステム URL
+      - 解決したい問題と、完了後に期待する状態
+      - 希望スケジュール、予算感、既存デザインや仕様の有無
+      - 相談したい範囲：フロントエンド、バックエンド、デプロイ、運用、設計など
+    contact_title: Contact
+    contact_text: Web 開発、内部ツール、DevOps 関連の相談は Email、GitHub、Facebook から連絡できます。
+  seo:
+    fallback_description: "Dabao Huang による Web 開発、DevOps、Linux、AWS、Git、フルスタック開発の技術メモ。"
