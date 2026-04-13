@@ -97,7 +97,7 @@ Invalid Mutex directory in argument file:${APACHE_LOCK_DIR}
 .
 {% endhighlight %}
 
-新增以上那段，後面多放了一段 `RewriteEngine`，是為了 *php Codignitor* 的設定
+新增以上那段，後面多放了一段 `RewriteEngine`，是為了 *php Codignitor* 的設定
 
 原本沒有要寫在這邊的，正常的方法是寫在根目錄的 `.htaccess`
 

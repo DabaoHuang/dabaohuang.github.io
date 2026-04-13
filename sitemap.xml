@@ -5,7 +5,7 @@ layout: null
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for post in site.posts %}
     <url>
-      <loc>{{ site.baseurl }}{{ post.url }}</loc>
+      <loc>{{ site.newbaseurl }}{{ post.url }}</loc>
       {% if post.lastmod == null %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       {% else %}
@@ -16,13 +16,13 @@ layout: null
     </url>
   {% endfor %}
   {% for page in site.pages %}
-    {% if page.sitemap != null and page.sitemap != empty %}
+    {% unless page.url contains '.xml' or page.url contains '.json' or page.url contains '.txt' or page.url contains '404' or page.url contains 'README' or page.url contains 'LICENSE' %}
       <url>
-        <loc>{{ site.baseurl }}{{ page.url }}</loc>
-        <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+        <loc>{{ site.newbaseurl }}{{ page.url }}</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <changefreq>{% if page.title == 'Home' %}daily{% else %}monthly{% endif %}</changefreq>
         <priority>0.7</priority>
        </url>
-    {% endif %}
+    {% endunless %}
   {% endfor %}
 </urlset>

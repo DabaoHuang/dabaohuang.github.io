@@ -1,61 +1,79 @@
-  <!-- SEO -->
-  <meta name="author" content="Dabao Huang">
-  <meta name="copyright" content="Dabao Huang">
-  <!-- <meta name="google-site-verification" content="Y6EHO_vACb33JR6CLegTUED-tf0hwqt3auuO2yHTwwg" /> -->
-  <meta name="keywords"
-        content="Dabao,dabao,DABAO,大寶開發學習誌,CSS,Git,HTML5,JavaScript,Python,jQuery,Front end engineering,VScode,Linux,CentOS,Ubuntu,RHEL,前端,後端,技術研究,教學,Dabao,Dabao Huang,{{ page.baseurl }}">
-  <meta name="description"
-        content="Dabao,dabao,DABAO,大寶開發學習誌,CSS,Git,HTML5,JavaScript,Python,jQuery,Front end engineering,VScode,Linux,CentOS,Ubuntu,RHEL,前端,後端,技術研究,教學,Dabao,Dabao Huang,{{ page.baseurl }},{% if page.title == "Home" %}
-        {{ site.title }} &middot; {{ site.tagline }}
-        {% else %}
-          {{ page.title }} &middot; {{ site.title }}
-        {% endif %}">
+{% assign site_origin = site.newbaseurl | default: site.url | replace: 'https://dabaohuang.github.io/', 'https://dabaohuang.github.io' | replace: 'http://localhost:4000/', 'http://localhost:4000' %}
+{% assign canonical_path = page.url | replace: 'index.html', '' %}
+{% assign canonical_url = site_origin | append: canonical_path %}
+{% if page.subtitle %}
+  {% assign seo_title = page.subtitle | append: ' | ' | append: site.title %}
+{% elsif page.title == 'Home' %}
+  {% assign seo_title = site.title | append: ' | ' | append: site.tagline %}
+{% else %}
+  {% assign seo_title = page.title | append: ' | ' | append: site.title %}
+{% endif %}
+{% if page.description %}
+  {% assign seo_description = page.description | strip_html | normalize_whitespace | truncate: 160 %}
+{% elsif page.signature == true %}
+  {% assign seo_description = page.content | strip_html | normalize_whitespace | truncate: 160 %}
+{% elsif page.title != 'Home' and page.content %}
+  {% assign seo_description = page.content | strip_html | normalize_whitespace | truncate: 160 %}
+{% else %}
+  {% assign seo_description = site.description | append: ' Dabao Huang 的技術筆記，記錄 Web Development、DevOps、Linux、AWS、Git 與全端開發實務。' | normalize_whitespace %}
+{% endif %}
+{% assign seo_image = site_origin | append: '/img/logo/logo.png' %}
+{% assign seo_type = 'website' %}
+{% if page.layout == 'post' or page.signature == true %}
+  {% assign seo_type = 'article' %}
+{% endif %}
+<!-- SEO -->
+<meta name="author" content="{{ site.author.name }}">
+<meta name="copyright" content="{{ site.author.name }}">
+<meta name="description" content="{{ seo_description }}">
+<meta name="keywords" content="Dabao Huang, 大寶開發學習誌, Web Development, DevOps, Full-stack, AWS, Linux, Git, PHP, JavaScript, Python, 技術筆記">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ canonical_url }}">
 
-  <link rel="contents" title="Archive" href="/Archive">
-  <link rel="start" title="Dabao's Tech Note" href="/">
-  <link rel="search" type="application/opensearchdescription+xml" href="{{ site.baseurl }}osd.xml" title="Dabao Huang 大寶開發學習誌">
+<link rel="contents" title="Archive" href="/Archive/">
+<link rel="start" title="Dabao's Tech Note" href="/">
+<link rel="search" type="application/opensearchdescription+xml" href="/osd.xml" title="Dabao Huang 大寶開發學習誌">
 
-  {% if page.signature == true %}
-    <meta property="og:title" content="{{ page.title }}" >
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ page.baseurl }}">
-    <meta property="og:image" content="{{ site.baseurl }}/img/logo.png">
-    <meta property="og:description"
-        content="大寶開發學習誌 {{ page.content | strip_html | truncatewords: 20 }}" >
-    <meta name="description"
-        content="大寶開發學習誌 {{ page.content | strip_html | truncatewords: 20 }}" >
-  {% else %}
-    <meta property="og:title" content="Dabao's Tech Note" >
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="{{ site.baseurl }}img/logo.png">
-    <meta property="og:description"
-        content="大寶開發學習誌" >
-    <meta name="description"
-        content="大寶開發學習誌">
-  {% endif %}
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ seo_title }}">
+<meta property="og:type" content="{{ seo_type }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ seo_image }}">
+<meta property="og:description" content="{{ seo_description }}">
+<meta property="og:locale" content="zh_TW">
+{% if page.layout == 'post' or page.signature == true %}
+<meta property="article:author" content="{{ site.author.name }}">
+{% if page.date %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% endif %}
+{% if page.category %}
+<meta property="article:section" content="{{ page.category }}">
+{% endif %}
+{% endif %}
 
-  <script type="application/ld+json">
-    {
-      "@type": "Blog",
-      "name": "
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-    ",
-      "description": "大寶開發學習誌,CSS,Git,HTML5,JavaScript,Python,jQuery,Front end engineering,VScode,Linux,CentOS,Ubuntu,RHEL,前端,後端,技術研究,教學,Dabao,Dabao Huang,{{ page.baseurl }},
-      {% if page.title == "Home" %}
-        {{ site.title }} &middot; {{ site.tagline }}
-      {% else %}
-        {{ page.title }} &middot; {{ site.title }}
-      {% endif %}",
-      "url" :"{{ page.baseurl }}",
-      "image":"",
-      "sku":"",
-        "AggregateRating" : {
-        "@type" : "Rating",
-        "ratingValue" : "5"
-        }  
-    }
-    </script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ seo_title }}">
+<meta name="twitter:description" content="{{ seo_description }}">
+<meta name="twitter:image" content="{{ seo_image }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{% if page.layout == 'post' or page.signature == true %}BlogPosting{% else %}WebSite{% endif %}",
+  "headline": {{ seo_title | jsonify }},
+  "description": {{ seo_description | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "image": {{ seo_image | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.author.url | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }}
+  }{% if page.date %},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.lastmod | default: page.date | date_to_xmlschema | jsonify }}{% endif %}
+}
+</script>

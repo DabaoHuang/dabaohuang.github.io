@@ -61,7 +61,7 @@ git config user.email "E-mail"
 git push Remote Branch
 ```
 
-設定完成後可以先藉由 `git config --edit` 或 `git config --global --edit` 查看作者資訊
+設定完成後可以先藉由 `git config --edit` 或 `git config --global --edit` 查看作者資訊
 ![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-1.png {{ post.title }})
 
 補充：如果只是設定未來的 commit，改 config 就可以；如果已經 commit 出去了，則需要搭配 amend 或 rebase 修改歷史。
@@ -94,7 +94,7 @@ git push Remote Branch
 ## 小技巧 - 修正某個節點的 commit
 -------------
 
-假設今天有 A->B->C->D->E->F(HEAD)，而我要修改 C,D,E 這三個 commit 的作者資訊
+假設今天有 A->B->C->D->E->F(HEAD)，而我要修改 C,D,E 這三個 commit 的作者資訊
 
 1. 在該 **Repo** 的目錄下指令
 ```
@@ -129,7 +129,7 @@ git rebase --abort
 ```
 
 
-## 小技巧 - 修改 git 預設編輯器
+## 小技巧 - 修改 git 預設編輯器
 -------------
 
 在 ubuntu 下 `git config --amend ... ` 相關指令時，會以 *nano* 編輯器打開
@@ -169,7 +169,7 @@ git stash
 
 
 
-## 小技巧 - 多點合併
+## 小技巧 - 多點合併
 -------------
 
 開發過程中有可能會有許多修正，可能寫好一個即 commit 一次
@@ -193,7 +193,7 @@ git stash
 git checkout master
 ```
 
-2. 基於 C 結點之後的變更全部合併到 Master，變成節點 M
+2. 基於 C 結點之後的變更全部合併到 Master，變成節點 M
 ```
 git merge --squash dev
 ```
