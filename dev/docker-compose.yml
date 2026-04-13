@@ -1,0 +1,30 @@
+name: dabaohuang-blog-dev
+
+services:
+  blog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /site
+    command:
+      - bundle
+      - exec
+      - jekyll
+      - serve
+      - --host
+      - 0.0.0.0
+      - --port
+      - "4000"
+      - --watch
+      - --force_polling
+      - --source
+      - /site
+      - --config
+      - /site/_config.yml,/site/dev/_config.dev.yml
+    environment:
+      BUNDLE_GEMFILE: /tmp/blog-dev/Gemfile
+      JEKYLL_ENV: development
+    ports:
+      - "4000:4000"
+    volumes:
+      - ..:/site

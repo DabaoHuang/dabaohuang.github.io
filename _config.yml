@@ -33,3 +33,6 @@ headpic:          https://avatars1.githubusercontent.com/u/4962159?v=4&amp;s=460
 categories:
   1:              'Linux'
   2:              'Git'
+
+exclude:
+  - dev
