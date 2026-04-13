@@ -13,6 +13,29 @@ signature: true
     本來是想到什麼問題就加到 <a href='https://dabaohuang.github.io/git/2018/07/18/git-command-produce/'>[ Git ] 常用指令介紹</a> 這篇文章，越寫越多之後我覺得還是拆開好了!
 </div>
 
+## 閱讀方式
+
+這篇是 Git 情境筆記，不是從零開始的教學。每一段都對應一個實務上容易遇到的問題，例如作者資訊錯誤、commit 需要修正、分支歷史太亂、或是不小心把不該提交的檔案放進 repo。
+
+建議在操作前先確認目前狀態：
+
+```
+git status
+git log --oneline --decorate --graph -10
+```
+
+只要會改歷史，例如 `rebase`、`filter-branch`、`push --force`，都應該先確認是否已經推到多人共用的遠端分支。
+
+## 先判斷是哪一種 Git 問題
+
+遇到 Git 問題時，我會先分成三類：
+
+1. 只影響自己本機：通常可以放心操作，例如 stash、local config
+2. 已經 commit 但還沒 push：可以 amend 或 rebase，風險較低
+3. 已經 push 到共用分支：要先溝通，因為改歷史會影響其他人
+
+下面每個情境都可以先套用這個判斷方式。
+
 ## 小技巧 - 修改作者 Config
 -------------
 
@@ -41,6 +64,8 @@ git push Remote Branch
 設定完成後可以先藉由 `git config --edit` 或 `git config --global --edit` 查看作者資訊
 ![placeholder]({{ site.baseurl }}img/2018/2018-07-18-git-command-produce-1.png {{ post.title }})
 
+補充：如果只是設定未來的 commit，改 config 就可以；如果已經 commit 出去了，則需要搭配 amend 或 rebase 修改歷史。
+
 
 
 ## 小技巧 - 修改上次提交的 commit
@@ -62,6 +87,8 @@ git log
 ```
 git push Remote Branch
 ```
+
+如果這個 commit 已經 push 到遠端，而且其他人可能已經拉下來，改完後通常需要 force push。這種情況要先跟團隊同步，避免別人的分支歷史被打亂。
 
 
 ## 小技巧 - 修正某個節點的 commit
@@ -89,6 +116,18 @@ git commit --amend --no-edit --author="Author Name E-mail"
 git rebase --continue
 ```
 
+如果 rebase 過程中發生衝突，先解完衝突並 `git add`，再繼續：
+
+```
+git rebase --continue
+```
+
+如果發現方向錯了，可以中止整個 rebase：
+
+```
+git rebase --abort
+```
+
 
 ## 小技巧 - 修改 git 預設編輯器
 -------------
@@ -113,6 +152,14 @@ git rebase --continue
 1. `git stash -u` : 將修改過的檔案丟進暫存
 2. `git pull --rebase origin master` : 把遠端有修改的部分都加進本地分支歷史，並更新到最新版本
 3. `git stash pop` : 把修改過的檔案丟出來
+
+補充：`git stash -u` 會包含 untracked files。如果只想暫存已追蹤檔案，可以使用：
+
+```
+git stash
+```
+
+取回 stash 後如果遇到衝突，處理方式跟 merge conflict 類似，解完衝突後再確認 `git status`。
 
 另外也有人透過另外一種方法做到相同目的
 
@@ -233,6 +280,60 @@ Checking objects: 100% (14/14), done.
 ```
 git push origin master --force
 ```
+
+這段操作會改寫 Git history，風險很高。若是多人協作 repo，要先確認：
+
+1. 這個檔案是否真的需要從所有歷史中移除
+2. 是否涉及 secret、credential 或個資
+3. 遠端分支是否允許 force push
+4. 其他開發者是否知道需要重新同步分支
+
+如果只是未來不要再追蹤某個檔案，通常只需要：
+
+```
+git rm --cached path/to/file
+echo "path/to/file" >> .gitignore
+git commit -m "remove tracked generated file"
+```
+
+只有在「歷史裡也不能留下」的情境，才需要使用改寫歷史的方式。
+
+## 實務例子：不小心把環境檔 commit 進去
+
+假設不小心把 `.env` commit 進去，先判斷有沒有 push：
+
+### 還沒 push
+
+可以直接從最新 commit 拿掉：
+
+```
+git rm --cached .env
+echo ".env" >> .gitignore
+git add .gitignore
+git commit --amend
+```
+
+### 已經 push，但不是敏感資料
+
+可以新增一個 commit 移除追蹤：
+
+```
+git rm --cached .env
+echo ".env" >> .gitignore
+git add .gitignore
+git commit -m "remove env file from tracking"
+git push
+```
+
+### 已經 push，而且是敏感資料
+
+這時只刪檔不夠，因為 secret 已經存在 Git history。應該立刻：
+
+1. 讓該 secret 失效或 rotate
+2. 評估是否需要改寫 Git history
+3. 通知團隊重新同步 repo
+
+改寫 history 是最後手段，不是第一反應；真正要先處理的是 secret 已外洩這件事。
 
 
 以上，有可能的問題我已經盡量列出來了，有錯誤還請指正！
