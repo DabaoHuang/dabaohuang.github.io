@@ -2,8 +2,8 @@ zh:
   lang_code: zh-Hant
   blog_name: "Dabao's Tech Blog"
   nav:
-    home: 首頁
-    projects: 專案
+    home: Index
+    projects: Projects
     language: 語言
   sidebar:
     description: 全端工程師，專注於網頁開發、DevOps 與實務技術筆記。
