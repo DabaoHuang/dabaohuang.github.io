@@ -88,7 +88,7 @@ nav: false
 
 重構舊系統最怕的是「看起來完成了，但上線後才發現某個角落壞掉」。所以我把多個 stage / production 發生過的問題轉成 regression test，讓修過的問題未來不容易再退回去。
 
-到 2026-04-28，完整測試已覆蓋超過 500 個 PHPUnit tests，最新紀錄為 518 tests、2010 assertions、74 skipped。
+完整測試已覆蓋超過 500 個 PHPUnit tests，最新紀錄為 518 tests、2010 assertions、74 skipped。
 
 我也整理上線 runbook，包含 production env/config、live symlink、Apache DocumentRoot、國泰 callback / RETURL、legacy DB 匯入、發票批次 dry-run、排程檢查與 stage 開關。這讓上線不只是「工程師記得怎麼做」，而是有文件可以檢查與交接。
 
