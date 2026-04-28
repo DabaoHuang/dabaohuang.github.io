@@ -22,7 +22,11 @@
 {% else %}
   {% assign seo_description = t.sidebar.description | append: ' ' | append: t.seo.fallback_description | normalize_whitespace %}
 {% endif %}
-{% assign seo_image = site_origin | append: '/img/logo/logo.png' %}
+{% if page.image %}
+  {% assign seo_image = site_origin | append: page.image %}
+{% else %}
+  {% assign seo_image = site_origin | append: '/img/logo/logo.png' %}
+{% endif %}
 {% assign seo_type = 'website' %}
 {% if page.layout == 'post' or page.signature == true %}
   {% assign seo_type = 'article' %}

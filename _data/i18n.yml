@@ -24,8 +24,18 @@ zh:
   projects:
     title: Projects
     eyebrow: Projects & Collaboration
-    heading: 全端工程師，可承接網頁開發與 DevOps 相關專案。
-    intro: 我什麼類型的系統都願意討論，但更專精於網頁開發、後台工具、流程自動化與雲端維運。這裡會逐步整理做過的網站、內部工具、資料流程與 DevOps 經驗。
+    heading: 我喜歡把複雜的需求，整理成穩定、清楚、之後也能維護的系統。
+    intro: 我是全端工程師，平常處理網站開發、後台系統、資料流程、雲端部署與維運改善。比起只把功能做出來，我更在意的是把需求、資料、流程和上線風險一起想清楚，讓專案交付後真的能被使用、被交接、被持續維護。
+    featured_title: Featured Work
+    case_title: 廉價航空快遞系統重構
+    case_text: 將累積多年技術債的舊物流系統，重構成可維護的新架構，同時升級付款、發票、資料匯入、後台對帳、測試與上線流程。
+    case_cta: 閱讀案例
+    case_tags:
+      - PHP 8.3
+      - Slim 4
+      - MySQL
+      - Legacy Migration
+      - Payment Flow
     web_title: Web Development
     web_text: 前後端功能、網站架構、管理後台、文件站與技術部落格。
     fullstack_title: Full-stack Delivery
@@ -86,8 +96,18 @@ en:
   projects:
     title: Projects
     eyebrow: Projects & Collaboration
-    heading: Full-stack engineer available for web development and DevOps projects.
-    intro: I am open to discussing many types of systems, with a stronger focus on web development, admin tools, workflow automation, cloud operations, and maintainable delivery.
+    heading: I help turn complex requirements into clear, stable, maintainable systems.
+    intro: I am a full-stack engineer working across web development, admin systems, data workflows, cloud deployment, and operations. Beyond shipping features, I care about clarifying requirements, data flow, launch risk, and handoff so the project remains useful after delivery.
+    featured_title: Featured Work
+    case_title: 廉價航空快遞 logistics system refactor
+    case_text: Rebuilt a high-debt legacy logistics system into a maintainable architecture, upgrading payment, invoice, data import, reconciliation, testing, and launch workflows.
+    case_cta: Read case study
+    case_tags:
+      - PHP 8.3
+      - Slim 4
+      - MySQL
+      - Legacy Migration
+      - Payment Flow
     web_title: Web Development
     web_text: Frontend and backend features, site architecture, admin panels, documentation sites, and technical blogs.
     fullstack_title: Full-stack Delivery
@@ -148,8 +168,18 @@ ja:
   projects:
     title: プロジェクト
     eyebrow: Projects & Collaboration
-    heading: Web 開発と DevOps 関連のプロジェクトを相談できます。
-    intro: 幅広いシステムについて相談可能ですが、特に Web 開発、管理画面、業務フロー自動化、クラウド運用、保守しやすい構成づくりを得意としています。
+    heading: 複雑な要件を、安定して使い続けられるシステムに整理することを大切にしています。
+    intro: Web 開発、管理画面、データフロー、クラウドデプロイ、運用改善を扱うフルスタックエンジニアです。機能を作るだけでなく、要件、データ、公開リスク、引き継ぎまで整理し、納品後も使い続けられる形にすることを重視しています。
+    featured_title: Featured Work
+    case_title: 廉價航空快遞 物流システムのリファクタリング
+    case_text: 技術的負債の大きい既存物流システムを保守しやすい構成へ再設計し、決済、請求書、データ移行、照合、テスト、公開手順を改善しました。
+    case_cta: 事例を読む
+    case_tags:
+      - PHP 8.3
+      - Slim 4
+      - MySQL
+      - Legacy Migration
+      - Payment Flow
     web_title: Web Development
     web_text: フロントエンド・バックエンド機能、サイト設計、管理画面、ドキュメントサイト、技術ブログ。
     fullstack_title: Full-stack Delivery

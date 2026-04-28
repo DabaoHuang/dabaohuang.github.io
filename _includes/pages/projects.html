@@ -20,6 +20,25 @@
   </article>
 </section>
 
+<section class="featured-work" aria-labelledby="featured-work-title">
+  <h2 id="featured-work-title">{{ t.projects.featured_title }}</h2>
+  <article class="case-card">
+    <a class="case-card-image" href="/portfolio/nippon-air-refactor/" aria-label="{{ t.projects.case_cta }}">
+      <img src="/img/portfolio/nippon-air-refactor-hero.png" alt="{{ t.projects.case_title }}">
+    </a>
+    <div class="case-card-body">
+      <h3><a href="/portfolio/nippon-air-refactor/">{{ t.projects.case_title }}</a></h3>
+      <p>{{ t.projects.case_text }}</p>
+      <ul class="case-tags" aria-label="Technologies">
+        {% for tag in t.projects.case_tags %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+      <a class="case-link" href="/portfolio/nippon-air-refactor/">{{ t.projects.case_cta }}</a>
+    </div>
+  </article>
+</section>
+
 <section class="collaboration-section">
   <h2>{{ t.projects.needs_title }}</h2>
   <ul class="collaboration-list">

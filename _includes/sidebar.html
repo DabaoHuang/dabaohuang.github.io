@@ -15,7 +15,7 @@
     <div><a href="/en/">English</a></div>
     <div><a href="/ja/">日本語</a></div>
     {% for node in pages_list %}
-      {% if node.title != null %}
+      {% if node.title != null and node.nav != false %}
         {% if node.layout == "page" %}
           {% assign show_node = false %}
           {% if node.lang == current_lang %}
@@ -28,7 +28,13 @@
           {% if node.url contains '/portfolio/' %}
             {% assign nav_title = t.nav.projects %}
           {% endif %}
-          <div><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ nav_title }}</a></div>
+          {% assign is_active = false %}
+          {% if page.url == node.url %}
+            {% assign is_active = true %}
+          {% elsif page.url contains '/portfolio/' and node.url contains '/portfolio/' %}
+            {% assign is_active = true %}
+          {% endif %}
+          <div><a class="sidebar-nav-item{% if is_active %} active{% endif %}" href="{{ node.url }}">{{ nav_title }}</a></div>
           {% endif %}
         {% endif %}
       {% endif %}
@@ -72,7 +78,7 @@
 
       
       {% for node in pages_list %}
-        {% if node.title != null %}
+        {% if node.title != null and node.nav != false %}
           {% if node.layout == "page" %}
             {% assign show_node = false %}
             {% if node.lang == current_lang %}
@@ -85,7 +91,13 @@
             {% if node.url contains '/portfolio/' %}
               {% assign nav_title = t.nav.projects %}
             {% endif %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ nav_title }}</a>
+            {% assign is_active = false %}
+            {% if page.url == node.url %}
+              {% assign is_active = true %}
+            {% elsif page.url contains '/portfolio/' and node.url contains '/portfolio/' %}
+              {% assign is_active = true %}
+            {% endif %}
+            <a class="sidebar-nav-item{% if is_active %} active{% endif %}" href="{{ node.url }}">{{ nav_title }}</a>
             {% endif %}
           {% endif %}
         {% endif %}

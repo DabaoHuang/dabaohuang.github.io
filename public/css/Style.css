@@ -650,6 +650,106 @@ tbody tr:nth-child(odd) th {
     margin: 0 0 36px;
 }
 
+.featured-work {
+    max-width: 900px;
+    margin: 0 0 34px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+}
+
+.featured-work h2 {
+    margin-top: 0;
+    color: var(--text);
+    font-size: 1.25rem;
+}
+
+.case-card {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.1fr);
+    gap: 0;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.case-card-image {
+    display: block;
+    min-height: 260px;
+    background: var(--surface-muted);
+}
+
+.case-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+.case-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
+}
+
+.case-card-body h3 {
+    margin: 0;
+    font-size: 1.22rem;
+    line-height: 1.35;
+}
+
+.case-card-body h3 a {
+    color: var(--text);
+}
+
+.case-card-body h3 a:hover {
+    color: var(--accent-strong);
+}
+
+.case-card-body p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.94rem;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.case-tags li {
+    min-height: 28px;
+    padding: 4px 9px;
+    color: var(--accent-strong);
+    background: var(--accent-soft);
+    border-radius: 8px;
+    font-size: 0.74rem;
+    font-weight: 800;
+}
+
+.case-link {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 7px 12px;
+    color: var(--surface);
+    background: var(--text);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.case-link:hover {
+    color: var(--surface);
+    background: var(--accent-strong);
+}
+
 .portfolio-item {
     min-height: 180px;
     padding: 20px;
@@ -724,6 +824,24 @@ tbody tr:nth-child(odd) th {
     margin-bottom: 0;
     color: var(--text-muted);
     font-size: 0.9rem;
+}
+
+.portfolio-case-hero {
+    display: block;
+    width: 100%;
+    margin: 6px 0 22px;
+    border: 1px solid var(--line);
+}
+
+.portfolio-case-summary {
+    margin-bottom: 28px;
+    padding: 18px 20px;
+    color: var(--text);
+    background: var(--surface-muted);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    font-size: 1.02rem;
+    font-weight: 650;
 }
 
 .archive {
@@ -805,6 +923,19 @@ tbody tr:nth-child(odd) th {
 
     .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+
+    .case-card {
+        grid-template-columns: 1fr;
+    }
+
+    .case-card-image,
+    .case-card-image img {
+        min-height: 190px;
+    }
+
+    .case-card-body {
+        padding: 18px;
     }
 
     .collaboration-steps {
