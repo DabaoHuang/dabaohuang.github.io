@@ -1,82 +1,258 @@
 {% include i18n.html %}
-<section class="portfolio-intro">
-  <p class="eyebrow">{{ t.projects.eyebrow }}</p>
-  <h2>{{ t.projects.heading }}</h2>
-  <p>{{ t.projects.intro }}</p>
-</section>
+{% assign case_url = '/portfolio/nippon-air-refactor/' %}
 
-<section class="portfolio-grid" aria-label="Focus areas">
-  <article class="portfolio-item">
-    <h3>{{ t.projects.web_title }}</h3>
-    <p>{{ t.projects.web_text }}</p>
-  </article>
-  <article class="portfolio-item">
-    <h3>{{ t.projects.fullstack_title }}</h3>
-    <p>{{ t.projects.fullstack_text }}</p>
-  </article>
-  <article class="portfolio-item">
-    <h3>{{ t.projects.devops_title }}</h3>
-    <p>{{ t.projects.devops_text }}</p>
-  </article>
-</section>
+<section class="projects-landing">
+  <section class="projects-hero" aria-labelledby="projects-hero-title">
+    <div class="projects-hero-copy">
+      <p class="eyebrow">{{ t.projects.hero_eyebrow }}</p>
+      <h1 id="projects-hero-title">{{ t.projects.hero_title }}</h1>
+      <p class="projects-hero-text">{{ t.projects.hero_text }}</p>
 
-<section class="featured-work" aria-labelledby="featured-work-title">
-  <h2 id="featured-work-title">{{ t.projects.featured_title }}</h2>
-  <article class="case-card">
-    <a class="case-card-image" href="/portfolio/nippon-air-refactor/" aria-label="{{ t.projects.case_cta }}">
-      <img src="/img/portfolio/nippon-air-refactor-hero.png" alt="{{ t.projects.case_title }}">
-    </a>
-    <div class="case-card-body">
-      <h3><a href="/portfolio/nippon-air-refactor/">{{ t.projects.case_title }}</a></h3>
-      <p>{{ t.projects.case_text }}</p>
-      <ul class="case-tags" aria-label="Technologies">
-        {% for tag in t.projects.case_tags %}
-          <li>{{ tag }}</li>
+      <div class="projects-hero-actions">
+        <a class="projects-primary" href="mailto:{{ site.author.email }}">{{ t.projects.hero_primary_cta }}</a>
+        <a class="projects-secondary" href="{{ case_url }}">{{ t.projects.hero_secondary_cta }}</a>
+      </div>
+
+      <ul class="projects-proof-list" aria-label="{{ t.projects.hero_points_label }}">
+        {% for item in t.projects.hero_points %}
+          <li>{{ item }}</li>
         {% endfor %}
       </ul>
-      <a class="case-link" href="/portfolio/nippon-air-refactor/">{{ t.projects.case_cta }}</a>
     </div>
-  </article>
-</section>
 
-<section class="collaboration-section">
-  <h2>{{ t.projects.needs_title }}</h2>
-  <ul class="collaboration-list">
-    {% for item in t.projects.needs %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
-</section>
+    <figure class="projects-hero-media">
+      <img src="/img/portfolio/projects-hero.jpg" alt="{{ t.projects.hero_image_alt }}">
+    </figure>
+  </section>
 
-<section class="collaboration-section">
-  <h2>{{ t.projects.process_title }}</h2>
-  <div class="collaboration-steps">
-    {% for step in t.projects.process %}
-      <article>
-        <h3>{{ step.title }}</h3>
-        <p>{{ step.text }}</p>
-      </article>
-    {% endfor %}
-  </div>
-</section>
+  <section class="projects-section projects-background" aria-labelledby="projects-background-title">
+    <div class="projects-background-copy">
+      <p class="eyebrow">{{ t.projects.background_eyebrow }}</p>
+      <h2 id="projects-background-title">{{ t.projects.background_title }}</h2>
+      <p>{{ t.projects.background_text }}</p>
 
-<section class="collaboration-section">
-  <h2>{{ t.projects.contact_brief_title }}</h2>
-  <ul class="collaboration-list">
-    {% for item in t.projects.contact_brief %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
-</section>
+      <div class="projects-background-list">
+        {% for item in t.projects.background_items %}
+          <article>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
 
-<section class="portfolio-contact">
-  <h2>{{ t.projects.contact_title }}</h2>
-  <p>{{ t.projects.contact_text }}</p>
-  <p>
-    <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-    <span aria-hidden="true"> / </span>
-    <a href="https://www.github.com/dabaohuang/">GitHub</a>
-    <span aria-hidden="true"> / </span>
-    <a href="https://www.facebook.com/da.bao.12">Facebook</a>
-  </p>
+    <figure class="projects-background-media">
+      <img src="/img/portfolio/projects-tech-background.svg" alt="{{ t.projects.background_image_alt }}" loading="lazy">
+    </figure>
+  </section>
+
+  <section class="projects-section projects-pain" aria-labelledby="projects-pain-title">
+    <div class="projects-section-head">
+      <p class="eyebrow">{{ t.projects.pain_eyebrow }}</p>
+      <h2 id="projects-pain-title">{{ t.projects.pain_title }}</h2>
+      <p>{{ t.projects.pain_text }}</p>
+    </div>
+
+    <div class="projects-pain-layout">
+      <figure class="projects-pain-media">
+        <img src="/img/portfolio/projects-pain-points.jpg" alt="{{ t.projects.pain_image_alt }}" loading="lazy">
+      </figure>
+
+      <div class="projects-pain-grid">
+        {% for item in t.projects.pains %}
+          <article class="projects-pain-item">
+            <span class="projects-marker">{{ forloop.index }}</span>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section projects-approach" aria-labelledby="projects-approach-title">
+    <div class="projects-section-head">
+      <p class="eyebrow">{{ t.projects.approach_eyebrow }}</p>
+      <h2 id="projects-approach-title">{{ t.projects.approach_title }}</h2>
+      <p>{{ t.projects.approach_text }}</p>
+    </div>
+
+    <div class="projects-flow">
+      {% for step in t.projects.approach_steps %}
+        <article class="projects-flow-step">
+          <div class="projects-flow-icon" aria-hidden="true">
+            {% if forloop.index == 1 %}
+              <svg viewBox="0 0 24 24"><path d="M12 2v4M5 5l3 3M19 5l-3 3"/><circle cx="12" cy="14" r="6"/><path d="M9 14h6M12 11v6"/></svg>
+            {% elsif forloop.index == 2 %}
+              <svg viewBox="0 0 24 24"><path d="M3 6h12M3 12h18M3 18h9"/><circle cx="20" cy="6" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+            {% elsif forloop.index == 3 %}
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            {% else %}
+              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            {% endif %}
+          </div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </article>
+        {% unless forloop.last %}
+          <div class="projects-flow-arrow" aria-hidden="true">→</div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="projects-section projects-case" aria-labelledby="projects-case-title">
+    <div class="projects-case-header">
+      <div>
+        <p class="eyebrow">{{ t.projects.case_eyebrow }}</p>
+        <h2 id="projects-case-title">{{ t.projects.case_title }}</h2>
+      </div>
+      <a class="projects-link" href="{{ case_url }}">{{ t.projects.case_cta }}</a>
+    </div>
+
+    <article class="projects-case-card">
+      <div class="projects-case-visual" aria-hidden="true">
+        <div class="projects-mini-chart">
+          <div class="projects-mini-chart-head">
+            <span>{{ t.projects.case_metric_stability }}</span>
+            <div>
+              <small>{{ t.projects.case_before_title }}</small>
+              <small>{{ t.projects.case_after_title }}</small>
+            </div>
+          </div>
+          <svg viewBox="0 0 220 76" aria-hidden="true">
+            <polyline points="0,48 28,46 56,54 84,34 112,58 140,30 168,62 196,38 220,52" />
+            <polyline class="is-good" points="0,52 28,44 56,38 84,32 112,25 140,19 168,16 196,12 220,8" />
+          </svg>
+        </div>
+        <div class="projects-mini-chart">
+          <div class="projects-mini-chart-head">
+            <span>{{ t.projects.case_metric_operations }}</span>
+            <div>
+              <small>{{ t.projects.case_before_title }}</small>
+              <small>{{ t.projects.case_after_title }}</small>
+            </div>
+          </div>
+          <div class="projects-bars">
+            <i style="height: 32%;"></i>
+            <i class="is-good" style="height: 54%;"></i>
+            <i style="height: 42%;"></i>
+            <i class="is-good" style="height: 70%;"></i>
+            <i style="height: 58%;"></i>
+            <i class="is-good" style="height: 94%;"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-case-content">
+        <p class="projects-case-client">{{ t.projects.case_client }}</p>
+        <h3>{{ t.projects.case_summary }}</h3>
+
+        <div class="projects-case-columns">
+          <div>
+            <h4>{{ t.projects.case_before_title }}</h4>
+            <ul>
+              {% for item in t.projects.case_before %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div>
+            <h4>{{ t.projects.case_after_title }}</h4>
+            <ul>
+              {% for item in t.projects.case_after %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <a class="projects-case-cta" href="{{ case_url }}">{{ t.projects.case_cta }}</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="projects-section projects-capabilities" aria-labelledby="projects-capability-title">
+    <div class="projects-section-head">
+      <p class="eyebrow">{{ t.projects.capability_eyebrow }}</p>
+      <h2 id="projects-capability-title">{{ t.projects.capability_title }}</h2>
+      <p>{{ t.projects.capability_text }}</p>
+    </div>
+
+    <article class="projects-capability-story">
+      <div>
+        <h3>{{ t.projects.capability_about_title }}</h3>
+        <p>{{ t.projects.capability_about_text }}</p>
+      </div>
+      <ul>
+        {% for item in t.projects.capability_points %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+
+    <div class="projects-capability-grid">
+      {% for item in t.projects.capabilities %}
+        <article class="projects-capability-item">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="projects-section projects-scenario" aria-labelledby="projects-scenario-title">
+    <figure class="projects-scenario-media">
+      <img src="/img/portfolio/projects-scenario.jpg" alt="{{ t.projects.scenario_image_alt }}" loading="lazy">
+    </figure>
+
+    <div class="projects-scenario-copy">
+      <p class="eyebrow">{{ t.projects.scenario_eyebrow }}</p>
+      <h2 id="projects-scenario-title">{{ t.projects.scenario_title }}</h2>
+      <div class="projects-scenario-list">
+        {% for item in t.projects.scenarios %}
+          <article>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section projects-process" aria-labelledby="projects-process-title">
+    <div class="projects-process-head">
+      <p class="eyebrow">{{ t.projects.process_eyebrow }}</p>
+      <h2 id="projects-process-title">{{ t.projects.process_title }}</h2>
+      <p>{{ t.projects.process_intro }}</p>
+    </div>
+
+    <figure class="projects-process-media">
+      <img src="/img/portfolio/projects-process.svg" alt="{{ t.projects.process_image_alt }}" loading="lazy">
+    </figure>
+
+    <div class="projects-process-list">
+      {% for step in t.projects.process %}
+        <article>
+          <span>{{ forloop.index }}</span>
+          <div>
+            <h3>{{ step.title | remove_first: forloop.index | remove_first: '. ' }}</h3>
+            <p>{{ step.text }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="projects-contact" aria-labelledby="projects-contact-title">
+    <div>
+      <p class="eyebrow">{{ t.projects.contact_eyebrow }}</p>
+      <h2 id="projects-contact-title">{{ t.projects.contact_title }}</h2>
+      <p>{{ t.projects.contact_text }}</p>
+    </div>
+    <div class="projects-contact-actions">
+      <a class="projects-primary" href="mailto:{{ site.author.email }}">{{ t.projects.contact_email_cta }}</a>
+      <a class="projects-secondary" href="{{ site.github.repo }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </section>
 </section>

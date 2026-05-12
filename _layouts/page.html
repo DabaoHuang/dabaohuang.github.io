@@ -3,12 +3,18 @@ layout: default
 ---
 
 {% assign display_title = page.title %}
+{% assign is_portfolio_landing = false %}
 {% if page.url contains '/portfolio/' %}
   {% include i18n.html %}
   {% assign display_title = t.projects.title %}
 {% endif %}
+{% if page.url == '/portfolio/' or page.url == '/en/portfolio/' or page.url == '/ja/portfolio/' %}
+  {% assign is_portfolio_landing = true %}
+{% endif %}
 
-<div class="page">
-  <h1 class="page-title">{{ display_title }}</h1>
+<div class="page{% if is_portfolio_landing %} portfolio-page{% endif %}">
+  {% unless is_portfolio_landing %}
+    <h1 class="page-title">{{ display_title }}</h1>
+  {% endunless %}
   {{ content }}
 </div>

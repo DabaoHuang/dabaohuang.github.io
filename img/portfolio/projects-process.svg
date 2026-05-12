@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">Collaboration process with quote confirmation</title>
+  <desc id="desc">A five-stage process illustration from discovery, scope alignment, quote confirmation, staged delivery, launch, and handoff.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7ed"/>
+      <stop offset="1" stop-color="#eef8f7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#17385f"/>
+      <stop offset="1" stop-color="#149f9b"/>
+    </linearGradient>
+    <filter id="shadow" width="130%" height="150%" x="-15%" y="-25%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#17385f" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="980" height="520" rx="32" fill="url(#bg)"/>
+  <path d="M84 288c82-120 188-132 270-46 76 80 162 76 236-12 78-94 184-96 306-10" fill="none" stroke="#d9dfdd" stroke-width="10" stroke-linecap="round"/>
+  <path d="M84 288c82-120 188-132 270-46 76 80 162 76 236-12 78-94 184-96 306-10" fill="none" stroke="#149f9b" stroke-width="6" stroke-linecap="round" stroke-dasharray="16 18"/>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="252" width="152" height="158" rx="22" fill="#ffffff" stroke="#f1d8c4"/>
+    <rect x="228" y="146" width="152" height="158" rx="22" fill="#ffffff" stroke="#d9dfdd"/>
+    <rect x="414" y="226" width="152" height="158" rx="22" fill="#ffffff" stroke="#d9dfdd"/>
+    <rect x="600" y="126" width="152" height="158" rx="22" fill="#ffffff" stroke="#d9dfdd"/>
+    <rect x="780" y="220" width="152" height="158" rx="22" fill="#ffffff" stroke="#d9dfdd"/>
+  </g>
+
+  <g>
+    <circle cx="124" cy="224" r="30" fill="url(#accent)"/>
+    <text x="124" y="235" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">1</text>
+    <circle cx="124" cy="305" r="30" fill="#eff8fb" stroke="#149f9b" stroke-width="8"/>
+    <path d="M112 317l-18 18" stroke="#149f9b" stroke-width="8" stroke-linecap="round"/>
+    <path d="M82 360h70M82 390h92" stroke="#bfd4e3" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="304" cy="118" r="30" fill="url(#accent)"/>
+    <text x="304" y="129" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">2</text>
+    <rect x="266" y="194" width="76" height="76" rx="16" fill="#eff8fb" stroke="#17385f" stroke-width="8"/>
+    <path d="M286 232l14 14 28-32" fill="none" stroke="#149f9b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M262 334h72M262 364h86" stroke="#bfd4e3" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="490" cy="198" r="30" fill="url(#accent)"/>
+    <text x="490" y="209" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">3</text>
+    <rect x="448" y="276" width="84" height="58" rx="14" fill="#eff8fb" stroke="#17385f" stroke-width="8"/>
+    <path d="M468 294h44M468 316h32" stroke="#149f9b" stroke-width="7" stroke-linecap="round"/>
+    <path d="M462 352h56" stroke="#e5484d" stroke-width="10" stroke-linecap="round"/>
+    <path d="M442 410h78M442 440h58" stroke="#bfd4e3" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="676" cy="98" r="30" fill="url(#accent)"/>
+    <text x="676" y="109" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">4</text>
+    <rect x="638" y="176" width="76" height="22" rx="8" fill="#17385f"/>
+    <rect x="638" y="214" width="104" height="22" rx="8" fill="#149f9b"/>
+    <rect x="638" y="252" width="58" height="22" rx="8" fill="#e5484d"/>
+    <path d="M634 326h72M634 356h88" stroke="#bfd4e3" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="856" cy="192" r="30" fill="url(#accent)"/>
+    <text x="856" y="203" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">5</text>
+    <path d="M820 268h72v62h-72z" fill="#eff8fb" stroke="#17385f" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M820 268l36 31 36-31" fill="none" stroke="#149f9b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M818 390h70M818 420h88" stroke="#bfd4e3" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>

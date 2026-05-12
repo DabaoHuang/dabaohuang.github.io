@@ -23,50 +23,122 @@ zh:
     related: Related Posts
   projects:
     title: Projects
-    eyebrow: Projects & Collaboration
-    heading: 我喜歡把複雜的需求，整理成穩定、清楚、之後也能維護的系統。
-    intro: 我是全端工程師，平常處理網站開發、後台系統、資料流程、雲端部署與維運改善。比起只把功能做出來，我更在意的是把需求、資料、流程和上線風險一起想清楚，讓專案交付後真的能被使用、被交接、被持續維護。
-    featured_title: Featured Work
-    case_title: 廉價航空快遞系統重構
-    case_text: 將累積多年技術債的舊物流系統，重構成可維護的新架構，同時升級付款、發票、資料匯入、後台對帳、測試與上線流程。
-    case_cta: 閱讀案例
-    case_tags:
-      - PHP 8.3
-      - Slim 4
-      - MySQL
-      - Legacy Migration
-      - Payment Flow
-    web_title: Web Development
-    web_text: 前後端功能、網站架構、管理後台、文件站與技術部落格。
-    fullstack_title: Full-stack Delivery
-    fullstack_text: 需求拆解、資料流程、API、表單、匯入匯出與例行工作自動化。
-    devops_title: DevOps & Operations
-    devops_text: AWS、Linux、部署流程、備份、監控、CI/CD 與既有環境改善。
-    needs_title: 適合討論的需求
-    needs:
-      - 公司形象網站、技術部落格、文件站、作品集網站
-      - 後台管理系統、表單流程、資料匯入匯出、報表整理
-      - 既有網站維護、功能擴充、頁面調整、效能與 SEO 改善
-      - AWS、Linux、部署流程、備份、監控、CI/CD 與維運改善
-      - 把重複的人工流程整理成可追蹤、可交接的內部工具
+    intro: 系統穩定服務，協助業主整理不穩定、難維護、流程混亂的網站、後台與營運系統。
+    hero_eyebrow: 系統穩定服務
+    hero_title: 系統能跑，不代表撐得住
+    hero_text: 我幫你把不穩定、難維護、流程混亂的系統，整理成能持續營運、能交接、能安全上線的架構。
+    hero_primary_cta: 先聊系統狀況
+    hero_secondary_cta: 看完整案例
+    hero_points_label: 服務重點
+    hero_points:
+      - 專注開發：解決技術問題
+      - 架構規劃：設計可維護方案
+      - 穩定上線：讓系統可靠運行
+    hero_image_alt: 大寶的系統穩定服務主視覺
+    background_eyebrow: Technical Background
+    background_title: Developer + DevOps，從功能開發到部署維運一起處理
+    background_text: 我不是只做畫面或只管主機，而是能把網站功能、後端流程、資料庫、部署與維運放在同一張圖上思考，讓專案更容易落地與交接。
+    background_image_alt: Developer 與 DevOps 技術背景整合示意圖
+    background_items:
+      - title: Developer
+        text: 前端頁面、後端流程、API、資料庫、管理後台與資料匯入匯出。
+      - title: DevOps
+        text: Linux、AWS、Docker、部署流程、備份、監控與 CI/CD 改善。
+      - title: Delivery
+        text: 需求拆解、資料流整理、測試規劃、上線 runbook 與交接文件。
+    pain_eyebrow: Pain Points
+    pain_title: 你的系統，是否也遇到這些問題？
+    pain_text: 業主通常不是缺一個新功能，而是有些關鍵流程一直不穩，讓營運每天都在補洞。
+    pain_image_alt: 常見系統痛點視覺圖
+    pains:
+      - title: 系統不穩定
+        text: 一忙就卡、一多人就慢，偶爾還會出錯。
+      - title: 金流與訂單不同步
+        text: 付款成功但訂單狀態錯誤，帳務對不起來。
+      - title: 舊系統不敢動
+        text: 牽一髮動全身，不知道從哪裡開始整理。
+      - title: 流量壓力撐不住
+        text: 流量或作業量一上來，系統就開始出問題。
+    approach_eyebrow: Our Approach
+    approach_title: 我如何讓系統穩定下來
+    approach_text: 先把問題拆清楚，再逐步整理流程、資料與程式結構，最後用測試與交接降低上線風險。
+    approach_steps:
+      - title: 系統盤點
+        text: 釐清現況、常見錯誤、資料流與營運風險。
+      - title: 流程整理
+        text: 把金流、訂單、後台與人工流程拆成可理解的步驟。
+      - title: 結構重建
+        text: 重構高風險區塊，讓後續維護不再靠猜。
+      - title: 測試與上線
+        text: 用測試、文件與 runbook 保護正式上線。
+    case_eyebrow: Case Study
+    case_client: CLIENT · 跨境電商物流
+    case_title: 實際案例：跨境物流系統重構
+    case_summary: 從老舊物流系統，到可維護的營運架構。
+    case_metric_stability: 系統穩定度
+    case_metric_operations: 營運流程
+    case_cta: 閱讀完整案例
+    case_before_title: 原本問題
+    case_before_signal: 難改、難查、風險高
+    case_after_title: 專案成果
+    case_after_signal: 可維護、可驗證、可交接
+    case_before:
+      - 金流與訂單狀態長期不穩
+      - 舊資料無法安全銜接
+      - 後台流程依賴人工判斷
+      - 系統上線與回歸風險高
+    case_after:
+      - 金流、訂單與後台狀態穩定一致
+      - 舊資料可重新匯入、查詢與追蹤
+      - 後台流程變得清楚可控
+      - 用測試與 runbook 降低上線風險
+    capability_eyebrow: Core Capability
+    capability_title: 我的核心能力與差異化
+    capability_text: 我不是只把功能做出來，而是把需求、資料、流程、部署與維運風險一起整理，讓業主得到一個能長期營運的系統。
+    capability_about_title: 關於我的做事方式
+    capability_about_text: 我有 Developer 與 DevOps 的混合背景，能同時看懂產品需求、程式結構、資料流與正式環境。這讓我在處理舊系統、金流流程、後台作業與上線風險時，不會只修單點問題，而是把背後的營運流程一起整理清楚。
+    capability_points:
+      - 能和業主討論需求，也能拆成工程可執行的階段
+      - 能處理前後端與部署維運，不需要多方轉譯
+      - 重視測試、文件與交接，避免專案完成後沒人敢維護
+    capabilities:
+      - title: 舊系統整理與重構
+        text: 把混在一起的頁面、SQL、流程邏輯拆清楚，降低每次修改的風險。
+      - title: 金流、訂單、後台整合
+        text: 讓付款、訂單、發票、報表與後台狀態能對得起來。
+      - title: 穩定性與上線控管
+        text: 補上測試、檢查流程與上線文件，讓正式環境不靠記憶操作。
+    scenario_eyebrow: For You
+    scenario_title: 如果你遇到這些情況，我可以幫上忙
+    scenario_image_alt: 大寶協助整理系統流程的情境圖
+    scenarios:
+      - title: 系統越來越難改
+        text: 每次新增功能都怕影響其他地方。
+      - title: 金流對不上帳
+        text: 付款、訂單、後台狀態經常不同步。
+      - title: 流程依賴人工
+        text: 很多步驟需要人手動判斷與補資料。
+      - title: 舊系統不敢動
+        text: 知道要重構，但擔心影響營運。
     process_title: 合作方式
+    process_eyebrow: Work Process
+    process_intro: 你不需要一開始就準備完整規格。我會先協助整理問題，再把範圍、報價、調整空間、階段、驗收與上線方式講清楚。
+    process_image_alt: 從初步討論、範圍整理、報價確認到上線交接的合作流程示意圖
     process:
       - title: 1. 初步討論
-        text: 先確認目前遇到的問題、希望完成的結果、時程與預算範圍。如果需求還不明確，也可以先一起把範圍整理出來。
-      - title: 2. 範圍確認
-        text: 把功能、頁面、資料來源、部署方式、交付內容與驗收方式列清楚，避免做到一半才發現雙方期待不同。
-      - title: 3. 分階段交付
-        text: 依照專案大小拆成可檢查的階段，定期同步進度。小型修改可以快速處理，較大的系統會先切 MVP。
-      - title: 4. 上線與交接
-        text: 協助部署、基本測試、文件整理與必要的操作說明，讓專案不是只有能跑，而是之後也能維護。
-    contact_brief_title: 聯絡時可以附上
-    contact_brief:
-      - 目前網站或系統網址，如果已經存在的話
-      - 想解決的問題，以及希望完成後變成什麼狀態
-      - 預計時程、預算範圍與是否有既有設計或規格
-      - 需要我負責的部分：前端、後端、部署、維運或整體規劃
+        text: 了解現狀與需求，初步評估問題。
+      - title: 2. 範圍整理
+        text: 把目標、頁面、流程、資料來源與交付內容整理清楚。
+      - title: 3. 報價與條件確認
+        text: 依照範圍提供報價，討論預算、時程與可調整項目。
+      - title: 4. 分階段交付
+        text: 分階段開發與測試，定期回報進度。
+      - title: 5. 上線與交接
+        text: 系統上線與驗證，整理文件與交接。
+    contact_eyebrow: Contact
     contact_title: Contact
-    contact_text: 如果有網站、內部工具或 DevOps 相關需求，可以透過 Email、GitHub 或 Facebook 聯絡我。
+    contact_text: 不需要先整理完整規格。你可以先告訴我目前遇到的問題、系統大概狀況，以及希望改善的方向。
+    contact_email_cta: Email 我
   seo:
     fallback_description: "Dabao Huang 的技術筆記，記錄 Web Development、DevOps、Linux、AWS、Git 與全端開發實務。"
 
@@ -95,50 +167,122 @@ en:
     related: Related Posts
   projects:
     title: Projects
-    eyebrow: Projects & Collaboration
-    heading: I help turn complex requirements into clear, stable, maintainable systems.
-    intro: I am a full-stack engineer working across web development, admin systems, data workflows, cloud deployment, and operations. Beyond shipping features, I care about clarifying requirements, data flow, launch risk, and handoff so the project remains useful after delivery.
-    featured_title: Featured Work
-    case_title: 廉價航空快遞 logistics system refactor
-    case_text: Rebuilt a high-debt legacy logistics system into a maintainable architecture, upgrading payment, invoice, data import, reconciliation, testing, and launch workflows.
-    case_cta: Read case study
-    case_tags:
-      - PHP 8.3
-      - Slim 4
-      - MySQL
-      - Legacy Migration
-      - Payment Flow
-    web_title: Web Development
-    web_text: Frontend and backend features, site architecture, admin panels, documentation sites, and technical blogs.
-    fullstack_title: Full-stack Delivery
-    fullstack_text: Requirement breakdown, data flows, APIs, forms, import/export flows, and recurring task automation.
-    devops_title: DevOps & Operations
-    devops_text: AWS, Linux, deployment workflows, backups, monitoring, CI/CD, and operational improvements.
-    needs_title: Good Fits
-    needs:
-      - Company websites, technical blogs, documentation sites, and portfolio sites
-      - Admin systems, forms, import/export flows, and reporting workflows
-      - Existing site maintenance, feature expansion, page updates, performance, and SEO improvements
-      - AWS, Linux, deployment, backup, monitoring, CI/CD, and operations work
-      - Turning repeated manual work into trackable internal tools
+    intro: System stabilization work for business owners with unstable, hard-to-maintain, process-heavy websites, admin panels, and operations systems.
+    hero_eyebrow: System Stabilization
+    hero_title: Running is not the same as being reliable
+    hero_text: I help turn unstable, hard-to-maintain, process-heavy systems into maintainable architecture that can keep operating, be handed off, and launch safely.
+    hero_primary_cta: Discuss your system
+    hero_secondary_cta: View case study
+    hero_points_label: Service focus
+    hero_points:
+      - Focused development for real technical issues
+      - Architecture planning for maintainable systems
+      - Safer launches for reliable operations
+    hero_image_alt: Dabao system stabilization service visual
+    background_eyebrow: Technical Background
+    background_title: Developer + DevOps, from product features to deployment and operations
+    background_text: I do not only build screens or only maintain servers. I connect product features, backend flows, databases, deployment, and operations so projects can be delivered and handed off clearly.
+    background_image_alt: Developer and DevOps technical background integration visual
+    background_items:
+      - title: Developer
+        text: Frontend pages, backend workflows, APIs, databases, admin panels, and import/export flows.
+      - title: DevOps
+        text: Linux, AWS, Docker, deployment workflows, backups, monitoring, and CI/CD improvements.
+      - title: Delivery
+        text: Requirement breakdown, data-flow cleanup, test planning, launch runbooks, and handoff notes.
+    pain_eyebrow: Pain Points
+    pain_title: Is your system running into these problems?
+    pain_text: Business owners usually do not just need another feature. The real cost is unstable workflows that keep interrupting operations.
+    pain_image_alt: Common system pain points visual
+    pains:
+      - title: Unstable system behavior
+        text: The site slows down, fails under load, or breaks at the worst time.
+      - title: Payments and orders drift apart
+        text: Payment succeeds, but order or back-office status does not match.
+      - title: Legacy system fear
+        text: Everyone knows it needs work, but each change feels risky.
+      - title: Traffic pressure breaks workflows
+        text: More users or more operations quickly expose hidden bottlenecks.
+    approach_eyebrow: Our Approach
+    approach_title: How I make systems stable again
+    approach_text: I clarify the problem first, then organize workflows, data, and code structure before reducing launch risk with tests and handoff notes.
+    approach_steps:
+      - title: System audit
+        text: Map current behavior, recurring errors, data flow, and operational risk.
+      - title: Workflow cleanup
+        text: Break payment, order, admin, and manual steps into understandable flows.
+      - title: Structure rebuild
+        text: Refactor risky areas so future changes are not guesswork.
+      - title: Test and launch
+        text: Protect production with tests, documentation, and a launch runbook.
+    case_eyebrow: Case Study
+    case_client: CLIENT · Cross-border ecommerce logistics
+    case_title: "Case study: Cross-border logistics system refactor"
+    case_summary: From an aging logistics system to maintainable operations architecture.
+    case_metric_stability: System stability
+    case_metric_operations: Operations flow
+    case_cta: Read full case study
+    case_before_title: Before
+    case_before_signal: Hard to change, hard to trace, high risk
+    case_after_title: After
+    case_after_signal: Maintainable, testable, handoff-ready
+    case_before:
+      - Payment and order status were frequently inconsistent
+      - Legacy data could not be safely connected
+      - Back-office work depended on manual judgment
+      - Launch and regression risk remained high
+    case_after:
+      - Payment, order, and admin status became consistent
+      - Legacy data can be imported, queried, and traced
+      - Back-office workflows became clearer and controllable
+      - Tests and runbooks reduced launch risk
+    capability_eyebrow: Core Capability
+    capability_title: My core capability and differentiation
+    capability_text: I do not just ship features. I organize requirements, data, workflows, deployment, and operational risk so the business receives a system that can keep running.
+    capability_about_title: How I work
+    capability_about_text: My background combines Developer and DevOps work, so I can reason about product requirements, code structure, data flow, and production environments together. When dealing with legacy systems, payment flows, admin operations, and launch risk, I do not only fix isolated issues. I organize the operating workflow behind them.
+    capability_points:
+      - I can discuss business needs and turn them into executable engineering stages
+      - I can handle frontend, backend, deployment, and operations without heavy handoff friction
+      - I care about tests, documentation, and handoff so the project remains maintainable
+    capabilities:
+      - title: Legacy cleanup and refactor
+        text: Separate tangled pages, SQL, and business logic to reduce change risk.
+      - title: Payment, order, and admin integration
+        text: Keep payment, order, invoice, reporting, and admin status aligned.
+      - title: Stability and launch control
+        text: Add tests, checks, and launch documentation so production is not run from memory.
+    scenario_eyebrow: For You
+    scenario_title: I can help if this sounds familiar
+    scenario_image_alt: Dabao helping organize system workflows
+    scenarios:
+      - title: The system is harder to change every month
+        text: Each new feature might affect something unrelated.
+      - title: Payments do not reconcile
+        text: Payment, order, and admin statuses often disagree.
+      - title: Workflows depend on manual work
+        text: People keep judging edge cases and patching data by hand.
+      - title: The legacy system feels risky to touch
+        text: You know it needs a refactor but worry about operations.
     process_title: Collaboration Process
+    process_eyebrow: Work Process
+    process_intro: You do not need a complete spec at the beginning. I help clarify the problem first, then align scope, quote, negotiable tradeoffs, stages, acceptance criteria, and launch steps.
+    process_image_alt: Collaboration process visual from initial discussion, scope alignment, quote confirmation, delivery, launch, and handoff
     process:
       - title: 1. Initial discussion
-        text: Clarify the problem, expected outcome, timeline, and rough budget. If the scope is unclear, we can shape it first.
+        text: Understand the current situation and assess the problem.
       - title: 2. Scope alignment
-        text: Define features, pages, data sources, deployment, deliverables, and acceptance criteria before implementation starts.
-      - title: 3. Staged delivery
-        text: Split work into reviewable milestones. Small changes can move quickly; larger systems start with a focused MVP.
-      - title: 4. Launch and handoff
-        text: Support deployment, basic testing, documentation, and handoff notes so the project can be maintained after launch.
-    contact_brief_title: Helpful Context
-    contact_brief:
-      - Current website or system URL, if one exists
-      - The problem you want to solve and the desired end state
-      - Timeline, rough budget, and any existing design or spec
-      - Which parts you need help with: frontend, backend, deployment, operations, or planning
+        text: Clarify goals, pages, workflows, data sources, and deliverables.
+      - title: 3. Quote and terms
+        text: Provide a quote based on scope and discuss budget, timeline, and tradeoffs.
+      - title: 4. Staged delivery
+        text: Deliver and test in stages with regular progress updates.
+      - title: 5. Launch and handoff
+        text: Launch, verify, and prepare handoff documentation.
+    contact_eyebrow: Contact
     contact_title: Contact
-    contact_text: For web development, internal tools, or DevOps-related projects, contact me by email, GitHub, or Facebook.
+    contact_text: You do not need a complete spec first. Share the problem, the rough system state, and what you want to improve.
+    contact_email_cta: Email me
   seo:
     fallback_description: "Technical notes by Dabao Huang on web development, DevOps, Linux, AWS, Git, and full-stack engineering."
 
@@ -167,49 +311,121 @@ ja:
     related: 関連記事
   projects:
     title: プロジェクト
-    eyebrow: Projects & Collaboration
-    heading: 複雑な要件を、安定して使い続けられるシステムに整理することを大切にしています。
-    intro: Web 開発、管理画面、データフロー、クラウドデプロイ、運用改善を扱うフルスタックエンジニアです。機能を作るだけでなく、要件、データ、公開リスク、引き継ぎまで整理し、納品後も使い続けられる形にすることを重視しています。
-    featured_title: Featured Work
-    case_title: 廉價航空快遞 物流システムのリファクタリング
-    case_text: 技術的負債の大きい既存物流システムを保守しやすい構成へ再設計し、決済、請求書、データ移行、照合、テスト、公開手順を改善しました。
+    intro: 不安定で保守しづらい Web サイト、管理画面、業務システムを、運用し続けられる形に整理します。
+    hero_eyebrow: System Stabilization
+    hero_title: 動いていることと、支えられることは違います
+    hero_text: 不安定で保守しづらく、業務フローが複雑になったシステムを、運用、引き継ぎ、安全な公開まで考えた構成へ整理します。
+    hero_primary_cta: システムについて相談する
+    hero_secondary_cta: 事例を見る
+    hero_points_label: サービスの重点
+    hero_points:
+      - 技術課題に集中した開発
+      - 保守しやすい構成の設計
+      - 安定した公開と運用
+    hero_image_alt: Dabao のシステム安定化サービスのビジュアル
+    background_eyebrow: Technical Background
+    background_title: Developer + DevOps、機能開発からデプロイと運用まで
+    background_text: 画面だけ、サーバーだけではなく、機能、バックエンド、データベース、デプロイ、運用を同じ流れで考え、納品と引き継ぎをしやすくします。
+    background_image_alt: Developer と DevOps の技術背景を表すビジュアル
+    background_items:
+      - title: Developer
+        text: フロントエンド、バックエンド、API、データベース、管理画面、データ入出力。
+      - title: DevOps
+        text: Linux、AWS、Docker、デプロイ、バックアップ、監視、CI/CD 改善。
+      - title: Delivery
+        text: 要件整理、データフロー、テスト計画、公開 runbook、引き継ぎ資料。
+    pain_eyebrow: Pain Points
+    pain_title: このような問題はありませんか？
+    pain_text: 必要なのは単なる新機能ではなく、日々の運用を止める不安定な流れを整理することかもしれません。
+    pain_image_alt: よくあるシステム課題のビジュアル
+    pains:
+      - title: システムが不安定
+        text: 忙しい時に遅くなり、利用者が増えるとエラーが出る。
+      - title: 決済と注文が合わない
+        text: 決済は成功しているのに、注文や管理画面の状態が一致しない。
+      - title: 古いシステムを触れない
+        text: 直す必要は分かっていても、変更の影響範囲が読めない。
+      - title: アクセスや作業量に耐えられない
+        text: 利用者や業務量が増えると、隠れていた問題が表面化する。
+    approach_eyebrow: Our Approach
+    approach_title: システムを安定させる進め方
+    approach_text: 問題を先に整理し、業務フロー、データ、コード構造を段階的に見直し、テストと引き継ぎで公開リスクを下げます。
+    approach_steps:
+      - title: システム調査
+        text: 現状、よく起きるエラー、データの流れ、運用リスクを整理します。
+      - title: フロー整理
+        text: 決済、注文、管理画面、手作業を分かる単位に分解します。
+      - title: 構造の再設計
+        text: リスクの高い部分をリファクタリングし、変更しやすくします。
+      - title: テストと公開
+        text: テスト、ドキュメント、公開手順で本番環境を守ります。
+    case_eyebrow: Case Study
+    case_client: CLIENT · 越境 EC 物流
+    case_title: 事例：越境物流システムのリファクタリング
+    case_summary: 古い物流システムを、保守しやすい運用基盤へ整理しました。
+    case_metric_stability: システム安定性
+    case_metric_operations: 運用フロー
     case_cta: 事例を読む
-    case_tags:
-      - PHP 8.3
-      - Slim 4
-      - MySQL
-      - Legacy Migration
-      - Payment Flow
-    web_title: Web Development
-    web_text: フロントエンド・バックエンド機能、サイト設計、管理画面、ドキュメントサイト、技術ブログ。
-    fullstack_title: Full-stack Delivery
-    fullstack_text: 要件整理、データフロー、API、フォーム、インポート・エクスポート、定型作業の自動化。
-    devops_title: DevOps & Operations
-    devops_text: AWS、Linux、デプロイ、バックアップ、監視、CI/CD、既存環境の改善。
-    needs_title: 相談しやすい内容
-    needs:
-      - 会社サイト、技術ブログ、ドキュメントサイト、ポートフォリオサイト
-      - 管理画面、フォーム、データ入出力、レポート作成フロー
-      - 既存サイトの保守、機能追加、ページ修正、パフォーマンスと SEO 改善
-      - AWS、Linux、デプロイ、バックアップ、監視、CI/CD、運用改善
-      - 手作業の多い業務を、追跡・引き継ぎしやすい内部ツールにすること
+    case_before_title: Before
+    case_before_signal: 変更しづらく、追跡しづらく、リスクが高い
+    case_after_title: After
+    case_after_signal: 保守、検証、引き継ぎがしやすい
+    case_before:
+      - 決済と注文状態が頻繁に不一致
+      - 既存データを安全に接続しづらい
+      - 管理画面の作業が人の判断に依存
+      - 公開と回帰のリスクが高い
+    case_after:
+      - 決済、注文、管理画面の状態を一致
+      - 既存データを移行、検索、追跡可能に
+      - 管理画面の流れを分かりやすく制御
+      - テストと runbook で公開リスクを低減
+    capability_eyebrow: Core Capability
+    capability_title: 私の強みと差別化
+    capability_text: 機能を作るだけでなく、要件、データ、業務フロー、デプロイ、運用リスクまで整理し、長く使えるシステムにします。
+    capability_about_title: 私の進め方
+    capability_about_text: Developer と DevOps の両方の背景があるため、要件、コード構造、データフロー、本番環境を一緒に見て判断できます。既存システム、決済、管理画面、公開リスクを扱う時も、単発の修正ではなく、運用フロー全体を整理します。
+    capability_points:
+      - 業務要件を話し合い、実装可能な段階に分解できます
+      - フロントエンド、バックエンド、デプロイ、運用まで一貫して扱えます
+      - テスト、ドキュメント、引き継ぎを重視し、保守しやすい状態にします
+    capabilities:
+      - title: 既存システムの整理とリファクタリング
+        text: ページ、SQL、業務ロジックが混ざった状態を分け、変更リスクを下げます。
+      - title: 決済、注文、管理画面の統合
+        text: 決済、注文、請求、レポート、管理画面の状態をそろえます。
+      - title: 安定性と公開リスクの管理
+        text: テスト、確認手順、公開ドキュメントを整え、記憶に頼らない運用にします。
+    scenario_eyebrow: For You
+    scenario_title: このような状況なら相談できます
+    scenario_image_alt: Dabao がシステムフローを整理するイメージ
+    scenarios:
+      - title: システムがどんどん変更しづらい
+        text: 新機能を追加するたびに別の箇所への影響が心配になる。
+      - title: 決済の照合が合わない
+        text: 決済、注文、管理画面の状態がよくずれる。
+      - title: 作業が手作業に依存している
+        text: 例外対応やデータ補正を人が判断し続けている。
+      - title: 古いシステムを触るのが不安
+        text: 改善したいが、運用への影響が怖くて進められない。
     process_title: 進め方
+    process_eyebrow: Work Process
+    process_intro: 最初から完全な仕様書は不要です。まず課題を整理し、範囲、見積もり、調整できる項目、段階、確認方法、公開手順をそろえます。
+    process_image_alt: 初回相談、範囲整理、見積もり確認、公開と引き継ぎまでの進め方のビジュアル
     process:
       - title: 1. 初回相談
-        text: 現在の課題、目指す状態、スケジュール、予算感を確認します。要件が曖昧な場合は整理から始めます。
-      - title: 2. 範囲の確認
-        text: 機能、ページ、データ、デプロイ方法、納品物、確認方法を実装前にそろえます。
-      - title: 3. 段階的な納品
-        text: 確認しやすい単位に分けて進めます。小さな修正は素早く、大きなシステムは MVP から始めます。
-      - title: 4. 公開と引き継ぎ
-        text: デプロイ、基本テスト、ドキュメント、操作メモまで整理し、公開後も保守しやすい状態にします。
-    contact_brief_title: 連絡時にあると助かる情報
-    contact_brief:
-      - 既存のサイトやシステム URL
-      - 解決したい問題と、完了後に期待する状態
-      - 希望スケジュール、予算感、既存デザインや仕様の有無
-      - 相談したい範囲：フロントエンド、バックエンド、デプロイ、運用、設計など
+        text: 現状と要望を確認し、問題を初期評価します。
+      - title: 2. 範囲の整理
+        text: 目標、ページ、業務フロー、データ、納品内容を整理します。
+      - title: 3. 見積もりと条件確認
+        text: 範囲に応じて見積もりを出し、予算、時期、調整項目を確認します。
+      - title: 4. 段階的な納品
+        text: 段階的に開発、テストし、進捗を共有します。
+      - title: 5. 公開と引き継ぎ
+        text: 公開、検証、ドキュメント整理と引き継ぎを行います。
+    contact_eyebrow: Contact
     contact_title: Contact
-    contact_text: Web 開発、内部ツール、DevOps 関連の相談は Email、GitHub、Facebook から連絡できます。
+    contact_text: 完全な仕様書は不要です。今困っていること、システムの状況、改善したい方向を教えてください。
+    contact_email_cta: Email で相談
   seo:
     fallback_description: "Dabao Huang による Web 開発、DevOps、Linux、AWS、Git、フルスタック開発の技術メモ。"

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" role="img" aria-labelledby="title desc">
+  <title id="title">Developer and DevOps technical background</title>
+  <desc id="desc">A clean technical illustration showing application development, infrastructure, deployment, monitoring, and operations connected as one system.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eff8fb"/>
+      <stop offset="1" stop-color="#f7fbfa"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#17385f"/>
+      <stop offset="1" stop-color="#149f9b"/>
+    </linearGradient>
+    <filter id="shadow" width="130%" height="130%" x="-15%" y="-15%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#17385f" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="640" rx="32" fill="url(#bg)"/>
+  <circle cx="108" cy="112" r="58" fill="#d9f1ef"/>
+  <circle cx="788" cy="94" r="82" fill="#e9f2fa"/>
+  <circle cx="752" cy="530" r="62" fill="#d9f1ef"/>
+  <circle cx="158" cy="548" r="74" fill="#e9f2fa"/>
+
+  <g filter="url(#shadow)">
+    <rect x="86" y="104" width="315" height="360" rx="24" fill="#ffffff" stroke="#d9dfdd"/>
+    <rect x="499" y="104" width="315" height="360" rx="24" fill="#ffffff" stroke="#d9dfdd"/>
+  </g>
+
+  <rect x="114" y="132" width="259" height="52" rx="14" fill="#f4f8f9"/>
+  <circle cx="140" cy="158" r="7" fill="#e5484d"/>
+  <circle cx="164" cy="158" r="7" fill="#f59e0b"/>
+  <circle cx="188" cy="158" r="7" fill="#149f9b"/>
+  <path d="M150 244l-42 38 42 38" fill="none" stroke="#17385f" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M338 244l42 38-42 38" fill="none" stroke="#17385f" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M278 224l-68 140" fill="none" stroke="#149f9b" stroke-width="16" stroke-linecap="round"/>
+  <rect x="136" y="394" width="214" height="14" rx="7" fill="#bfd4e3"/>
+  <rect x="136" y="424" width="154" height="14" rx="7" fill="#d8e5ed"/>
+
+  <rect x="527" y="132" width="259" height="52" rx="14" fill="#f4f8f9"/>
+  <circle cx="552" cy="158" r="7" fill="#149f9b"/>
+  <circle cx="576" cy="158" r="7" fill="#149f9b"/>
+  <circle cx="600" cy="158" r="7" fill="#149f9b"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M656 242c0-42 34-76 76-76 36 0 67 26 74 60 38 3 68 35 68 74 0 41-33 74-74 74H608c-45 0-82-37-82-82 0-40 29-74 68-81 15-31 47-52 84-52" stroke="#bfd4e3" stroke-width="18"/>
+    <path d="M586 318h160" stroke="#17385f" stroke-width="15"/>
+    <path d="M666 240v128" stroke="#149f9b" stroke-width="15"/>
+    <path d="M626 278l40-38 40 38" stroke="#149f9b" stroke-width="15"/>
+  </g>
+  <rect x="546" y="394" width="218" height="14" rx="7" fill="#bfd4e3"/>
+  <rect x="546" y="424" width="172" height="14" rx="7" fill="#d8e5ed"/>
+
+  <g filter="url(#shadow)">
+    <rect x="334" y="466" width="232" height="92" rx="24" fill="url(#primary)"/>
+  </g>
+  <path d="M402 512h96" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+  <path d="M486 482l36 30-36 30" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="374" cy="512" r="12" fill="#7ee6df"/>
+  <circle cx="530" cy="512" r="12" fill="#7ee6df"/>
+
+  <path d="M401 282h68c24 0 43 19 43 43v141" fill="none" stroke="#bfd4e3" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 16"/>
+  <path d="M499 282h-68c-24 0-43 19-43 43v141" fill="none" stroke="#bfd4e3" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 16"/>
+</svg>
